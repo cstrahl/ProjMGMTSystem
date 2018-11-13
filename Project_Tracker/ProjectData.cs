@@ -34,7 +34,7 @@ namespace Project_Tracker
         }
 
         public override string ToString(){
-            return (projName +"\t\t"+ projManager.ToString);
+            return (projName +"\t\t"+ projManager.ToString());
         }
     }
 }
