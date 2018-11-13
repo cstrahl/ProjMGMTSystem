@@ -9,16 +9,16 @@ namespace Project_Tracker
 
     class ProjectData
     {
-        private string projName;
-        private string projManager;
-        private string projDescrip;
-        private List<Person> projMembers = new List<Person>();
-        private List<Risk> projRisk = new List<Risk>();
-        private List<Requirement> projReq = new List<Requirement>();
+        private string projName { set; }
+        private Person projManager {set;}
+        private string projDescrip {set;}
+        private List<Person> projMembers {set;}
+        private List<Risk> projRisk {set;}
+        private List<Requirement> projReq {set;}
 
         public ProjectData() { }
 
-        public ProjectData(string projName, string projManager, string projDescrip, List<Person> projMembers, List<Risk> projRisk, List<Requirement> projReq)
+        public ProjectData(string projName, Person projManager, string projDescrip, List<Person> projMembers, List<Risk> projRisk, List<Requirement> projReq)
         {
             this.projName = projName;
             this.projManager = projManager;
@@ -28,28 +28,29 @@ namespace Project_Tracker
             this.projReq = projReq;
         }
 
-        public string ProjName
+        public string getProjName()
         {
-            get
-            {
-                return this.projName;
-            }            
+            return projName;
+        }            
+
+        public Person getProjManager(){
+            return this.projManager;
         }
 
-        public string ProjManager
-        {
-            get
-            {
-                return this.projManager;
-            }
+        public string getProjDescrip(){
+            return this.projDescrip;
         }
 
-        public string ProjDescrip
-        {
-            get
-            {
-                return this.projDescrip;
-            }
+        public List<Person> getProjMembers(){
+            return this.projMembers;
+        }
+
+        public List<Person> getProjRisk(){
+            return this.projRisk;
+        }
+
+        public List<Person> getProjReq(){
+            return this.projReq;
         }
 
         public override string ToString(){
