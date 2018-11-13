@@ -28,5 +28,9 @@ namespace Project_Tracker
             this.projReq = projReq;
 
         }
+
+        public override string ToString(){
+            return (projName +"\t\t"+ projManager.ToString());
+        }
     }
 }
