@@ -12,9 +12,16 @@ namespace Project_Tracker
 {
     public partial class Main_Form : Form
     {
+
+
         public Main_Form()
         {
             InitializeComponent();
+        }
+
+        private void Add_Button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

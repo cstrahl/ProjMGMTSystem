@@ -34,41 +34,41 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Home_Tab = new System.Windows.Forms.TabPage();
             this.Add_Project_Tab = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.Project_Name_Label = new System.Windows.Forms.Label();
-            this.Project_Name_Textbox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Project_Manager_Label = new System.Windows.Forms.Label();
-            this.Team_Members_Label = new System.Windows.Forms.Label();
-            this.Team_Members_RichTextBox = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Project_Description_Label = new System.Windows.Forms.Label();
-            this.Project_Description_RichTextBox = new System.Windows.Forms.RichTextBox();
-            this.Risk_Input_GroupBox = new System.Windows.Forms.GroupBox();
-            this.Risk_Name_Label = new System.Windows.Forms.Label();
-            this.Risk_Name_Textbox = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.Risk_Description_Label = new System.Windows.Forms.Label();
-            this.Risk_Status_ComboBox = new System.Windows.Forms.ComboBox();
-            this.Risk_Status_Label = new System.Windows.Forms.Label();
-            this.Risks_ListBox = new System.Windows.Forms.ListBox();
+            this.Save_Project_Button = new System.Windows.Forms.Button();
+            this.Delete_Button = new System.Windows.Forms.Button();
+            this.Modify_Button = new System.Windows.Forms.Button();
+            this.Add_Button = new System.Windows.Forms.Button();
             this.Requirements_Input_GroupBox = new System.Windows.Forms.GroupBox();
+            this.NonFunctional_RadioButton = new System.Windows.Forms.RadioButton();
+            this.Functional_RadioButton = new System.Windows.Forms.RadioButton();
             this.Requirements_ListBox = new System.Windows.Forms.ListBox();
             this.Requirements_Description_RichTextBox = new System.Windows.Forms.RichTextBox();
             this.Requirements_Description_Label = new System.Windows.Forms.Label();
             this.Requirements_Name_TextBox = new System.Windows.Forms.TextBox();
             this.Requirements_Name_Label = new System.Windows.Forms.Label();
-            this.Functional_RadioButton = new System.Windows.Forms.RadioButton();
-            this.NonFunctional_RadioButton = new System.Windows.Forms.RadioButton();
-            this.Add_Button = new System.Windows.Forms.Button();
-            this.Modify_Button = new System.Windows.Forms.Button();
-            this.Delete_Button = new System.Windows.Forms.Button();
-            this.Save_Project_Button = new System.Windows.Forms.Button();
+            this.Risk_Input_GroupBox = new System.Windows.Forms.GroupBox();
+            this.Risks_ListBox = new System.Windows.Forms.ListBox();
+            this.Risk_Status_Label = new System.Windows.Forms.Label();
+            this.Risk_Status_ComboBox = new System.Windows.Forms.ComboBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Risk_Description_Label = new System.Windows.Forms.Label();
+            this.Risk_Name_Textbox = new System.Windows.Forms.TextBox();
+            this.Risk_Name_Label = new System.Windows.Forms.Label();
+            this.Project_Description_RichTextBox = new System.Windows.Forms.RichTextBox();
+            this.Project_Description_Label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Team_Members_RichTextBox = new System.Windows.Forms.RichTextBox();
+            this.Team_Members_Label = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Project_Manager_Label = new System.Windows.Forms.Label();
+            this.Project_Name_Textbox = new System.Windows.Forms.TextBox();
+            this.Project_Name_Label = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.Home_Tab.SuspendLayout();
             this.Add_Project_Tab.SuspendLayout();
-            this.Risk_Input_GroupBox.SuspendLayout();
             this.Requirements_Input_GroupBox.SuspendLayout();
+            this.Risk_Input_GroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // Add_Project_Button
@@ -146,173 +146,42 @@
             this.Add_Project_Tab.Text = "Add Project";
             this.Add_Project_Tab.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // Save_Project_Button
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(665, 519);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.Save_Project_Button.Location = new System.Drawing.Point(110, 456);
+            this.Save_Project_Button.Name = "Save_Project_Button";
+            this.Save_Project_Button.Size = new System.Drawing.Size(75, 23);
+            this.Save_Project_Button.TabIndex = 19;
+            this.Save_Project_Button.Text = "Add Project";
+            this.Save_Project_Button.UseVisualStyleBackColor = true;
             // 
-            // Project_Name_Label
+            // Delete_Button
             // 
-            this.Project_Name_Label.AutoSize = true;
-            this.Project_Name_Label.Location = new System.Drawing.Point(52, 40);
-            this.Project_Name_Label.Name = "Project_Name_Label";
-            this.Project_Name_Label.Size = new System.Drawing.Size(74, 13);
-            this.Project_Name_Label.TabIndex = 0;
-            this.Project_Name_Label.Text = "Project Name:";
+            this.Delete_Button.Location = new System.Drawing.Point(284, 347);
+            this.Delete_Button.Name = "Delete_Button";
+            this.Delete_Button.Size = new System.Drawing.Size(80, 49);
+            this.Delete_Button.TabIndex = 18;
+            this.Delete_Button.Text = "Delete Selected Item";
+            this.Delete_Button.UseVisualStyleBackColor = true;
             // 
-            // Project_Name_Textbox
+            // Modify_Button
             // 
-            this.Project_Name_Textbox.Location = new System.Drawing.Point(132, 37);
-            this.Project_Name_Textbox.Name = "Project_Name_Textbox";
-            this.Project_Name_Textbox.Size = new System.Drawing.Size(127, 20);
-            this.Project_Name_Textbox.TabIndex = 1;
+            this.Modify_Button.Location = new System.Drawing.Point(284, 269);
+            this.Modify_Button.Name = "Modify_Button";
+            this.Modify_Button.Size = new System.Drawing.Size(80, 49);
+            this.Modify_Button.TabIndex = 17;
+            this.Modify_Button.Text = "Modify Selected Item";
+            this.Modify_Button.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // Add_Button
             // 
-            this.textBox1.Location = new System.Drawing.Point(482, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // Project_Manager_Label
-            // 
-            this.Project_Manager_Label.AutoSize = true;
-            this.Project_Manager_Label.Location = new System.Drawing.Point(388, 37);
-            this.Project_Manager_Label.Name = "Project_Manager_Label";
-            this.Project_Manager_Label.Size = new System.Drawing.Size(88, 13);
-            this.Project_Manager_Label.TabIndex = 2;
-            this.Project_Manager_Label.Text = "Project Manager:";
-            // 
-            // Team_Members_Label
-            // 
-            this.Team_Members_Label.AutoSize = true;
-            this.Team_Members_Label.Location = new System.Drawing.Point(42, 79);
-            this.Team_Members_Label.Name = "Team_Members_Label";
-            this.Team_Members_Label.Size = new System.Drawing.Size(83, 13);
-            this.Team_Members_Label.TabIndex = 4;
-            this.Team_Members_Label.Text = "Team Members:";
-            // 
-            // Team_Members_RichTextBox
-            // 
-            this.Team_Members_RichTextBox.Location = new System.Drawing.Point(133, 79);
-            this.Team_Members_RichTextBox.Name = "Team_Members_RichTextBox";
-            this.Team_Members_RichTextBox.Size = new System.Drawing.Size(127, 46);
-            this.Team_Members_RichTextBox.TabIndex = 5;
-            this.Team_Members_RichTextBox.Text = "";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "*One member per line";
-            // 
-            // Project_Description_Label
-            // 
-            this.Project_Description_Label.AutoSize = true;
-            this.Project_Description_Label.Location = new System.Drawing.Point(377, 79);
-            this.Project_Description_Label.Name = "Project_Description_Label";
-            this.Project_Description_Label.Size = new System.Drawing.Size(99, 13);
-            this.Project_Description_Label.TabIndex = 7;
-            this.Project_Description_Label.Text = "Project Description:";
-            // 
-            // Project_Description_RichTextBox
-            // 
-            this.Project_Description_RichTextBox.Location = new System.Drawing.Point(482, 79);
-            this.Project_Description_RichTextBox.Name = "Project_Description_RichTextBox";
-            this.Project_Description_RichTextBox.Size = new System.Drawing.Size(128, 59);
-            this.Project_Description_RichTextBox.TabIndex = 8;
-            this.Project_Description_RichTextBox.Text = "";
-            // 
-            // Risk_Input_GroupBox
-            // 
-            this.Risk_Input_GroupBox.Controls.Add(this.Risks_ListBox);
-            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Status_Label);
-            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Status_ComboBox);
-            this.Risk_Input_GroupBox.Controls.Add(this.richTextBox1);
-            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Description_Label);
-            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Name_Textbox);
-            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Name_Label);
-            this.Risk_Input_GroupBox.Location = new System.Drawing.Point(31, 166);
-            this.Risk_Input_GroupBox.Name = "Risk_Input_GroupBox";
-            this.Risk_Input_GroupBox.Size = new System.Drawing.Size(226, 253);
-            this.Risk_Input_GroupBox.TabIndex = 9;
-            this.Risk_Input_GroupBox.TabStop = false;
-            this.Risk_Input_GroupBox.Text = "Risks Input";
-            // 
-            // Risk_Name_Label
-            // 
-            this.Risk_Name_Label.AutoSize = true;
-            this.Risk_Name_Label.Location = new System.Drawing.Point(42, 26);
-            this.Risk_Name_Label.Name = "Risk_Name_Label";
-            this.Risk_Name_Label.Size = new System.Drawing.Size(38, 13);
-            this.Risk_Name_Label.TabIndex = 0;
-            this.Risk_Name_Label.Text = "Name:";
-            // 
-            // Risk_Name_Textbox
-            // 
-            this.Risk_Name_Textbox.Location = new System.Drawing.Point(88, 23);
-            this.Risk_Name_Textbox.Name = "Risk_Name_Textbox";
-            this.Risk_Name_Textbox.Size = new System.Drawing.Size(127, 20);
-            this.Risk_Name_Textbox.TabIndex = 1;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(88, 62);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(127, 46);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
-            // 
-            // Risk_Description_Label
-            // 
-            this.Risk_Description_Label.AutoSize = true;
-            this.Risk_Description_Label.Location = new System.Drawing.Point(19, 65);
-            this.Risk_Description_Label.Name = "Risk_Description_Label";
-            this.Risk_Description_Label.Size = new System.Drawing.Size(63, 13);
-            this.Risk_Description_Label.TabIndex = 10;
-            this.Risk_Description_Label.Text = "Description:";
-            // 
-            // Risk_Status_ComboBox
-            // 
-            this.Risk_Status_ComboBox.FormattingEnabled = true;
-            this.Risk_Status_ComboBox.Items.AddRange(new object[] {
-            "Identified",
-            "Assessed",
-            "Planned",
-            "In-Process",
-            "Closed",
-            "Not Occurred",
-            "Rejected"});
-            this.Risk_Status_ComboBox.Location = new System.Drawing.Point(88, 125);
-            this.Risk_Status_ComboBox.Name = "Risk_Status_ComboBox";
-            this.Risk_Status_ComboBox.Size = new System.Drawing.Size(127, 21);
-            this.Risk_Status_ComboBox.TabIndex = 12;
-            // 
-            // Risk_Status_Label
-            // 
-            this.Risk_Status_Label.AutoSize = true;
-            this.Risk_Status_Label.Location = new System.Drawing.Point(19, 128);
-            this.Risk_Status_Label.Name = "Risk_Status_Label";
-            this.Risk_Status_Label.Size = new System.Drawing.Size(64, 13);
-            this.Risk_Status_Label.TabIndex = 13;
-            this.Risk_Status_Label.Text = "Risk Status:";
-            // 
-            // Risks_ListBox
-            // 
-            this.Risks_ListBox.FormattingEnabled = true;
-            this.Risks_ListBox.Location = new System.Drawing.Point(22, 162);
-            this.Risks_ListBox.Name = "Risks_ListBox";
-            this.Risks_ListBox.Size = new System.Drawing.Size(193, 82);
-            this.Risks_ListBox.TabIndex = 14;
+            this.Add_Button.Location = new System.Drawing.Point(284, 189);
+            this.Add_Button.Name = "Add_Button";
+            this.Add_Button.Size = new System.Drawing.Size(80, 49);
+            this.Add_Button.TabIndex = 16;
+            this.Add_Button.Text = "Add to List";
+            this.Add_Button.UseVisualStyleBackColor = true;
+            this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
             // Requirements_Input_GroupBox
             // 
@@ -329,6 +198,28 @@
             this.Requirements_Input_GroupBox.TabIndex = 15;
             this.Requirements_Input_GroupBox.TabStop = false;
             this.Requirements_Input_GroupBox.Text = "Requirements Input";
+            // 
+            // NonFunctional_RadioButton
+            // 
+            this.NonFunctional_RadioButton.AutoSize = true;
+            this.NonFunctional_RadioButton.Location = new System.Drawing.Point(33, 138);
+            this.NonFunctional_RadioButton.Name = "NonFunctional_RadioButton";
+            this.NonFunctional_RadioButton.Size = new System.Drawing.Size(160, 17);
+            this.NonFunctional_RadioButton.TabIndex = 16;
+            this.NonFunctional_RadioButton.TabStop = true;
+            this.NonFunctional_RadioButton.Text = "Non-Functional Requirement";
+            this.NonFunctional_RadioButton.UseVisualStyleBackColor = true;
+            // 
+            // Functional_RadioButton
+            // 
+            this.Functional_RadioButton.AutoSize = true;
+            this.Functional_RadioButton.Location = new System.Drawing.Point(33, 114);
+            this.Functional_RadioButton.Name = "Functional_RadioButton";
+            this.Functional_RadioButton.Size = new System.Drawing.Size(137, 17);
+            this.Functional_RadioButton.TabIndex = 15;
+            this.Functional_RadioButton.TabStop = true;
+            this.Functional_RadioButton.Text = "Functional Requirement";
+            this.Functional_RadioButton.UseVisualStyleBackColor = true;
             // 
             // Requirements_ListBox
             // 
@@ -371,63 +262,173 @@
             this.Requirements_Name_Label.TabIndex = 0;
             this.Requirements_Name_Label.Text = "Name:";
             // 
-            // Functional_RadioButton
+            // Risk_Input_GroupBox
             // 
-            this.Functional_RadioButton.AutoSize = true;
-            this.Functional_RadioButton.Location = new System.Drawing.Point(33, 114);
-            this.Functional_RadioButton.Name = "Functional_RadioButton";
-            this.Functional_RadioButton.Size = new System.Drawing.Size(137, 17);
-            this.Functional_RadioButton.TabIndex = 15;
-            this.Functional_RadioButton.TabStop = true;
-            this.Functional_RadioButton.Text = "Functional Requirement";
-            this.Functional_RadioButton.UseVisualStyleBackColor = true;
+            this.Risk_Input_GroupBox.Controls.Add(this.Risks_ListBox);
+            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Status_Label);
+            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Status_ComboBox);
+            this.Risk_Input_GroupBox.Controls.Add(this.richTextBox1);
+            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Description_Label);
+            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Name_Textbox);
+            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Name_Label);
+            this.Risk_Input_GroupBox.Location = new System.Drawing.Point(31, 166);
+            this.Risk_Input_GroupBox.Name = "Risk_Input_GroupBox";
+            this.Risk_Input_GroupBox.Size = new System.Drawing.Size(226, 253);
+            this.Risk_Input_GroupBox.TabIndex = 9;
+            this.Risk_Input_GroupBox.TabStop = false;
+            this.Risk_Input_GroupBox.Text = "Risks Input";
             // 
-            // NonFunctional_RadioButton
+            // Risks_ListBox
             // 
-            this.NonFunctional_RadioButton.AutoSize = true;
-            this.NonFunctional_RadioButton.Location = new System.Drawing.Point(33, 138);
-            this.NonFunctional_RadioButton.Name = "NonFunctional_RadioButton";
-            this.NonFunctional_RadioButton.Size = new System.Drawing.Size(160, 17);
-            this.NonFunctional_RadioButton.TabIndex = 16;
-            this.NonFunctional_RadioButton.TabStop = true;
-            this.NonFunctional_RadioButton.Text = "Non-Functional Requirement";
-            this.NonFunctional_RadioButton.UseVisualStyleBackColor = true;
+            this.Risks_ListBox.FormattingEnabled = true;
+            this.Risks_ListBox.Location = new System.Drawing.Point(22, 162);
+            this.Risks_ListBox.Name = "Risks_ListBox";
+            this.Risks_ListBox.Size = new System.Drawing.Size(193, 82);
+            this.Risks_ListBox.TabIndex = 14;
             // 
-            // Add_Button
+            // Risk_Status_Label
             // 
-            this.Add_Button.Location = new System.Drawing.Point(284, 189);
-            this.Add_Button.Name = "Add_Button";
-            this.Add_Button.Size = new System.Drawing.Size(80, 49);
-            this.Add_Button.TabIndex = 16;
-            this.Add_Button.Text = "Add to List";
-            this.Add_Button.UseVisualStyleBackColor = true;
+            this.Risk_Status_Label.AutoSize = true;
+            this.Risk_Status_Label.Location = new System.Drawing.Point(19, 128);
+            this.Risk_Status_Label.Name = "Risk_Status_Label";
+            this.Risk_Status_Label.Size = new System.Drawing.Size(64, 13);
+            this.Risk_Status_Label.TabIndex = 13;
+            this.Risk_Status_Label.Text = "Risk Status:";
             // 
-            // Modify_Button
+            // Risk_Status_ComboBox
             // 
-            this.Modify_Button.Location = new System.Drawing.Point(284, 269);
-            this.Modify_Button.Name = "Modify_Button";
-            this.Modify_Button.Size = new System.Drawing.Size(80, 49);
-            this.Modify_Button.TabIndex = 17;
-            this.Modify_Button.Text = "Modify Selected Item";
-            this.Modify_Button.UseVisualStyleBackColor = true;
+            this.Risk_Status_ComboBox.FormattingEnabled = true;
+            this.Risk_Status_ComboBox.Items.AddRange(new object[] {
+            "Identified",
+            "Assessed",
+            "Planned",
+            "In-Process",
+            "Closed",
+            "Not Occurred",
+            "Rejected"});
+            this.Risk_Status_ComboBox.Location = new System.Drawing.Point(88, 125);
+            this.Risk_Status_ComboBox.Name = "Risk_Status_ComboBox";
+            this.Risk_Status_ComboBox.Size = new System.Drawing.Size(127, 21);
+            this.Risk_Status_ComboBox.TabIndex = 12;
             // 
-            // Delete_Button
+            // richTextBox1
             // 
-            this.Delete_Button.Location = new System.Drawing.Point(284, 347);
-            this.Delete_Button.Name = "Delete_Button";
-            this.Delete_Button.Size = new System.Drawing.Size(80, 49);
-            this.Delete_Button.TabIndex = 18;
-            this.Delete_Button.Text = "Delete Selected Item";
-            this.Delete_Button.UseVisualStyleBackColor = true;
+            this.richTextBox1.Location = new System.Drawing.Point(88, 62);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(127, 46);
+            this.richTextBox1.TabIndex = 11;
+            this.richTextBox1.Text = "";
             // 
-            // Save_Project_Button
+            // Risk_Description_Label
             // 
-            this.Save_Project_Button.Location = new System.Drawing.Point(110, 456);
-            this.Save_Project_Button.Name = "Save_Project_Button";
-            this.Save_Project_Button.Size = new System.Drawing.Size(75, 23);
-            this.Save_Project_Button.TabIndex = 19;
-            this.Save_Project_Button.Text = "Add Project";
-            this.Save_Project_Button.UseVisualStyleBackColor = true;
+            this.Risk_Description_Label.AutoSize = true;
+            this.Risk_Description_Label.Location = new System.Drawing.Point(19, 65);
+            this.Risk_Description_Label.Name = "Risk_Description_Label";
+            this.Risk_Description_Label.Size = new System.Drawing.Size(63, 13);
+            this.Risk_Description_Label.TabIndex = 10;
+            this.Risk_Description_Label.Text = "Description:";
+            // 
+            // Risk_Name_Textbox
+            // 
+            this.Risk_Name_Textbox.Location = new System.Drawing.Point(88, 23);
+            this.Risk_Name_Textbox.Name = "Risk_Name_Textbox";
+            this.Risk_Name_Textbox.Size = new System.Drawing.Size(127, 20);
+            this.Risk_Name_Textbox.TabIndex = 1;
+            // 
+            // Risk_Name_Label
+            // 
+            this.Risk_Name_Label.AutoSize = true;
+            this.Risk_Name_Label.Location = new System.Drawing.Point(42, 26);
+            this.Risk_Name_Label.Name = "Risk_Name_Label";
+            this.Risk_Name_Label.Size = new System.Drawing.Size(38, 13);
+            this.Risk_Name_Label.TabIndex = 0;
+            this.Risk_Name_Label.Text = "Name:";
+            // 
+            // Project_Description_RichTextBox
+            // 
+            this.Project_Description_RichTextBox.Location = new System.Drawing.Point(132, 82);
+            this.Project_Description_RichTextBox.Name = "Project_Description_RichTextBox";
+            this.Project_Description_RichTextBox.Size = new System.Drawing.Size(128, 59);
+            this.Project_Description_RichTextBox.TabIndex = 8;
+            this.Project_Description_RichTextBox.Text = "";
+            // 
+            // Project_Description_Label
+            // 
+            this.Project_Description_Label.AutoSize = true;
+            this.Project_Description_Label.Location = new System.Drawing.Point(27, 82);
+            this.Project_Description_Label.Name = "Project_Description_Label";
+            this.Project_Description_Label.Size = new System.Drawing.Size(99, 13);
+            this.Project_Description_Label.TabIndex = 7;
+            this.Project_Description_Label.Text = "Project Description:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(366, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "*One member per line";
+            // 
+            // Team_Members_RichTextBox
+            // 
+            this.Team_Members_RichTextBox.Location = new System.Drawing.Point(482, 79);
+            this.Team_Members_RichTextBox.Name = "Team_Members_RichTextBox";
+            this.Team_Members_RichTextBox.Size = new System.Drawing.Size(127, 46);
+            this.Team_Members_RichTextBox.TabIndex = 5;
+            this.Team_Members_RichTextBox.Text = "";
+            // 
+            // Team_Members_Label
+            // 
+            this.Team_Members_Label.AutoSize = true;
+            this.Team_Members_Label.Location = new System.Drawing.Point(391, 79);
+            this.Team_Members_Label.Name = "Team_Members_Label";
+            this.Team_Members_Label.Size = new System.Drawing.Size(83, 13);
+            this.Team_Members_Label.TabIndex = 4;
+            this.Team_Members_Label.Text = "Team Members:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(482, 34);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(127, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // Project_Manager_Label
+            // 
+            this.Project_Manager_Label.AutoSize = true;
+            this.Project_Manager_Label.Location = new System.Drawing.Point(388, 37);
+            this.Project_Manager_Label.Name = "Project_Manager_Label";
+            this.Project_Manager_Label.Size = new System.Drawing.Size(88, 13);
+            this.Project_Manager_Label.TabIndex = 2;
+            this.Project_Manager_Label.Text = "Project Manager:";
+            // 
+            // Project_Name_Textbox
+            // 
+            this.Project_Name_Textbox.Location = new System.Drawing.Point(132, 37);
+            this.Project_Name_Textbox.Name = "Project_Name_Textbox";
+            this.Project_Name_Textbox.Size = new System.Drawing.Size(127, 20);
+            this.Project_Name_Textbox.TabIndex = 1;
+            // 
+            // Project_Name_Label
+            // 
+            this.Project_Name_Label.AutoSize = true;
+            this.Project_Name_Label.Location = new System.Drawing.Point(52, 40);
+            this.Project_Name_Label.Name = "Project_Name_Label";
+            this.Project_Name_Label.Size = new System.Drawing.Size(74, 13);
+            this.Project_Name_Label.TabIndex = 0;
+            this.Project_Name_Label.Text = "Project Name:";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(665, 519);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // Main_Form
             // 
@@ -441,10 +442,10 @@
             this.Home_Tab.ResumeLayout(false);
             this.Add_Project_Tab.ResumeLayout(false);
             this.Add_Project_Tab.PerformLayout();
-            this.Risk_Input_GroupBox.ResumeLayout(false);
-            this.Risk_Input_GroupBox.PerformLayout();
             this.Requirements_Input_GroupBox.ResumeLayout(false);
             this.Requirements_Input_GroupBox.PerformLayout();
+            this.Risk_Input_GroupBox.ResumeLayout(false);
+            this.Risk_Input_GroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
