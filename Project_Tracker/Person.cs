@@ -12,7 +12,7 @@ namespace Project_Tracker{
         }
 
 
-        override ToString(){
+        public override string ToString(){
             return (firstName + " " + lastName);
         }
 
