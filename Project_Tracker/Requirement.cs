@@ -47,5 +47,12 @@ namespace Project_Tracker
                 this.functional = value;
             }
         }
+
+        public Requirement(string name, string description, bool functional)
+        {
+            this.name = name;
+            this.description = description;
+            this.functional = functional;
+        }
     }
 }
