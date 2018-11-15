@@ -47,5 +47,12 @@ namespace Project_Tracker
                 this.riskStatus = value;
             }
         }
+
+        public Risk(string name, string description, string riskStatus)
+        {
+            this.name = name;
+            this.description = description;
+            this.riskStatus = riskStatus;
+        }
     }
 }
