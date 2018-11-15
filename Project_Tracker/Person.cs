@@ -11,11 +11,11 @@ namespace Project_Tracker{
             this.lastName = lastName;
         }
 
-        protected void setFirstName ( string firstName){
+        internal void setFirstName ( string firstName){
             this.firstName = firstName;
         }
 
-        protected void setLastName ( string lastName){
+        internal void setLastName ( string lastName){
             this.lastName = lastName;
         }
 

@@ -28,27 +28,27 @@ namespace Project_Tracker
             this.projReq = projReq;
         }
 
-        protected void setProjName ( string projName){
+        internal void setProjName ( string projName){
             this.projName = projName;
         }
 
-        protected void setProjManager ( Person projManager){
+        internal void setProjManager ( Person projManager){
             this.projManager = projManager;
         }
 
-        protected void setProjDescrip (string projDescrip){
+        internal void setProjDescrip (string projDescrip){
             this.projDescrip = projDescrip;
         }
 
-        protected void setProjMembers ( List<Person> projMembers){
+        internal void setProjMembers ( List<Person> projMembers){
             this.projMembers = projMembers;
         }
 
-        protected void setProjRisk (List<Risk> projRisk){
+        internal void setProjRisk (List<Risk> projRisk){
             this.projRisk = projRisk;
         }
 
-        protected void setProjReq (List<Requirement> projReq){
+        internal void setProjReq (List<Requirement> projReq){
             this.projReq = projReq;
         }
 
