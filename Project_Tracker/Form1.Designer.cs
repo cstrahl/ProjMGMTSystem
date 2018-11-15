@@ -64,11 +64,15 @@
             this.Project_Name_Textbox = new System.Windows.Forms.TextBox();
             this.Project_Name_Label = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Week = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.Home_Tab.SuspendLayout();
             this.Add_Project_Tab.SuspendLayout();
             this.Requirements_Input_GroupBox.SuspendLayout();
             this.Risk_Input_GroupBox.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Add_Project_Button
@@ -423,6 +427,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.dataGridView1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -430,6 +435,22 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Week});
+            this.dataGridView1.Location = new System.Drawing.Point(117, 105);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Week
+            // 
+            this.Week.HeaderText = "Week";
+            this.Week.Name = "Week";
             // 
             // Main_Form
             // 
@@ -447,6 +468,8 @@
             this.Requirements_Input_GroupBox.PerformLayout();
             this.Risk_Input_GroupBox.ResumeLayout(false);
             this.Risk_Input_GroupBox.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -489,6 +512,8 @@
         private System.Windows.Forms.Button Modify_Button;
         private System.Windows.Forms.Button Add_Button;
         private System.Windows.Forms.Button Save_Project_Button;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Week;
     }
 }
 
