@@ -154,6 +154,7 @@
             this.Save_Project_Button.TabIndex = 19;
             this.Save_Project_Button.Text = "Add Project";
             this.Save_Project_Button.UseVisualStyleBackColor = true;
+            this.Save_Project_Button.Click += new System.EventHandler(this.Save_Project_Button_Click);
             // 
             // Delete_Button
             // 
