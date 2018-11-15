@@ -69,11 +69,11 @@ namespace Project_Tracker
             return this.projMembers;
         }
 
-        public List<Person> getProjRisk(){
+        public List<Risk> getProjRisk(){
             return this.projRisk;
         }
 
-        public List<Person> getProjReq(){
+        public List<Requirement> getProjReq(){
             return this.projReq;
         }
 

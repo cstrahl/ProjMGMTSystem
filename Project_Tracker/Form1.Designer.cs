@@ -50,7 +50,7 @@
             this.Risks_ListBox = new System.Windows.Forms.ListBox();
             this.Risk_Status_Label = new System.Windows.Forms.Label();
             this.Risk_Status_ComboBox = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.Risk_Description_RichTextBox = new System.Windows.Forms.RichTextBox();
             this.Risk_Description_Label = new System.Windows.Forms.Label();
             this.Risk_Name_Textbox = new System.Windows.Forms.TextBox();
             this.Risk_Name_Label = new System.Windows.Forms.Label();
@@ -267,7 +267,7 @@
             this.Risk_Input_GroupBox.Controls.Add(this.Risks_ListBox);
             this.Risk_Input_GroupBox.Controls.Add(this.Risk_Status_Label);
             this.Risk_Input_GroupBox.Controls.Add(this.Risk_Status_ComboBox);
-            this.Risk_Input_GroupBox.Controls.Add(this.richTextBox1);
+            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Description_RichTextBox);
             this.Risk_Input_GroupBox.Controls.Add(this.Risk_Description_Label);
             this.Risk_Input_GroupBox.Controls.Add(this.Risk_Name_Textbox);
             this.Risk_Input_GroupBox.Controls.Add(this.Risk_Name_Label);
@@ -311,13 +311,13 @@
             this.Risk_Status_ComboBox.Size = new System.Drawing.Size(127, 21);
             this.Risk_Status_ComboBox.TabIndex = 12;
             // 
-            // richTextBox1
+            // Risk_Description_RichTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(88, 62);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(127, 46);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
+            this.Risk_Description_RichTextBox.Location = new System.Drawing.Point(88, 62);
+            this.Risk_Description_RichTextBox.Name = "Risk_Description_RichTextBox";
+            this.Risk_Description_RichTextBox.Size = new System.Drawing.Size(127, 46);
+            this.Risk_Description_RichTextBox.TabIndex = 11;
+            this.Risk_Description_RichTextBox.Text = "";
             // 
             // Risk_Description_Label
             // 
@@ -471,7 +471,7 @@
         private System.Windows.Forms.GroupBox Risk_Input_GroupBox;
         private System.Windows.Forms.Label Risk_Status_Label;
         private System.Windows.Forms.ComboBox Risk_Status_ComboBox;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox Risk_Description_RichTextBox;
         private System.Windows.Forms.Label Risk_Description_Label;
         private System.Windows.Forms.TextBox Risk_Name_Textbox;
         private System.Windows.Forms.Label Risk_Name_Label;

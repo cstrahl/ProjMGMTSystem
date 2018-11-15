@@ -18,7 +18,7 @@ namespace Project_Tracker
         {
             InitializeComponent();
 
-            ProjectData x = new ProjectData();
+            ProjectData TempProj = new ProjectData();
             
 
             Risk y = new Risk();
