@@ -9,12 +9,12 @@ namespace Project_Tracker
 
     class ProjectData
     {
-        private string projName { set; }
-        private Person projManager {set;}
-        private string projDescrip {set;}
-        private List<Person> projMembers {set;}
-        private List<Risk> projRisk {set;}
-        private List<Requirement> projReq {set;}
+        private string projName;
+        private Person projManager;
+        private string projDescrip;
+        private List<Person> projMembers;
+        private List<Risk> projRisk;
+        private List<Requirement> projReq;
 
         public ProjectData() { }
 
@@ -25,6 +25,30 @@ namespace Project_Tracker
             this.projDescrip = projDescrip;
             this.projMembers = projMembers;
             this.projRisk = projRisk;
+            this.projReq = projReq;
+        }
+
+        protected void setProjName ( string projName){
+            this.projName = projName;
+        }
+
+        protected void setProjManager ( Person projManager){
+            this.projManager = projManager;
+        }
+
+        protected void setProjDescrip (string projDescrip){
+            this.projDescrip = projDescrip;
+        }
+
+        protected void setProjMembers ( List<Person> projMembers){
+            this.projMembers = projMembers;
+        }
+
+        protected void setProjRisk (List<Risk> projRisk){
+            this.projRisk = projRisk;
+        }
+
+        protected void setProjReq (List<Requirement> projReq){
             this.projReq = projReq;
         }
 
