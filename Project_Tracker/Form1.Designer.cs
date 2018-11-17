@@ -177,6 +177,7 @@
             this.Modify_Button.TabIndex = 17;
             this.Modify_Button.Text = "Modify Selected Item";
             this.Modify_Button.UseVisualStyleBackColor = true;
+            this.Modify_Button.Click += new System.EventHandler(this.Modify_Button_Click);
             // 
             // Add_Button
             // 
@@ -445,7 +446,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Week
             // 

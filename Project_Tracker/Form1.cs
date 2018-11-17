@@ -65,9 +65,10 @@ namespace Project_Tracker
             string ProjName = Project_Name_Textbox.Text;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Modify_Button_Click(object sender, EventArgs e)
         {
-
+            string SelectedRisk = Risks_ListBox.SelectedItem.ToString();
+            //TempProj.getProjRisk   search through the list and find the risk and display it out
         }
     }
 }

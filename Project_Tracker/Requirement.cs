@@ -54,5 +54,17 @@ namespace Project_Tracker
             this.description = description;
             this.functional = functional;
         }
+
+        public override string ToString()
+        {
+            if(functional == true)
+            {
+                return name + ":Functional" + " - " + description;
+            }
+            else if (functional == false)
+            {
+                return name + ":Non-Functional" + " - " + description;
+            }
+        }
     }
 }

@@ -54,5 +54,10 @@ namespace Project_Tracker
             this.description = description;
             this.riskStatus = riskStatus;
         }
+
+        public override string ToString()
+        {
+            return name + ":" + riskStatus + " - " + description;
+        }
     }
 }
