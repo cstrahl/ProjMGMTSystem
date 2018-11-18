@@ -61,7 +61,7 @@ namespace Project_Tracker
             {
                 return name + ":Functional" + " - " + description;
             }
-            else if (functional == false)
+            else
             {
                 return name + ":Non-Functional" + " - " + description;
             }

@@ -14,6 +14,8 @@ namespace Project_Tracker
     {
         private List<ProjectData> ProjectList = new List<ProjectData>();
         ProjectData TempProj = new ProjectData();
+        List<Risk> RiskList = new List<Risk>();
+        List<Requirement> RequirementList = new List<Requirement>();
 
         public Main_Form()
         {
@@ -25,21 +27,20 @@ namespace Project_Tracker
 
         private void Add_Button_Click(object sender, EventArgs e)
         {
-            //For addings risks
-            List<Risk> RiskList = new List<Risk>();
+            //For addings risks         
             
             string Rname = Risk_Name_Textbox.Text;
             string Rdescription = Risk_Description_RichTextBox.Text;
-            string Rstatus = Risk_Status_ComboBox.SelectedText;
+            string Rstatus = Risk_Status_ComboBox.SelectedItem.ToString();
             Risk NewRisk = new Risk(Rname, Rdescription, Rstatus);
-            RiskList.Add(NewRisk);
+            RiskList.Add(NewRisk);           
             Risks_ListBox.Items.Add(Risk_Name_Textbox.Text);
 
             TempProj.setProjRisk(RiskList);
 
 
             //For adding requirements
-            List<Requirement> RequirementList = new List<Requirement>();
+            
             string ReqName = Requirements_Name_TextBox.Text;
             string ReqDescription = Requirements_Description_RichTextBox.Text;
             bool ReqType = false;
@@ -67,8 +68,10 @@ namespace Project_Tracker
 
         private void Modify_Button_Click(object sender, EventArgs e)
         {
-            string SelectedRisk = Risks_ListBox.SelectedItem.ToString();
-            //TempProj.getProjRisk   search through the list and find the risk and display it out
+            int x = Risks_ListBox.SelectedIndex;
+            Risk_Name_Textbox.Text = RiskList[x].Name;
+            Risk_Description_RichTextBox.Text = RiskList[x].Description;
+            Risk_Status_ComboBox.SelectedIndex = Risk_Status_ComboBox.FindStringExact(RiskList[x].RiskStatus);            
         }
     }
 }
