@@ -27,37 +27,51 @@ namespace Project_Tracker
 
         private void Add_Button_Click(object sender, EventArgs e)
         {
-            //For addings risks         
+            //For addings risks  
             
-            string Rname = Risk_Name_Textbox.Text;
-            string Rdescription = Risk_Description_RichTextBox.Text;
-            string Rstatus = Risk_Status_ComboBox.SelectedItem.ToString();
-            Risk NewRisk = new Risk(Rname, Rdescription, Rstatus);
-            RiskList.Add(NewRisk);           
-            Risks_ListBox.Items.Add(Risk_Name_Textbox.Text);
+            //Make sure every entry is filled before adding       
+            if (Risk_Name_Textbox.Text != "" && Risk_Description_RichTextBox.Text != "" && !string.IsNullOrEmpty(Risk_Status_ComboBox.Text))
+            {                
+                string Rname = Risk_Name_Textbox.Text;
+                string Rdescription = Risk_Description_RichTextBox.Text;
+                string Rstatus = Risk_Status_ComboBox.SelectedItem.ToString();
+                Risk NewRisk = new Risk(Rname, Rdescription, Rstatus);
+                RiskList.Add(NewRisk);
+                Risks_ListBox.Items.Add(Risk_Name_Textbox.Text);
+                TempProj.setProjRisk(RiskList);  //update the list
+                Risk_Name_Textbox.Text = "";
+                Risk_Description_RichTextBox.Text = "";
+                Risk_Status_ComboBox.Text = "";
+            }
 
-            TempProj.setProjRisk(RiskList);
+
 
 
             //For adding requirements
+
+            //Make sure every entry is filled before adding       
+            if (Requirements_Name_TextBox.Text != "" && Requirements_Description_RichTextBox.Text != "" && Functional_RadioButton.Checked || NonFunctional_RadioButton.Checked) {
+                string ReqName = Requirements_Name_TextBox.Text;
+                string ReqDescription = Requirements_Description_RichTextBox.Text;
+                bool ReqType = false;
+                if (Functional_RadioButton.Checked == true) {
+                    ReqType = true;
+                }
+                else if (NonFunctional_RadioButton.Checked == true)
+                {
+                    ReqType = false;
+                }
             
-            string ReqName = Requirements_Name_TextBox.Text;
-            string ReqDescription = Requirements_Description_RichTextBox.Text;
-            bool ReqType = false;
-            if (Functional_RadioButton.Checked == true) {
-                ReqType = true;
+                Requirement NewRequirement = new Requirement(ReqName, ReqDescription, ReqType);
+                RequirementList.Add(NewRequirement);
+                Requirements_ListBox.Items.Add(Requirements_Name_TextBox.Text);
+                TempProj.setProjReq(RequirementList);
+                Requirements_Name_TextBox.Text = "";
+                Requirements_Description_RichTextBox.Text = "";
+                Functional_RadioButton.Checked = false;
+                NonFunctional_RadioButton.Checked = false;
             }
-            else if (NonFunctional_RadioButton.Checked == true)
-            {
-                ReqType = false;
-            }
-
-            Requirement NewRequirement = new Requirement(ReqName ,ReqDescription, ReqType);
-
-            RequirementList.Add(NewRequirement);
-            Requirements_ListBox.Items.Add(Requirements_Name_TextBox.Text);
-
-            TempProj.setProjReq(RequirementList);
+               
 
         }
 
@@ -68,10 +82,47 @@ namespace Project_Tracker
 
         private void Modify_Button_Click(object sender, EventArgs e)
         {
-            int x = Risks_ListBox.SelectedIndex;
-            Risk_Name_Textbox.Text = RiskList[x].Name;
-            Risk_Description_RichTextBox.Text = RiskList[x].Description;
-            Risk_Status_ComboBox.SelectedIndex = Risk_Status_ComboBox.FindStringExact(RiskList[x].RiskStatus);            
+            //Determine which listbox has a selected item
+
+
+            //For modifying risks
+
+            if (Risks_ListBox.SelectedIndex > -1) {
+                int x = Risks_ListBox.SelectedIndex;
+                Risk_Name_Textbox.Text = RiskList[x].Name;
+                Risk_Description_RichTextBox.Text = RiskList[x].Description;
+                Risk_Status_ComboBox.SelectedIndex = Risk_Status_ComboBox.FindStringExact(RiskList[x].RiskStatus);
+            }
+
+            //For modifying requirements
+
+            if (Requirements_ListBox.SelectedIndex > -1) {
+                int y = Requirements_ListBox.SelectedIndex;
+                Requirements_Name_TextBox.Text = RequirementList[y].Name;
+                Requirements_Description_RichTextBox.Text = RequirementList[y].Description;
+                bool ReqStatus = RequirementList[y].Functional;
+                if (ReqStatus == true)
+                {
+                    Functional_RadioButton.Checked = true;
+                }
+                else {
+                    NonFunctional_RadioButton.Checked = true;
+                }
+            }
+            
+
+            //Need to prevent user from trying to modify risk and requirement at the same time, prevent selection change while modifying
+            //Need to add functionality to update the item when done modifying, can change button text to say save
+        }
+
+        private void Requirements_ListBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            Risks_ListBox.ClearSelected();
+        }
+
+        private void Risks_ListBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            Requirements_ListBox.ClearSelected();
         }
     }
 }

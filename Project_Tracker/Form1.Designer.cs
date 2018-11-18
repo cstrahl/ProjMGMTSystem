@@ -234,6 +234,7 @@
             this.Requirements_ListBox.Name = "Requirements_ListBox";
             this.Requirements_ListBox.Size = new System.Drawing.Size(193, 82);
             this.Requirements_ListBox.TabIndex = 14;
+            this.Requirements_ListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Requirements_ListBox_MouseDown);
             // 
             // Requirements_Description_RichTextBox
             // 
@@ -291,6 +292,7 @@
             this.Risks_ListBox.Name = "Risks_ListBox";
             this.Risks_ListBox.Size = new System.Drawing.Size(193, 82);
             this.Risks_ListBox.TabIndex = 14;
+            this.Risks_ListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Risks_ListBox_MouseDown);
             // 
             // Risk_Status_Label
             // 
