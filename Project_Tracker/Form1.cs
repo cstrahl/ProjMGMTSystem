@@ -82,12 +82,24 @@ namespace Project_Tracker
 
         private void Modify_Button_Click(object sender, EventArgs e)
         {
+            //need to add check if anything is selected or anything is in the listbox
+
+
             //Determine which listbox has a selected item
 
+            if (Modify_Button.Text == "Modify Selected Item")
+            {
+                Modify_Button.Text = "Update Selected Item";
+            }
+            else if (Modify_Button.Text == "Update Selected Item")
+            {
+                Modify_Button.Text = "Modify Selected Item";
+            }
 
             //For modifying risks
 
             if (Risks_ListBox.SelectedIndex > -1) {
+                //Load into fields the selected risk
                 int x = Risks_ListBox.SelectedIndex;
                 Risk_Name_Textbox.Text = RiskList[x].Name;
                 Risk_Description_RichTextBox.Text = RiskList[x].Description;
@@ -97,6 +109,7 @@ namespace Project_Tracker
             //For modifying requirements
 
             if (Requirements_ListBox.SelectedIndex > -1) {
+                //Load into fields the selected requirements
                 int y = Requirements_ListBox.SelectedIndex;
                 Requirements_Name_TextBox.Text = RequirementList[y].Name;
                 Requirements_Description_RichTextBox.Text = RequirementList[y].Description;
