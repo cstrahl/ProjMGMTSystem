@@ -31,10 +31,7 @@ namespace Project_Tracker
             
             //Make sure every entry is filled before adding       
             if (Risk_Name_Textbox.Text != "" && Risk_Description_RichTextBox.Text != "" && !string.IsNullOrEmpty(Risk_Status_ComboBox.Text))
-            {                
-                //string Rname = Risk_Name_Textbox.Text;
-                //string Rdescription = Risk_Description_RichTextBox.Text;
-                //string Rstatus = Risk_Status_ComboBox.SelectedItem.ToString();
+            {
                 Risk NewRisk = new Risk(Risk_Name_Textbox.Text, Risk_Description_RichTextBox.Text, Risk_Status_ComboBox.SelectedItem.ToString());
                 RiskList.Add(NewRisk);
                 Risks_ListBox.Items.Add(Risk_Name_Textbox.Text);
@@ -49,8 +46,6 @@ namespace Project_Tracker
 
             //Make sure every entry is filled before adding       
             if (Requirements_Name_TextBox.Text != "" && Requirements_Description_RichTextBox.Text != "" && Functional_RadioButton.Checked || NonFunctional_RadioButton.Checked) {
-                //string ReqName = Requirements_Name_TextBox.Text;
-                //string ReqDescription = Requirements_Description_RichTextBox.Text;
                 bool ReqType = false;
                 if (Functional_RadioButton.Checked == true) {
                     ReqType = true;
@@ -78,16 +73,13 @@ namespace Project_Tracker
 
         private void Modify_Button_Click(object sender, EventArgs e)
         {
-            //need to add check if anything is selected or anything is in the listbox
-
             //if both listboxes are empty or neither of them have an item selected then dont run the code below
             if (Risks_ListBox.Items.Count == 0 && Requirements_ListBox.Items.Count == 0 || Risks_ListBox.SelectedIndex == -1 && Requirements_ListBox.SelectedIndex == -1) {
                 return;
             }
 
-                //Determine which listbox has a selected item
 
-                if (Modify_Button.Text == "Modify Selected Item")
+            if (Modify_Button.Text == "Modify Selected Item")
             {
                 Modify_Button.Text = "Update Selected Item";
 
@@ -167,15 +159,8 @@ namespace Project_Tracker
             }
 
 
-
-
-            //Need to prevent user from trying to modify risk and requirement at the same time, prevent selection change while modifying
-            //Need to add functionality to update the item when done modifying, can change button text to say save
         }
 
-        //public Risk RecordRisk(string RiskName, string RiskDescription, string RiskStatus) {
-
-        //}
 
         private void Requirements_ListBox_MouseDown(object sender, MouseEventArgs e)
         {
