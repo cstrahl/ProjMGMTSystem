@@ -168,6 +168,7 @@
             this.Delete_Button.TabIndex = 18;
             this.Delete_Button.Text = "Delete Selected Item";
             this.Delete_Button.UseVisualStyleBackColor = true;
+            this.Delete_Button.Click += new System.EventHandler(this.Delete_Button_Click);
             // 
             // Modify_Button
             // 
