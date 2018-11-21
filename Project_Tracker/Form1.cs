@@ -17,11 +17,10 @@ namespace Project_Tracker
         List<Risk> RiskList = new List<Risk>();
         List<Requirement> RequirementList = new List<Requirement>();
 
+
         public Main_Form()
         {
-            InitializeComponent();                       
-
-            
+            InitializeComponent();
             
         }
 
@@ -86,7 +85,15 @@ namespace Project_Tracker
             TempProj.setProjDescrip(Project_Description_RichTextBox.Text);
 
             //add members, loop through list
-
+            string[] Members = Team_Members_RichTextBox.Text.Split('\n'); //Put each name typed in list
+            List<Person> Tmembers = new List<Person>();  //Create a team members list to store the people
+            foreach (string Persn in Members) {
+                //Split name into first and last using space
+                string[] EachName = Persn .Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+                //Store each name as a person
+                Person PerTemp = new Person(EachName[0], EachName[1]);
+                Tmembers.Add(PerTemp);
+            }
         }
 
         private void Modify_Button_Click(object sender, EventArgs e)
@@ -196,6 +203,8 @@ namespace Project_Tracker
         private void Delete_Button_Click(object sender, EventArgs e)
         {
             //used for removing a risk or requirement completely
-        }
+            
+        }        
+        
     }
 }

@@ -34,6 +34,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Home_Tab = new System.Windows.Forms.TabPage();
             this.Add_Project_Tab = new System.Windows.Forms.TabPage();
+            this.Error_Label = new System.Windows.Forms.Label();
             this.Save_Project_Button = new System.Windows.Forms.Button();
             this.Delete_Button = new System.Windows.Forms.Button();
             this.Modify_Button = new System.Windows.Forms.Button();
@@ -66,6 +67,11 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Week = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProjectName_PictureBox = new System.Windows.Forms.PictureBox();
+            this.ProjectManager_PictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Description_Panel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.Home_Tab.SuspendLayout();
             this.Add_Project_Tab.SuspendLayout();
@@ -73,6 +79,9 @@
             this.Risk_Input_GroupBox.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectName_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectManager_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Add_Project_Button
@@ -127,6 +136,14 @@
             // 
             // Add_Project_Tab
             // 
+            this.Add_Project_Tab.Controls.Add(this.Description_Panel);
+            this.Add_Project_Tab.Controls.Add(this.pictureBox1);
+            this.Add_Project_Tab.Controls.Add(this.panel1);
+            this.Add_Project_Tab.Controls.Add(this.Project_Manager_Textbox);
+            this.Add_Project_Tab.Controls.Add(this.ProjectManager_PictureBox);
+            this.Add_Project_Tab.Controls.Add(this.Project_Name_Textbox);
+            this.Add_Project_Tab.Controls.Add(this.ProjectName_PictureBox);
+            this.Add_Project_Tab.Controls.Add(this.Error_Label);
             this.Add_Project_Tab.Controls.Add(this.Save_Project_Button);
             this.Add_Project_Tab.Controls.Add(this.Delete_Button);
             this.Add_Project_Tab.Controls.Add(this.Modify_Button);
@@ -138,9 +155,7 @@
             this.Add_Project_Tab.Controls.Add(this.label1);
             this.Add_Project_Tab.Controls.Add(this.Team_Members_RichTextBox);
             this.Add_Project_Tab.Controls.Add(this.Team_Members_Label);
-            this.Add_Project_Tab.Controls.Add(this.Project_Manager_Textbox);
             this.Add_Project_Tab.Controls.Add(this.Project_Manager_Label);
-            this.Add_Project_Tab.Controls.Add(this.Project_Name_Textbox);
             this.Add_Project_Tab.Controls.Add(this.Project_Name_Label);
             this.Add_Project_Tab.Location = new System.Drawing.Point(4, 22);
             this.Add_Project_Tab.Name = "Add_Project_Tab";
@@ -149,6 +164,15 @@
             this.Add_Project_Tab.TabIndex = 1;
             this.Add_Project_Tab.Text = "Add Project";
             this.Add_Project_Tab.UseVisualStyleBackColor = true;
+            // 
+            // Error_Label
+            // 
+            this.Error_Label.AutoSize = true;
+            this.Error_Label.Location = new System.Drawing.Point(116, 493);
+            this.Error_Label.Name = "Error_Label";
+            this.Error_Label.Size = new System.Drawing.Size(58, 13);
+            this.Error_Label.TabIndex = 20;
+            this.Error_Label.Text = "Error Label";
             // 
             // Save_Project_Button
             // 
@@ -355,7 +379,8 @@
             // 
             // Project_Description_RichTextBox
             // 
-            this.Project_Description_RichTextBox.Location = new System.Drawing.Point(132, 82);
+            this.Project_Description_RichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Project_Description_RichTextBox.Location = new System.Drawing.Point(282, 6);
             this.Project_Description_RichTextBox.Name = "Project_Description_RichTextBox";
             this.Project_Description_RichTextBox.Size = new System.Drawing.Size(128, 59);
             this.Project_Description_RichTextBox.TabIndex = 8;
@@ -455,6 +480,49 @@
             this.Week.HeaderText = "Week";
             this.Week.Name = "Week";
             // 
+            // ProjectName_PictureBox
+            // 
+            this.ProjectName_PictureBox.BackColor = System.Drawing.Color.Red;
+            this.ProjectName_PictureBox.Location = new System.Drawing.Point(130, 35);
+            this.ProjectName_PictureBox.Name = "ProjectName_PictureBox";
+            this.ProjectName_PictureBox.Size = new System.Drawing.Size(131, 24);
+            this.ProjectName_PictureBox.TabIndex = 21;
+            this.ProjectName_PictureBox.TabStop = false;
+            // 
+            // ProjectManager_PictureBox
+            // 
+            this.ProjectManager_PictureBox.BackColor = System.Drawing.Color.Red;
+            this.ProjectManager_PictureBox.Location = new System.Drawing.Point(480, 32);
+            this.ProjectManager_PictureBox.Name = "ProjectManager_PictureBox";
+            this.ProjectManager_PictureBox.Size = new System.Drawing.Size(131, 24);
+            this.ProjectManager_PictureBox.TabIndex = 22;
+            this.ProjectManager_PictureBox.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Red;
+            this.pictureBox1.Location = new System.Drawing.Point(131, 130);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(131, 24);
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Description_Panel
+            // 
+            this.Description_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Description_Panel.Location = new System.Drawing.Point(132, 82);
+            this.Description_Panel.Name = "Description_Panel";
+            this.Description_Panel.Size = new System.Drawing.Size(128, 59);
+            this.Description_Panel.TabIndex = 24;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(429, 95);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(128, 59);
+            this.panel1.TabIndex = 25;
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -473,6 +541,9 @@
             this.Risk_Input_GroupBox.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectName_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectManager_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -517,6 +588,12 @@
         private System.Windows.Forms.Button Save_Project_Button;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Week;
+        private System.Windows.Forms.Label Error_Label;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ProjectManager_PictureBox;
+        private System.Windows.Forms.PictureBox ProjectName_PictureBox;
+        private System.Windows.Forms.Panel Description_Panel;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
