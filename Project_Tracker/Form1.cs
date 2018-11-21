@@ -68,7 +68,25 @@ namespace Project_Tracker
 
         private void Save_Project_Button_Click(object sender, EventArgs e)
         {
-            string ProjName = Project_Name_Textbox.Text;
+            TempProj.setProjName(Project_Name_Textbox.Text);
+            string MangrName = Project_Manager_Textbox.Text;
+            try
+            {
+                //Assuming first and last name of manager are typed
+                string[] ManagerName = MangrName.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+                Person Manager = new Person(ManagerName[0], ManagerName[1]);
+                TempProj.setProjManager(Manager);
+            }
+            catch {
+                //If Project Manager first name given and last name was not typed
+                Person Manager2 = new Person(Project_Manager_Textbox.Text);
+                TempProj.setProjManager(Manager2);
+            }
+            
+            TempProj.setProjDescrip(Project_Description_RichTextBox.Text);
+
+            //add members, loop through list
+
         }
 
         private void Modify_Button_Click(object sender, EventArgs e)
@@ -82,7 +100,8 @@ namespace Project_Tracker
             if (Modify_Button.Text == "Modify Selected Item")
             {
                 Modify_Button.Text = "Update Selected Item";
-
+                Add_Button.Enabled = false;
+                Delete_Button.Enabled = false;
 
                 //For modifying risks
                 if (Risks_ListBox.SelectedIndex > -1)
@@ -119,6 +138,8 @@ namespace Project_Tracker
             else if (Modify_Button.Text == "Update Selected Item")
             {
                 Modify_Button.Text = "Modify Selected Item";
+                Add_Button.Enabled = true;
+                Delete_Button.Enabled = true;
 
                 //Rewrites the risk
                 if (Risks_ListBox.SelectedIndex > -1) {

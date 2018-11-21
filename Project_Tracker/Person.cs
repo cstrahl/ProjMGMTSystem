@@ -11,6 +11,10 @@ namespace Project_Tracker{
             this.lastName = lastName;
         }
 
+        public Person(string firstName) {
+            this.firstName = firstName;
+        }
+
         internal void setFirstName ( string firstName){
             this.firstName = firstName;
         }

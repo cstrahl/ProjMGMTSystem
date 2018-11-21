@@ -28,11 +28,11 @@ namespace Project_Tracker
             this.projReq = projReq;
         }
 
-        internal void setProjName ( string projName){
+        internal void setProjName (string projName){
             this.projName = projName;
         }
 
-        internal void setProjManager ( Person projManager){
+        internal void setProjManager (Person projManager){
             this.projManager = projManager;
         }
 
@@ -40,7 +40,7 @@ namespace Project_Tracker
             this.projDescrip = projDescrip;
         }
 
-        internal void setProjMembers ( List<Person> projMembers){
+        internal void setProjMembers (List<Person> projMembers){
             this.projMembers = projMembers;
         }
 

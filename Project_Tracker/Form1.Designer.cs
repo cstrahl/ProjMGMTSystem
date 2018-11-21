@@ -59,7 +59,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Team_Members_RichTextBox = new System.Windows.Forms.RichTextBox();
             this.Team_Members_Label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Project_Manager_Textbox = new System.Windows.Forms.TextBox();
             this.Project_Manager_Label = new System.Windows.Forms.Label();
             this.Project_Name_Textbox = new System.Windows.Forms.TextBox();
             this.Project_Name_Label = new System.Windows.Forms.Label();
@@ -138,7 +138,7 @@
             this.Add_Project_Tab.Controls.Add(this.label1);
             this.Add_Project_Tab.Controls.Add(this.Team_Members_RichTextBox);
             this.Add_Project_Tab.Controls.Add(this.Team_Members_Label);
-            this.Add_Project_Tab.Controls.Add(this.textBox1);
+            this.Add_Project_Tab.Controls.Add(this.Project_Manager_Textbox);
             this.Add_Project_Tab.Controls.Add(this.Project_Manager_Label);
             this.Add_Project_Tab.Controls.Add(this.Project_Name_Textbox);
             this.Add_Project_Tab.Controls.Add(this.Project_Name_Label);
@@ -162,9 +162,9 @@
             // 
             // Delete_Button
             // 
-            this.Delete_Button.Location = new System.Drawing.Point(284, 347);
+            this.Delete_Button.Location = new System.Drawing.Point(282, 342);
             this.Delete_Button.Name = "Delete_Button";
-            this.Delete_Button.Size = new System.Drawing.Size(80, 49);
+            this.Delete_Button.Size = new System.Drawing.Size(80, 38);
             this.Delete_Button.TabIndex = 18;
             this.Delete_Button.Text = "Delete Selected Item";
             this.Delete_Button.UseVisualStyleBackColor = true;
@@ -172,9 +172,9 @@
             // 
             // Modify_Button
             // 
-            this.Modify_Button.Location = new System.Drawing.Point(284, 269);
+            this.Modify_Button.Location = new System.Drawing.Point(282, 269);
             this.Modify_Button.Name = "Modify_Button";
-            this.Modify_Button.Size = new System.Drawing.Size(80, 49);
+            this.Modify_Button.Size = new System.Drawing.Size(80, 38);
             this.Modify_Button.TabIndex = 17;
             this.Modify_Button.Text = "Modify Selected Item";
             this.Modify_Button.UseVisualStyleBackColor = true;
@@ -182,9 +182,9 @@
             // 
             // Add_Button
             // 
-            this.Add_Button.Location = new System.Drawing.Point(284, 189);
+            this.Add_Button.Location = new System.Drawing.Point(282, 200);
             this.Add_Button.Name = "Add_Button";
-            this.Add_Button.Size = new System.Drawing.Size(80, 49);
+            this.Add_Button.Size = new System.Drawing.Size(80, 38);
             this.Add_Button.TabIndex = 16;
             this.Add_Button.Text = "Add to List";
             this.Add_Button.UseVisualStyleBackColor = true;
@@ -397,12 +397,12 @@
             this.Team_Members_Label.TabIndex = 4;
             this.Team_Members_Label.Text = "Team Members:";
             // 
-            // textBox1
+            // Project_Manager_Textbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(482, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 20);
-            this.textBox1.TabIndex = 3;
+            this.Project_Manager_Textbox.Location = new System.Drawing.Point(482, 34);
+            this.Project_Manager_Textbox.Name = "Project_Manager_Textbox";
+            this.Project_Manager_Textbox.Size = new System.Drawing.Size(127, 20);
+            this.Project_Manager_Textbox.TabIndex = 3;
             // 
             // Project_Manager_Label
             // 
@@ -489,7 +489,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox Team_Members_RichTextBox;
         private System.Windows.Forms.Label Team_Members_Label;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Project_Manager_Textbox;
         private System.Windows.Forms.Label Project_Manager_Label;
         private System.Windows.Forms.TextBox Project_Name_Textbox;
         private System.Windows.Forms.Label Project_Name_Label;
