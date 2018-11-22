@@ -181,11 +181,13 @@
             // Error_Label
             // 
             this.Error_Label.AutoSize = true;
-            this.Error_Label.Location = new System.Drawing.Point(116, 493);
+            this.Error_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Error_Label.ForeColor = System.Drawing.Color.Red;
+            this.Error_Label.Location = new System.Drawing.Point(191, 461);
             this.Error_Label.Name = "Error_Label";
-            this.Error_Label.Size = new System.Drawing.Size(58, 13);
+            this.Error_Label.Size = new System.Drawing.Size(161, 13);
             this.Error_Label.TabIndex = 20;
-            this.Error_Label.Text = "Error Label";
+            this.Error_Label.Text = "*Please fill in the empty fields first";
             // 
             // Save_Project_Button
             // 
@@ -607,6 +609,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Main_Form";
             this.Text = "Project Tracker";
+            this.Load += new System.EventHandler(this.Main_Form_Load);
             this.tabControl1.ResumeLayout(false);
             this.Home_Tab.ResumeLayout(false);
             this.Add_Project_Tab.ResumeLayout(false);

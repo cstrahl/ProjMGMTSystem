@@ -198,22 +198,40 @@ namespace Project_Tracker
             }
         }
 
+        private void Hide_Error_Graphics() {
+            ProjectName_PictureBox.Visible = false;
+            ProjectManager_PictureBox.Visible = false;
+            ProjectDescription_PictureBox.Visible = false;
+            TeamMembers_PictureBox.Visible = false;
+            RiskName_PictureBox.Visible = false;
+            RiskDescription_PictureBox.Visible = false;
+            RiskStatus_PictureBox.Visible = false;
+            RequirementsName_PictureBox.Visible = false;
+            RequirementsDescription_PictureBox.Visible = false;
+            Functional_PictureBox.Visible = false;
+            NonFunctional_PictureBox.Visible = false;
+            Error_Label.Visible = false;
+        }
 
         private void Requirements_ListBox_MouseDown(object sender, MouseEventArgs e)
         {
-            Risks_ListBox.ClearSelected();
+            Risks_ListBox.ClearSelected(); //Prevents risks from being selected while requirements are selected
         }
 
         private void Risks_ListBox_MouseDown(object sender, MouseEventArgs e)
         {
-            Requirements_ListBox.ClearSelected();
+            Requirements_ListBox.ClearSelected();  //Prevents requirements from being selected while risks are selected
         }
 
         private void Delete_Button_Click(object sender, EventArgs e)
         {
             //used for removing a risk or requirement completely
             
-        }        
-        
+        }
+
+        private void Main_Form_Load(object sender, EventArgs e)
+        {
+            Hide_Error_Graphics();
+        }
     }
 }
