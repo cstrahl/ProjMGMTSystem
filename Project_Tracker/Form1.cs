@@ -29,14 +29,14 @@ namespace Project_Tracker
             //For addings risks  
             
             //Make sure every entry is filled before adding       
-            if (Risk_Name_Textbox.Text != "" && Risk_Description_RichTextBox.Text != "" && !string.IsNullOrEmpty(Risk_Status_ComboBox.Text))
+            if (Risk_Name_Textbox.Text != "" && Risk_Description_TextBox.Text != "" && !string.IsNullOrEmpty(Risk_Status_ComboBox.Text))
             {
-                Risk NewRisk = new Risk(Risk_Name_Textbox.Text, Risk_Description_RichTextBox.Text, Risk_Status_ComboBox.SelectedItem.ToString());
+                Risk NewRisk = new Risk(Risk_Name_Textbox.Text, Risk_Description_TextBox.Text, Risk_Status_ComboBox.SelectedItem.ToString());
                 RiskList.Add(NewRisk);
                 Risks_ListBox.Items.Add(Risk_Name_Textbox.Text);
                 TempProj.setProjRisk(RiskList);  //update the list
                 Risk_Name_Textbox.Text = "";
-                Risk_Description_RichTextBox.Text = "";
+                Risk_Description_TextBox.Text = "";
                 Risk_Status_ComboBox.Text = "";
             }
             
@@ -44,7 +44,7 @@ namespace Project_Tracker
             //For adding requirements
 
             //Make sure every entry is filled before adding       
-            if (Requirements_Name_TextBox.Text != "" && Requirements_Description_RichTextBox.Text != "" && Functional_RadioButton.Checked || NonFunctional_RadioButton.Checked) {
+            if (Requirements_Name_TextBox.Text != "" && Requirements_Description_TextBox.Text != "" && Functional_RadioButton.Checked || NonFunctional_RadioButton.Checked) {
                 bool ReqType = false;
                 if (Functional_RadioButton.Checked == true) {
                     ReqType = true;
@@ -54,12 +54,12 @@ namespace Project_Tracker
                     ReqType = false;
                 }
             
-                Requirement NewRequirement = new Requirement(Requirements_Name_TextBox.Text, Requirements_Description_RichTextBox.Text, ReqType);
+                Requirement NewRequirement = new Requirement(Requirements_Name_TextBox.Text, Requirements_Description_TextBox.Text, ReqType);
                 RequirementList.Add(NewRequirement);
                 Requirements_ListBox.Items.Add(Requirements_Name_TextBox.Text);
                 TempProj.setProjReq(RequirementList);
                 Requirements_Name_TextBox.Text = "";
-                Requirements_Description_RichTextBox.Text = "";
+                Requirements_Description_TextBox.Text = "";
                 Functional_RadioButton.Checked = false;
                 NonFunctional_RadioButton.Checked = false;
             }
@@ -82,18 +82,29 @@ namespace Project_Tracker
                 TempProj.setProjManager(Manager2);
             }
             
-            TempProj.setProjDescrip(Project_Description_RichTextBox.Text);
+            TempProj.setProjDescrip(Project_Description_TextBox.Text);
 
             //add members, loop through list
-            string[] Members = Team_Members_RichTextBox.Text.Split('\n'); //Put each name typed in list
+            string[] Members = Team_Members_TextBox.Text.Split('\n'); //Put each name typed in list
             List<Person> Tmembers = new List<Person>();  //Create a team members list to store the people
             foreach (string Persn in Members) {
-                //Split name into first and last using space
-                string[] EachName = Persn .Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
-                //Store each name as a person
-                Person PerTemp = new Person(EachName[0], EachName[1]);
-                Tmembers.Add(PerTemp);
+                try
+                {
+                    //Split name into first and last using space
+                    string[] EachName = Persn.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+                    Person PerTemp = new Person(EachName[0], EachName[1]);    //Store each name as a person
+                    Tmembers.Add(PerTemp);
+                }
+                catch {
+                    Person PerTemp2 = new Person(Persn);  //If only first names were typed
+                    Tmembers.Add(PerTemp2);
+                }                
             }
+
+            TempProj.setProjRisk(RiskList);
+            TempProj.setProjReq(RequirementList);
+            ProjectList.Add(TempProj);
+            Projects_Listbox.Items.Add(TempProj.getProjName());
         }
 
         private void Modify_Button_Click(object sender, EventArgs e)
@@ -116,8 +127,8 @@ namespace Project_Tracker
                     //Load into fields the selected risk
                     int x = Risks_ListBox.SelectedIndex;
                     Risk_Name_Textbox.Text = RiskList[x].Name;
-                    Risk_Description_RichTextBox.Text = RiskList[x].Description;
-                    Risk_Status_ComboBox.SelectedIndex = Risk_Status_ComboBox.FindStringExact(RiskList[x].RiskStatus);
+                    Risk_Description_TextBox.Text = RiskList[x].Description;                                      
+                    Risk_Status_ComboBox.Text = RiskList[x].RiskStatus;
                     Risks_ListBox.Enabled = false;
                     Requirements_ListBox.Enabled = false;
                 }
@@ -128,7 +139,7 @@ namespace Project_Tracker
                     //Load into fields the selected requirement
                     int y = Requirements_ListBox.SelectedIndex;
                     Requirements_Name_TextBox.Text = RequirementList[y].Name;
-                    Requirements_Description_RichTextBox.Text = RequirementList[y].Description;
+                    Requirements_Description_TextBox.Text = RequirementList[y].Description;
                     bool ReqStatus = RequirementList[y].Functional;
                     if (ReqStatus == true)
                     {
@@ -150,12 +161,12 @@ namespace Project_Tracker
 
                 //Rewrites the risk
                 if (Risks_ListBox.SelectedIndex > -1) {
-                    Risk UpdatedRisk = new Risk(Risk_Name_Textbox.Text, Risk_Description_RichTextBox.Text, Risk_Status_ComboBox.SelectedItem.ToString());
+                    Risk UpdatedRisk = new Risk(Risk_Name_Textbox.Text, Risk_Description_TextBox.Text, Risk_Status_ComboBox.SelectedItem.ToString());
                     RiskList[Risks_ListBox.SelectedIndex] = UpdatedRisk;
                     Risks_ListBox.Items[Risks_ListBox.SelectedIndex] = Risk_Name_Textbox.Text;
                     Risks_ListBox.ClearSelected();
                     Risk_Name_Textbox.Text = "";
-                    Risk_Description_RichTextBox.Text = "";
+                    Risk_Description_TextBox.Text = "";
                     Risk_Status_ComboBox.Text = "";
                     Risks_ListBox.Enabled = true;
                     Requirements_ListBox.Enabled = true;
@@ -173,20 +184,18 @@ namespace Project_Tracker
                         RequireType = false;
                     }
 
-                    Requirement UpdatedRequirement = new Requirement(Requirements_Name_TextBox.Text, Requirements_Description_RichTextBox.Text, RequireType);
+                    Requirement UpdatedRequirement = new Requirement(Requirements_Name_TextBox.Text, Requirements_Description_TextBox.Text, RequireType);
                     RequirementList[Requirements_ListBox.SelectedIndex] = UpdatedRequirement;
                     Requirements_ListBox.Items[Requirements_ListBox.SelectedIndex] = Requirements_Name_TextBox.Text;
                     Requirements_ListBox.ClearSelected();
                     Requirements_Name_TextBox.Text = "";
-                    Requirements_Description_RichTextBox.Text = "";
+                    Requirements_Description_TextBox.Text = "";
                     Functional_RadioButton.Checked = false;
                     NonFunctional_RadioButton.Checked = false;
                     Requirements_ListBox.Enabled = true;
                     Risks_ListBox.Enabled = true;
                 }
             }
-
-
         }
 
 

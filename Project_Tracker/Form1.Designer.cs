@@ -43,7 +43,6 @@
             this.NonFunctional_RadioButton = new System.Windows.Forms.RadioButton();
             this.Functional_RadioButton = new System.Windows.Forms.RadioButton();
             this.Requirements_ListBox = new System.Windows.Forms.ListBox();
-            this.Requirements_Description_RichTextBox = new System.Windows.Forms.RichTextBox();
             this.Requirements_Description_Label = new System.Windows.Forms.Label();
             this.Requirements_Name_TextBox = new System.Windows.Forms.TextBox();
             this.Requirements_Name_Label = new System.Windows.Forms.Label();
@@ -51,14 +50,11 @@
             this.Risks_ListBox = new System.Windows.Forms.ListBox();
             this.Risk_Status_Label = new System.Windows.Forms.Label();
             this.Risk_Status_ComboBox = new System.Windows.Forms.ComboBox();
-            this.Risk_Description_RichTextBox = new System.Windows.Forms.RichTextBox();
             this.Risk_Description_Label = new System.Windows.Forms.Label();
             this.Risk_Name_Textbox = new System.Windows.Forms.TextBox();
             this.Risk_Name_Label = new System.Windows.Forms.Label();
-            this.Project_Description_RichTextBox = new System.Windows.Forms.RichTextBox();
             this.Project_Description_Label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Team_Members_RichTextBox = new System.Windows.Forms.RichTextBox();
             this.Team_Members_Label = new System.Windows.Forms.Label();
             this.Project_Manager_Textbox = new System.Windows.Forms.TextBox();
             this.Project_Manager_Label = new System.Windows.Forms.Label();
@@ -69,9 +65,19 @@
             this.Week = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProjectName_PictureBox = new System.Windows.Forms.PictureBox();
             this.ProjectManager_PictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Description_Panel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ProjectDescription_PictureBox = new System.Windows.Forms.PictureBox();
+            this.Team_Members_TextBox = new System.Windows.Forms.TextBox();
+            this.Project_Description_TextBox = new System.Windows.Forms.TextBox();
+            this.Risk_Description_TextBox = new System.Windows.Forms.TextBox();
+            this.Requirements_Description_TextBox = new System.Windows.Forms.TextBox();
+            this.TeamMembers_PictureBox = new System.Windows.Forms.PictureBox();
+            this.RiskDescription_PictureBox = new System.Windows.Forms.PictureBox();
+            this.RiskName_PictureBox = new System.Windows.Forms.PictureBox();
+            this.RequirementsName_PictureBox = new System.Windows.Forms.PictureBox();
+            this.Functional_PictureBox = new System.Windows.Forms.PictureBox();
+            this.RequirementsDescription_PictureBox = new System.Windows.Forms.PictureBox();
+            this.RiskStatus_PictureBox = new System.Windows.Forms.PictureBox();
+            this.NonFunctional_PictureBox = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.Home_Tab.SuspendLayout();
             this.Add_Project_Tab.SuspendLayout();
@@ -81,7 +87,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectName_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectManager_PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectDescription_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TeamMembers_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RiskDescription_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RiskName_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RequirementsName_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Functional_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RequirementsDescription_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RiskStatus_PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NonFunctional_PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // Add_Project_Button
@@ -136,9 +150,10 @@
             // 
             // Add_Project_Tab
             // 
-            this.Add_Project_Tab.Controls.Add(this.Description_Panel);
-            this.Add_Project_Tab.Controls.Add(this.pictureBox1);
-            this.Add_Project_Tab.Controls.Add(this.panel1);
+            this.Add_Project_Tab.Controls.Add(this.Team_Members_TextBox);
+            this.Add_Project_Tab.Controls.Add(this.TeamMembers_PictureBox);
+            this.Add_Project_Tab.Controls.Add(this.Project_Description_TextBox);
+            this.Add_Project_Tab.Controls.Add(this.ProjectDescription_PictureBox);
             this.Add_Project_Tab.Controls.Add(this.Project_Manager_Textbox);
             this.Add_Project_Tab.Controls.Add(this.ProjectManager_PictureBox);
             this.Add_Project_Tab.Controls.Add(this.Project_Name_Textbox);
@@ -150,10 +165,8 @@
             this.Add_Project_Tab.Controls.Add(this.Add_Button);
             this.Add_Project_Tab.Controls.Add(this.Requirements_Input_GroupBox);
             this.Add_Project_Tab.Controls.Add(this.Risk_Input_GroupBox);
-            this.Add_Project_Tab.Controls.Add(this.Project_Description_RichTextBox);
             this.Add_Project_Tab.Controls.Add(this.Project_Description_Label);
             this.Add_Project_Tab.Controls.Add(this.label1);
-            this.Add_Project_Tab.Controls.Add(this.Team_Members_RichTextBox);
             this.Add_Project_Tab.Controls.Add(this.Team_Members_Label);
             this.Add_Project_Tab.Controls.Add(this.Project_Manager_Label);
             this.Add_Project_Tab.Controls.Add(this.Project_Name_Label);
@@ -186,20 +199,20 @@
             // 
             // Delete_Button
             // 
-            this.Delete_Button.Location = new System.Drawing.Point(282, 342);
+            this.Delete_Button.Location = new System.Drawing.Point(282, 340);
             this.Delete_Button.Name = "Delete_Button";
             this.Delete_Button.Size = new System.Drawing.Size(80, 38);
-            this.Delete_Button.TabIndex = 18;
+            this.Delete_Button.TabIndex = 12;
             this.Delete_Button.Text = "Delete Selected Item";
             this.Delete_Button.UseVisualStyleBackColor = true;
             this.Delete_Button.Click += new System.EventHandler(this.Delete_Button_Click);
             // 
             // Modify_Button
             // 
-            this.Modify_Button.Location = new System.Drawing.Point(282, 269);
+            this.Modify_Button.Location = new System.Drawing.Point(282, 270);
             this.Modify_Button.Name = "Modify_Button";
             this.Modify_Button.Size = new System.Drawing.Size(80, 38);
-            this.Modify_Button.TabIndex = 17;
+            this.Modify_Button.TabIndex = 11;
             this.Modify_Button.Text = "Modify Selected Item";
             this.Modify_Button.UseVisualStyleBackColor = true;
             this.Modify_Button.Click += new System.EventHandler(this.Modify_Button_Click);
@@ -209,24 +222,28 @@
             this.Add_Button.Location = new System.Drawing.Point(282, 200);
             this.Add_Button.Name = "Add_Button";
             this.Add_Button.Size = new System.Drawing.Size(80, 38);
-            this.Add_Button.TabIndex = 16;
+            this.Add_Button.TabIndex = 10;
             this.Add_Button.Text = "Add to List";
             this.Add_Button.UseVisualStyleBackColor = true;
             this.Add_Button.Click += new System.EventHandler(this.Add_Button_Click);
             // 
             // Requirements_Input_GroupBox
             // 
+            this.Requirements_Input_GroupBox.Controls.Add(this.NonFunctional_PictureBox);
+            this.Requirements_Input_GroupBox.Controls.Add(this.Requirements_Description_TextBox);
+            this.Requirements_Input_GroupBox.Controls.Add(this.RequirementsDescription_PictureBox);
+            this.Requirements_Input_GroupBox.Controls.Add(this.Functional_PictureBox);
+            this.Requirements_Input_GroupBox.Controls.Add(this.Requirements_Name_TextBox);
+            this.Requirements_Input_GroupBox.Controls.Add(this.RequirementsName_PictureBox);
             this.Requirements_Input_GroupBox.Controls.Add(this.NonFunctional_RadioButton);
             this.Requirements_Input_GroupBox.Controls.Add(this.Functional_RadioButton);
             this.Requirements_Input_GroupBox.Controls.Add(this.Requirements_ListBox);
-            this.Requirements_Input_GroupBox.Controls.Add(this.Requirements_Description_RichTextBox);
             this.Requirements_Input_GroupBox.Controls.Add(this.Requirements_Description_Label);
-            this.Requirements_Input_GroupBox.Controls.Add(this.Requirements_Name_TextBox);
             this.Requirements_Input_GroupBox.Controls.Add(this.Requirements_Name_Label);
-            this.Requirements_Input_GroupBox.Location = new System.Drawing.Point(384, 166);
+            this.Requirements_Input_GroupBox.Location = new System.Drawing.Point(383, 166);
             this.Requirements_Input_GroupBox.Name = "Requirements_Input_GroupBox";
             this.Requirements_Input_GroupBox.Size = new System.Drawing.Size(226, 253);
-            this.Requirements_Input_GroupBox.TabIndex = 15;
+            this.Requirements_Input_GroupBox.TabIndex = 13;
             this.Requirements_Input_GroupBox.TabStop = false;
             this.Requirements_Input_GroupBox.Text = "Requirements Input";
             // 
@@ -236,7 +253,7 @@
             this.NonFunctional_RadioButton.Location = new System.Drawing.Point(33, 138);
             this.NonFunctional_RadioButton.Name = "NonFunctional_RadioButton";
             this.NonFunctional_RadioButton.Size = new System.Drawing.Size(160, 17);
-            this.NonFunctional_RadioButton.TabIndex = 16;
+            this.NonFunctional_RadioButton.TabIndex = 5;
             this.NonFunctional_RadioButton.TabStop = true;
             this.NonFunctional_RadioButton.Text = "Non-Functional Requirement";
             this.NonFunctional_RadioButton.UseVisualStyleBackColor = true;
@@ -247,7 +264,7 @@
             this.Functional_RadioButton.Location = new System.Drawing.Point(33, 114);
             this.Functional_RadioButton.Name = "Functional_RadioButton";
             this.Functional_RadioButton.Size = new System.Drawing.Size(137, 17);
-            this.Functional_RadioButton.TabIndex = 15;
+            this.Functional_RadioButton.TabIndex = 4;
             this.Functional_RadioButton.TabStop = true;
             this.Functional_RadioButton.Text = "Functional Requirement";
             this.Functional_RadioButton.UseVisualStyleBackColor = true;
@@ -258,16 +275,8 @@
             this.Requirements_ListBox.Location = new System.Drawing.Point(22, 162);
             this.Requirements_ListBox.Name = "Requirements_ListBox";
             this.Requirements_ListBox.Size = new System.Drawing.Size(193, 82);
-            this.Requirements_ListBox.TabIndex = 14;
+            this.Requirements_ListBox.TabIndex = 6;
             this.Requirements_ListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Requirements_ListBox_MouseDown);
-            // 
-            // Requirements_Description_RichTextBox
-            // 
-            this.Requirements_Description_RichTextBox.Location = new System.Drawing.Point(88, 62);
-            this.Requirements_Description_RichTextBox.Name = "Requirements_Description_RichTextBox";
-            this.Requirements_Description_RichTextBox.Size = new System.Drawing.Size(127, 46);
-            this.Requirements_Description_RichTextBox.TabIndex = 11;
-            this.Requirements_Description_RichTextBox.Text = "";
             // 
             // Requirements_Description_Label
             // 
@@ -275,7 +284,7 @@
             this.Requirements_Description_Label.Location = new System.Drawing.Point(19, 65);
             this.Requirements_Description_Label.Name = "Requirements_Description_Label";
             this.Requirements_Description_Label.Size = new System.Drawing.Size(63, 13);
-            this.Requirements_Description_Label.TabIndex = 10;
+            this.Requirements_Description_Label.TabIndex = 2;
             this.Requirements_Description_Label.Text = "Description:";
             // 
             // Requirements_Name_TextBox
@@ -288,7 +297,7 @@
             // Requirements_Name_Label
             // 
             this.Requirements_Name_Label.AutoSize = true;
-            this.Requirements_Name_Label.Location = new System.Drawing.Point(42, 26);
+            this.Requirements_Name_Label.Location = new System.Drawing.Point(44, 26);
             this.Requirements_Name_Label.Name = "Requirements_Name_Label";
             this.Requirements_Name_Label.Size = new System.Drawing.Size(38, 13);
             this.Requirements_Name_Label.TabIndex = 0;
@@ -296,14 +305,17 @@
             // 
             // Risk_Input_GroupBox
             // 
+            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Status_ComboBox);
+            this.Risk_Input_GroupBox.Controls.Add(this.RiskStatus_PictureBox);
+            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Description_TextBox);
+            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Name_Textbox);
+            this.Risk_Input_GroupBox.Controls.Add(this.RiskDescription_PictureBox);
+            this.Risk_Input_GroupBox.Controls.Add(this.RiskName_PictureBox);
             this.Risk_Input_GroupBox.Controls.Add(this.Risks_ListBox);
             this.Risk_Input_GroupBox.Controls.Add(this.Risk_Status_Label);
-            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Status_ComboBox);
-            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Description_RichTextBox);
             this.Risk_Input_GroupBox.Controls.Add(this.Risk_Description_Label);
-            this.Risk_Input_GroupBox.Controls.Add(this.Risk_Name_Textbox);
             this.Risk_Input_GroupBox.Controls.Add(this.Risk_Name_Label);
-            this.Risk_Input_GroupBox.Location = new System.Drawing.Point(31, 166);
+            this.Risk_Input_GroupBox.Location = new System.Drawing.Point(33, 166);
             this.Risk_Input_GroupBox.Name = "Risk_Input_GroupBox";
             this.Risk_Input_GroupBox.Size = new System.Drawing.Size(226, 253);
             this.Risk_Input_GroupBox.TabIndex = 9;
@@ -316,7 +328,7 @@
             this.Risks_ListBox.Location = new System.Drawing.Point(22, 162);
             this.Risks_ListBox.Name = "Risks_ListBox";
             this.Risks_ListBox.Size = new System.Drawing.Size(193, 82);
-            this.Risks_ListBox.TabIndex = 14;
+            this.Risks_ListBox.TabIndex = 6;
             this.Risks_ListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Risks_ListBox_MouseDown);
             // 
             // Risk_Status_Label
@@ -325,7 +337,7 @@
             this.Risk_Status_Label.Location = new System.Drawing.Point(19, 128);
             this.Risk_Status_Label.Name = "Risk_Status_Label";
             this.Risk_Status_Label.Size = new System.Drawing.Size(64, 13);
-            this.Risk_Status_Label.TabIndex = 13;
+            this.Risk_Status_Label.TabIndex = 4;
             this.Risk_Status_Label.Text = "Risk Status:";
             // 
             // Risk_Status_ComboBox
@@ -342,15 +354,7 @@
             this.Risk_Status_ComboBox.Location = new System.Drawing.Point(88, 125);
             this.Risk_Status_ComboBox.Name = "Risk_Status_ComboBox";
             this.Risk_Status_ComboBox.Size = new System.Drawing.Size(127, 21);
-            this.Risk_Status_ComboBox.TabIndex = 12;
-            // 
-            // Risk_Description_RichTextBox
-            // 
-            this.Risk_Description_RichTextBox.Location = new System.Drawing.Point(88, 62);
-            this.Risk_Description_RichTextBox.Name = "Risk_Description_RichTextBox";
-            this.Risk_Description_RichTextBox.Size = new System.Drawing.Size(127, 46);
-            this.Risk_Description_RichTextBox.TabIndex = 11;
-            this.Risk_Description_RichTextBox.Text = "";
+            this.Risk_Status_ComboBox.TabIndex = 5;
             // 
             // Risk_Description_Label
             // 
@@ -358,7 +362,7 @@
             this.Risk_Description_Label.Location = new System.Drawing.Point(19, 65);
             this.Risk_Description_Label.Name = "Risk_Description_Label";
             this.Risk_Description_Label.Size = new System.Drawing.Size(63, 13);
-            this.Risk_Description_Label.TabIndex = 10;
+            this.Risk_Description_Label.TabIndex = 2;
             this.Risk_Description_Label.Text = "Description:";
             // 
             // Risk_Name_Textbox
@@ -377,22 +381,13 @@
             this.Risk_Name_Label.TabIndex = 0;
             this.Risk_Name_Label.Text = "Name:";
             // 
-            // Project_Description_RichTextBox
-            // 
-            this.Project_Description_RichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Project_Description_RichTextBox.Location = new System.Drawing.Point(282, 6);
-            this.Project_Description_RichTextBox.Name = "Project_Description_RichTextBox";
-            this.Project_Description_RichTextBox.Size = new System.Drawing.Size(128, 59);
-            this.Project_Description_RichTextBox.TabIndex = 8;
-            this.Project_Description_RichTextBox.Text = "";
-            // 
             // Project_Description_Label
             // 
             this.Project_Description_Label.AutoSize = true;
             this.Project_Description_Label.Location = new System.Drawing.Point(27, 82);
             this.Project_Description_Label.Name = "Project_Description_Label";
             this.Project_Description_Label.Size = new System.Drawing.Size(99, 13);
-            this.Project_Description_Label.TabIndex = 7;
+            this.Project_Description_Label.TabIndex = 4;
             this.Project_Description_Label.Text = "Project Description:";
             // 
             // label1
@@ -402,16 +397,8 @@
             this.label1.Location = new System.Drawing.Point(366, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 13);
-            this.label1.TabIndex = 6;
+            this.label1.TabIndex = 8;
             this.label1.Text = "*One member per line";
-            // 
-            // Team_Members_RichTextBox
-            // 
-            this.Team_Members_RichTextBox.Location = new System.Drawing.Point(482, 79);
-            this.Team_Members_RichTextBox.Name = "Team_Members_RichTextBox";
-            this.Team_Members_RichTextBox.Size = new System.Drawing.Size(127, 46);
-            this.Team_Members_RichTextBox.TabIndex = 5;
-            this.Team_Members_RichTextBox.Text = "";
             // 
             // Team_Members_Label
             // 
@@ -419,7 +406,7 @@
             this.Team_Members_Label.Location = new System.Drawing.Point(391, 79);
             this.Team_Members_Label.Name = "Team_Members_Label";
             this.Team_Members_Label.Size = new System.Drawing.Size(83, 13);
-            this.Team_Members_Label.TabIndex = 4;
+            this.Team_Members_Label.TabIndex = 6;
             this.Team_Members_Label.Text = "Team Members:";
             // 
             // Project_Manager_Textbox
@@ -498,30 +485,119 @@
             this.ProjectManager_PictureBox.TabIndex = 22;
             this.ProjectManager_PictureBox.TabStop = false;
             // 
-            // pictureBox1
+            // ProjectDescription_PictureBox
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Red;
-            this.pictureBox1.Location = new System.Drawing.Point(131, 130);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 24);
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
+            this.ProjectDescription_PictureBox.BackColor = System.Drawing.Color.Red;
+            this.ProjectDescription_PictureBox.Location = new System.Drawing.Point(130, 80);
+            this.ProjectDescription_PictureBox.Name = "ProjectDescription_PictureBox";
+            this.ProjectDescription_PictureBox.Size = new System.Drawing.Size(131, 63);
+            this.ProjectDescription_PictureBox.TabIndex = 23;
+            this.ProjectDescription_PictureBox.TabStop = false;
             // 
-            // Description_Panel
+            // Team_Members_TextBox
             // 
-            this.Description_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Description_Panel.Location = new System.Drawing.Point(132, 82);
-            this.Description_Panel.Name = "Description_Panel";
-            this.Description_Panel.Size = new System.Drawing.Size(128, 59);
-            this.Description_Panel.TabIndex = 24;
+            this.Team_Members_TextBox.Location = new System.Drawing.Point(482, 79);
+            this.Team_Members_TextBox.Multiline = true;
+            this.Team_Members_TextBox.Name = "Team_Members_TextBox";
+            this.Team_Members_TextBox.Size = new System.Drawing.Size(127, 59);
+            this.Team_Members_TextBox.TabIndex = 7;
+            this.Team_Members_TextBox.WordWrap = false;
             // 
-            // panel1
+            // Project_Description_TextBox
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(429, 95);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(128, 59);
-            this.panel1.TabIndex = 25;
+            this.Project_Description_TextBox.Location = new System.Drawing.Point(132, 82);
+            this.Project_Description_TextBox.Multiline = true;
+            this.Project_Description_TextBox.Name = "Project_Description_TextBox";
+            this.Project_Description_TextBox.Size = new System.Drawing.Size(127, 59);
+            this.Project_Description_TextBox.TabIndex = 5;
+            // 
+            // Risk_Description_TextBox
+            // 
+            this.Risk_Description_TextBox.Location = new System.Drawing.Point(88, 62);
+            this.Risk_Description_TextBox.Multiline = true;
+            this.Risk_Description_TextBox.Name = "Risk_Description_TextBox";
+            this.Risk_Description_TextBox.Size = new System.Drawing.Size(127, 46);
+            this.Risk_Description_TextBox.TabIndex = 3;
+            // 
+            // Requirements_Description_TextBox
+            // 
+            this.Requirements_Description_TextBox.Location = new System.Drawing.Point(88, 62);
+            this.Requirements_Description_TextBox.Multiline = true;
+            this.Requirements_Description_TextBox.Name = "Requirements_Description_TextBox";
+            this.Requirements_Description_TextBox.Size = new System.Drawing.Size(127, 46);
+            this.Requirements_Description_TextBox.TabIndex = 3;
+            // 
+            // TeamMembers_PictureBox
+            // 
+            this.TeamMembers_PictureBox.BackColor = System.Drawing.Color.Red;
+            this.TeamMembers_PictureBox.Location = new System.Drawing.Point(480, 77);
+            this.TeamMembers_PictureBox.Name = "TeamMembers_PictureBox";
+            this.TeamMembers_PictureBox.Size = new System.Drawing.Size(131, 63);
+            this.TeamMembers_PictureBox.TabIndex = 28;
+            this.TeamMembers_PictureBox.TabStop = false;
+            // 
+            // RiskDescription_PictureBox
+            // 
+            this.RiskDescription_PictureBox.BackColor = System.Drawing.Color.Red;
+            this.RiskDescription_PictureBox.Location = new System.Drawing.Point(86, 60);
+            this.RiskDescription_PictureBox.Name = "RiskDescription_PictureBox";
+            this.RiskDescription_PictureBox.Size = new System.Drawing.Size(131, 50);
+            this.RiskDescription_PictureBox.TabIndex = 29;
+            this.RiskDescription_PictureBox.TabStop = false;
+            // 
+            // RiskName_PictureBox
+            // 
+            this.RiskName_PictureBox.BackColor = System.Drawing.Color.Red;
+            this.RiskName_PictureBox.Location = new System.Drawing.Point(86, 21);
+            this.RiskName_PictureBox.Name = "RiskName_PictureBox";
+            this.RiskName_PictureBox.Size = new System.Drawing.Size(131, 24);
+            this.RiskName_PictureBox.TabIndex = 30;
+            this.RiskName_PictureBox.TabStop = false;
+            // 
+            // RequirementsName_PictureBox
+            // 
+            this.RequirementsName_PictureBox.BackColor = System.Drawing.Color.Red;
+            this.RequirementsName_PictureBox.Location = new System.Drawing.Point(86, 21);
+            this.RequirementsName_PictureBox.Name = "RequirementsName_PictureBox";
+            this.RequirementsName_PictureBox.Size = new System.Drawing.Size(131, 24);
+            this.RequirementsName_PictureBox.TabIndex = 31;
+            this.RequirementsName_PictureBox.TabStop = false;
+            // 
+            // Functional_PictureBox
+            // 
+            this.Functional_PictureBox.BackColor = System.Drawing.Color.Red;
+            this.Functional_PictureBox.Location = new System.Drawing.Point(53, 131);
+            this.Functional_PictureBox.Name = "Functional_PictureBox";
+            this.Functional_PictureBox.Size = new System.Drawing.Size(110, 2);
+            this.Functional_PictureBox.TabIndex = 32;
+            this.Functional_PictureBox.TabStop = false;
+            // 
+            // RequirementsDescription_PictureBox
+            // 
+            this.RequirementsDescription_PictureBox.BackColor = System.Drawing.Color.Red;
+            this.RequirementsDescription_PictureBox.Location = new System.Drawing.Point(86, 60);
+            this.RequirementsDescription_PictureBox.Name = "RequirementsDescription_PictureBox";
+            this.RequirementsDescription_PictureBox.Size = new System.Drawing.Size(131, 50);
+            this.RequirementsDescription_PictureBox.TabIndex = 31;
+            this.RequirementsDescription_PictureBox.TabStop = false;
+            // 
+            // RiskStatus_PictureBox
+            // 
+            this.RiskStatus_PictureBox.BackColor = System.Drawing.Color.Red;
+            this.RiskStatus_PictureBox.Location = new System.Drawing.Point(86, 123);
+            this.RiskStatus_PictureBox.Name = "RiskStatus_PictureBox";
+            this.RiskStatus_PictureBox.Size = new System.Drawing.Size(131, 25);
+            this.RiskStatus_PictureBox.TabIndex = 33;
+            this.RiskStatus_PictureBox.TabStop = false;
+            // 
+            // NonFunctional_PictureBox
+            // 
+            this.NonFunctional_PictureBox.BackColor = System.Drawing.Color.Red;
+            this.NonFunctional_PictureBox.Location = new System.Drawing.Point(53, 155);
+            this.NonFunctional_PictureBox.Name = "NonFunctional_PictureBox";
+            this.NonFunctional_PictureBox.Size = new System.Drawing.Size(133, 2);
+            this.NonFunctional_PictureBox.TabIndex = 33;
+            this.NonFunctional_PictureBox.TabStop = false;
             // 
             // Main_Form
             // 
@@ -543,7 +619,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectName_PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectManager_PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectDescription_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TeamMembers_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RiskDescription_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RiskName_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RequirementsName_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Functional_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RequirementsDescription_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RiskStatus_PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NonFunctional_PictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -558,18 +642,15 @@
         private System.Windows.Forms.TabPage Add_Project_Tab;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox Team_Members_RichTextBox;
         private System.Windows.Forms.Label Team_Members_Label;
         private System.Windows.Forms.TextBox Project_Manager_Textbox;
         private System.Windows.Forms.Label Project_Manager_Label;
         private System.Windows.Forms.TextBox Project_Name_Textbox;
         private System.Windows.Forms.Label Project_Name_Label;
         private System.Windows.Forms.Label Project_Description_Label;
-        private System.Windows.Forms.RichTextBox Project_Description_RichTextBox;
         private System.Windows.Forms.GroupBox Risk_Input_GroupBox;
         private System.Windows.Forms.Label Risk_Status_Label;
         private System.Windows.Forms.ComboBox Risk_Status_ComboBox;
-        private System.Windows.Forms.RichTextBox Risk_Description_RichTextBox;
         private System.Windows.Forms.Label Risk_Description_Label;
         private System.Windows.Forms.TextBox Risk_Name_Textbox;
         private System.Windows.Forms.Label Risk_Name_Label;
@@ -578,7 +659,6 @@
         private System.Windows.Forms.RadioButton NonFunctional_RadioButton;
         private System.Windows.Forms.RadioButton Functional_RadioButton;
         private System.Windows.Forms.ListBox Requirements_ListBox;
-        private System.Windows.Forms.RichTextBox Requirements_Description_RichTextBox;
         private System.Windows.Forms.Label Requirements_Description_Label;
         private System.Windows.Forms.TextBox Requirements_Name_TextBox;
         private System.Windows.Forms.Label Requirements_Name_Label;
@@ -589,11 +669,21 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Week;
         private System.Windows.Forms.Label Error_Label;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ProjectDescription_PictureBox;
         private System.Windows.Forms.PictureBox ProjectManager_PictureBox;
         private System.Windows.Forms.PictureBox ProjectName_PictureBox;
-        private System.Windows.Forms.Panel Description_Panel;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox Team_Members_TextBox;
+        private System.Windows.Forms.TextBox Project_Description_TextBox;
+        private System.Windows.Forms.TextBox Risk_Description_TextBox;
+        private System.Windows.Forms.TextBox Requirements_Description_TextBox;
+        private System.Windows.Forms.PictureBox TeamMembers_PictureBox;
+        private System.Windows.Forms.PictureBox RiskDescription_PictureBox;
+        private System.Windows.Forms.PictureBox Functional_PictureBox;
+        private System.Windows.Forms.PictureBox RequirementsName_PictureBox;
+        private System.Windows.Forms.PictureBox RiskName_PictureBox;
+        private System.Windows.Forms.PictureBox RequirementsDescription_PictureBox;
+        private System.Windows.Forms.PictureBox RiskStatus_PictureBox;
+        private System.Windows.Forms.PictureBox NonFunctional_PictureBox;
     }
 }
 
