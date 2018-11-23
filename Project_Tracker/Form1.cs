@@ -233,5 +233,10 @@ namespace Project_Tracker
         {
             Hide_Error_Graphics();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
