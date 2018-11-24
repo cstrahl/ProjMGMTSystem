@@ -30,8 +30,8 @@
         {
             this.Add_Project_Button = new System.Windows.Forms.Button();
             this.Projects_Listbox = new System.Windows.Forms.ListBox();
-            this.Edit_Project_Button = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Modify_Project_Button = new System.Windows.Forms.Button();
+            this.Project_TabControl = new System.Windows.Forms.TabControl();
             this.Home_Tab = new System.Windows.Forms.TabPage();
             this.Add_Project_Tab = new System.Windows.Forms.TabPage();
             this.Team_Members_TextBox = new System.Windows.Forms.TextBox();
@@ -75,7 +75,7 @@
             this.Team_Members_Label = new System.Windows.Forms.Label();
             this.Project_Manager_Label = new System.Windows.Forms.Label();
             this.Project_Name_Label = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.Tracking_Tab = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Week = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,7 +85,11 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabControl1.SuspendLayout();
+            this.ViewProjectDetails_Button = new System.Windows.Forms.Button();
+            this.Delete_Project_Button = new System.Windows.Forms.Button();
+            this.Project_Details_Display_GroupBox = new System.Windows.Forms.GroupBox();
+            this.ProjectDisplay_RichTextBox = new System.Windows.Forms.RichTextBox();
+            this.Project_TabControl.SuspendLayout();
             this.Home_Tab.SuspendLayout();
             this.Add_Project_Tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeamMembers_PictureBox)).BeginInit();
@@ -101,15 +105,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.RiskStatus_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RiskDescription_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RiskName_PictureBox)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            this.Tracking_Tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Project_Details_Display_GroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // Add_Project_Button
             // 
-            this.Add_Project_Button.Location = new System.Drawing.Point(300, 85);
+            this.Add_Project_Button.Location = new System.Drawing.Point(53, 291);
             this.Add_Project_Button.Name = "Add_Project_Button";
-            this.Add_Project_Button.Size = new System.Drawing.Size(75, 23);
+            this.Add_Project_Button.Size = new System.Drawing.Size(75, 34);
             this.Add_Project_Button.TabIndex = 0;
             this.Add_Project_Button.Text = "Add Project";
             this.Add_Project_Button.UseVisualStyleBackColor = true;
@@ -118,40 +123,43 @@
             // Projects_Listbox
             // 
             this.Projects_Listbox.FormattingEnabled = true;
-            this.Projects_Listbox.Location = new System.Drawing.Point(97, 85);
+            this.Projects_Listbox.Location = new System.Drawing.Point(53, 45);
             this.Projects_Listbox.Name = "Projects_Listbox";
-            this.Projects_Listbox.Size = new System.Drawing.Size(120, 95);
+            this.Projects_Listbox.Size = new System.Drawing.Size(192, 212);
             this.Projects_Listbox.TabIndex = 1;
             // 
-            // Edit_Project_Button
+            // Modify_Project_Button
             // 
-            this.Edit_Project_Button.Location = new System.Drawing.Point(300, 128);
-            this.Edit_Project_Button.Name = "Edit_Project_Button";
-            this.Edit_Project_Button.Size = new System.Drawing.Size(75, 23);
-            this.Edit_Project_Button.TabIndex = 2;
-            this.Edit_Project_Button.Text = "Edit Project";
-            this.Edit_Project_Button.UseVisualStyleBackColor = true;
+            this.Modify_Project_Button.Location = new System.Drawing.Point(53, 344);
+            this.Modify_Project_Button.Name = "Modify_Project_Button";
+            this.Modify_Project_Button.Size = new System.Drawing.Size(75, 34);
+            this.Modify_Project_Button.TabIndex = 2;
+            this.Modify_Project_Button.Text = "Modify Project";
+            this.Modify_Project_Button.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // Project_TabControl
             // 
-            this.tabControl1.Controls.Add(this.Home_Tab);
-            this.tabControl1.Controls.Add(this.Add_Project_Tab);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(13, 13);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(673, 545);
-            this.tabControl1.TabIndex = 3;
+            this.Project_TabControl.Controls.Add(this.Home_Tab);
+            this.Project_TabControl.Controls.Add(this.Add_Project_Tab);
+            this.Project_TabControl.Controls.Add(this.Tracking_Tab);
+            this.Project_TabControl.Location = new System.Drawing.Point(12, 12);
+            this.Project_TabControl.Name = "Project_TabControl";
+            this.Project_TabControl.SelectedIndex = 0;
+            this.Project_TabControl.Size = new System.Drawing.Size(673, 519);
+            this.Project_TabControl.TabIndex = 3;
             // 
             // Home_Tab
             // 
+            this.Home_Tab.Controls.Add(this.Project_Details_Display_GroupBox);
+            this.Home_Tab.Controls.Add(this.Delete_Project_Button);
+            this.Home_Tab.Controls.Add(this.ViewProjectDetails_Button);
             this.Home_Tab.Controls.Add(this.Projects_Listbox);
-            this.Home_Tab.Controls.Add(this.Edit_Project_Button);
+            this.Home_Tab.Controls.Add(this.Modify_Project_Button);
             this.Home_Tab.Controls.Add(this.Add_Project_Button);
             this.Home_Tab.Location = new System.Drawing.Point(4, 22);
             this.Home_Tab.Name = "Home_Tab";
             this.Home_Tab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.Home_Tab.Size = new System.Drawing.Size(665, 519);
+            this.Home_Tab.Size = new System.Drawing.Size(665, 493);
             this.Home_Tab.TabIndex = 0;
             this.Home_Tab.Text = "Home";
             this.Home_Tab.UseVisualStyleBackColor = true;
@@ -181,7 +189,7 @@
             this.Add_Project_Tab.Location = new System.Drawing.Point(4, 22);
             this.Add_Project_Tab.Name = "Add_Project_Tab";
             this.Add_Project_Tab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.Add_Project_Tab.Size = new System.Drawing.Size(665, 519);
+            this.Add_Project_Tab.Size = new System.Drawing.Size(665, 493);
             this.Add_Project_Tab.TabIndex = 1;
             this.Add_Project_Tab.Text = "Add Project";
             this.Add_Project_Tab.UseVisualStyleBackColor = true;
@@ -194,6 +202,7 @@
             this.Team_Members_TextBox.Size = new System.Drawing.Size(127, 59);
             this.Team_Members_TextBox.TabIndex = 7;
             this.Team_Members_TextBox.WordWrap = false;
+            this.Team_Members_TextBox.Leave += new System.EventHandler(this.Team_Members_TextBox_Leave);
             // 
             // TeamMembers_PictureBox
             // 
@@ -211,6 +220,7 @@
             this.Project_Description_TextBox.Name = "Project_Description_TextBox";
             this.Project_Description_TextBox.Size = new System.Drawing.Size(127, 59);
             this.Project_Description_TextBox.TabIndex = 5;
+            this.Project_Description_TextBox.Leave += new System.EventHandler(this.Project_Description_TextBox_Leave);
             // 
             // ProjectDescription_PictureBox
             // 
@@ -227,6 +237,7 @@
             this.Project_Manager_Textbox.Name = "Project_Manager_Textbox";
             this.Project_Manager_Textbox.Size = new System.Drawing.Size(127, 20);
             this.Project_Manager_Textbox.TabIndex = 3;
+            this.Project_Manager_Textbox.Leave += new System.EventHandler(this.Project_Manager_Textbox_Leave);
             // 
             // ProjectManager_PictureBox
             // 
@@ -259,7 +270,7 @@
             this.Error_Label.AutoSize = true;
             this.Error_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Error_Label.ForeColor = System.Drawing.Color.Red;
-            this.Error_Label.Location = new System.Drawing.Point(191, 461);
+            this.Error_Label.Location = new System.Drawing.Point(200, 448);
             this.Error_Label.Name = "Error_Label";
             this.Error_Label.Size = new System.Drawing.Size(161, 13);
             this.Error_Label.TabIndex = 20;
@@ -267,7 +278,7 @@
             // 
             // Save_Project_Button
             // 
-            this.Save_Project_Button.Location = new System.Drawing.Point(110, 456);
+            this.Save_Project_Button.Location = new System.Drawing.Point(119, 443);
             this.Save_Project_Button.Name = "Save_Project_Button";
             this.Save_Project_Button.Size = new System.Drawing.Size(75, 23);
             this.Save_Project_Button.TabIndex = 19;
@@ -584,16 +595,16 @@
             this.Project_Name_Label.TabIndex = 0;
             this.Project_Name_Label.Text = "Project Name:";
             // 
-            // tabPage3
+            // Tracking_Tab
             // 
-            this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage3.Size = new System.Drawing.Size(665, 519);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.Tracking_Tab.Controls.Add(this.dataGridView1);
+            this.Tracking_Tab.Location = new System.Drawing.Point(4, 22);
+            this.Tracking_Tab.Name = "Tracking_Tab";
+            this.Tracking_Tab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Tracking_Tab.Size = new System.Drawing.Size(665, 493);
+            this.Tracking_Tab.TabIndex = 2;
+            this.Tracking_Tab.Text = "Tracking";
+            this.Tracking_Tab.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -653,16 +664,53 @@
             this.Column7.HeaderText = "7";
             this.Column7.Name = "Column7";
             // 
+            // ViewProjectDetails_Button
+            // 
+            this.ViewProjectDetails_Button.Location = new System.Drawing.Point(170, 291);
+            this.ViewProjectDetails_Button.Name = "ViewProjectDetails_Button";
+            this.ViewProjectDetails_Button.Size = new System.Drawing.Size(75, 34);
+            this.ViewProjectDetails_Button.TabIndex = 3;
+            this.ViewProjectDetails_Button.Text = "View Project Details";
+            this.ViewProjectDetails_Button.UseVisualStyleBackColor = true;
+            // 
+            // Delete_Project_Button
+            // 
+            this.Delete_Project_Button.Location = new System.Drawing.Point(170, 344);
+            this.Delete_Project_Button.Name = "Delete_Project_Button";
+            this.Delete_Project_Button.Size = new System.Drawing.Size(75, 34);
+            this.Delete_Project_Button.TabIndex = 4;
+            this.Delete_Project_Button.Text = "Delete Project";
+            this.Delete_Project_Button.UseVisualStyleBackColor = true;
+            // 
+            // Project_Details_Display_GroupBox
+            // 
+            this.Project_Details_Display_GroupBox.Controls.Add(this.ProjectDisplay_RichTextBox);
+            this.Project_Details_Display_GroupBox.Location = new System.Drawing.Point(301, 45);
+            this.Project_Details_Display_GroupBox.Name = "Project_Details_Display_GroupBox";
+            this.Project_Details_Display_GroupBox.Size = new System.Drawing.Size(330, 418);
+            this.Project_Details_Display_GroupBox.TabIndex = 5;
+            this.Project_Details_Display_GroupBox.TabStop = false;
+            this.Project_Details_Display_GroupBox.Text = "Project Details Display";
+            // 
+            // ProjectDisplay_RichTextBox
+            // 
+            this.ProjectDisplay_RichTextBox.Location = new System.Drawing.Point(6, 19);
+            this.ProjectDisplay_RichTextBox.Name = "ProjectDisplay_RichTextBox";
+            this.ProjectDisplay_RichTextBox.ReadOnly = true;
+            this.ProjectDisplay_RichTextBox.Size = new System.Drawing.Size(318, 393);
+            this.ProjectDisplay_RichTextBox.TabIndex = 0;
+            this.ProjectDisplay_RichTextBox.Text = "";
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 389);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(696, 543);
+            this.Controls.Add(this.Project_TabControl);
             this.Name = "Main_Form";
             this.Text = "Project Tracker";
             this.Load += new System.EventHandler(this.Main_Form_Load);
-            this.tabControl1.ResumeLayout(false);
+            this.Project_TabControl.ResumeLayout(false);
             this.Home_Tab.ResumeLayout(false);
             this.Add_Project_Tab.ResumeLayout(false);
             this.Add_Project_Tab.PerformLayout();
@@ -681,8 +729,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.RiskStatus_PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RiskDescription_PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RiskName_PictureBox)).EndInit();
-            this.tabPage3.ResumeLayout(false);
+            this.Tracking_Tab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Project_Details_Display_GroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -691,11 +740,11 @@
 
         private System.Windows.Forms.Button Add_Project_Button;
         private System.Windows.Forms.ListBox Projects_Listbox;
-        private System.Windows.Forms.Button Edit_Project_Button;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button Modify_Project_Button;
+        private System.Windows.Forms.TabControl Project_TabControl;
         private System.Windows.Forms.TabPage Home_Tab;
         private System.Windows.Forms.TabPage Add_Project_Tab;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage Tracking_Tab;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Team_Members_Label;
         private System.Windows.Forms.TextBox Project_Manager_Textbox;
@@ -746,6 +795,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.Button ViewProjectDetails_Button;
+        private System.Windows.Forms.Button Delete_Project_Button;
+        private System.Windows.Forms.GroupBox Project_Details_Display_GroupBox;
+        private System.Windows.Forms.RichTextBox ProjectDisplay_RichTextBox;
     }
 }
 

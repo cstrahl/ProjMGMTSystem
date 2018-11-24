@@ -67,6 +67,11 @@ namespace Project_Tracker
 
         private void Save_Project_Button_Click(object sender, EventArgs e)
         {
+            if (Project_Name_Textbox.Text == "" || Project_Manager_Textbox.Text == "" || Project_Description_TextBox.Text == "" || Team_Members_TextBox.Text == "" || Risks_ListBox.Items.Count == 0 || Requirements_ListBox.Items.Count == 0) {
+                Error_Label.Visible = true;
+                return;
+            }
+
             TempProj.setProjName(Project_Name_Textbox.Text);
             string MangrName = Project_Manager_Textbox.Text;
             try
@@ -269,8 +274,44 @@ namespace Project_Tracker
 
         private void Add_Project_Button_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectTab(Add_Project_Tab);
+            Project_TabControl.SelectTab(Add_Project_Tab);
 
+        }
+
+        private void Project_Manager_Textbox_Leave(object sender, EventArgs e)
+        {
+            if (Project_Manager_Textbox.Text == "")
+            {
+                ProjectManager_PictureBox.Visible = true;
+            }
+            else
+            {
+                ProjectManager_PictureBox.Visible = false;
+            }
+        }
+
+        private void Project_Description_TextBox_Leave(object sender, EventArgs e)
+        {
+            if (Project_Description_TextBox.Text == "")
+            {
+                ProjectDescription_PictureBox.Visible = true;
+            }
+            else
+            {
+                ProjectDescription_PictureBox.Visible = false;
+            }
+        }
+
+        private void Team_Members_TextBox_Leave(object sender, EventArgs e)
+        {
+            if (Team_Members_TextBox.Text == "")
+            {
+                TeamMembers_PictureBox.Visible = true;
+            }
+            else
+            {
+                TeamMembers_PictureBox.Visible = false;
+            }
         }
     }
 }
