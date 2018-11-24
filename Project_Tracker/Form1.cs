@@ -266,5 +266,11 @@ namespace Project_Tracker
                 ProjectName_PictureBox.Visible = false;
             }
         }
+
+        private void Add_Project_Button_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(Add_Project_Tab);
+
+        }
     }
 }
