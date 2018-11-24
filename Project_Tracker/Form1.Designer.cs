@@ -90,6 +90,7 @@
             this.Project_Details_Display_GroupBox = new System.Windows.Forms.GroupBox();
             this.ProjectDisplay_RichTextBox = new System.Windows.Forms.RichTextBox();
             this.UpdateTracking_Button = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.Project_TabControl.SuspendLayout();
             this.Home_Tab.SuspendLayout();
             this.Add_Project_Tab.SuspendLayout();
@@ -124,7 +125,7 @@
             // Projects_Listbox
             // 
             this.Projects_Listbox.FormattingEnabled = true;
-            this.Projects_Listbox.Location = new System.Drawing.Point(53, 45);
+            this.Projects_Listbox.Location = new System.Drawing.Point(53, 51);
             this.Projects_Listbox.Name = "Projects_Listbox";
             this.Projects_Listbox.Size = new System.Drawing.Size(192, 212);
             this.Projects_Listbox.TabIndex = 1;
@@ -137,6 +138,7 @@
             this.Modify_Project_Button.TabIndex = 2;
             this.Modify_Project_Button.Text = "Modify Project";
             this.Modify_Project_Button.UseVisualStyleBackColor = true;
+            this.Modify_Project_Button.Click += new System.EventHandler(this.Modify_Project_Button_Click);
             // 
             // Project_TabControl
             // 
@@ -151,6 +153,7 @@
             // 
             // Home_Tab
             // 
+            this.Home_Tab.Controls.Add(this.label2);
             this.Home_Tab.Controls.Add(this.UpdateTracking_Button);
             this.Home_Tab.Controls.Add(this.Project_Details_Display_GroupBox);
             this.Home_Tab.Controls.Add(this.Delete_Project_Button);
@@ -674,6 +677,7 @@
             this.ViewProjectDetails_Button.TabIndex = 3;
             this.ViewProjectDetails_Button.Text = "View Project Details";
             this.ViewProjectDetails_Button.UseVisualStyleBackColor = true;
+            this.ViewProjectDetails_Button.Click += new System.EventHandler(this.ViewProjectDetails_Button_Click);
             // 
             // Delete_Project_Button
             // 
@@ -711,6 +715,18 @@
             this.UpdateTracking_Button.TabIndex = 6;
             this.UpdateTracking_Button.Text = "Update Tracking";
             this.UpdateTracking_Button.UseVisualStyleBackColor = true;
+            this.UpdateTracking_Button.Click += new System.EventHandler(this.UpdateTracking_Button_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(50, 450);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "*Please select a project first";
             // 
             // Main_Form
             // 
@@ -723,6 +739,7 @@
             this.Load += new System.EventHandler(this.Main_Form_Load);
             this.Project_TabControl.ResumeLayout(false);
             this.Home_Tab.ResumeLayout(false);
+            this.Home_Tab.PerformLayout();
             this.Add_Project_Tab.ResumeLayout(false);
             this.Add_Project_Tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeamMembers_PictureBox)).EndInit();
@@ -811,6 +828,7 @@
         private System.Windows.Forms.GroupBox Project_Details_Display_GroupBox;
         private System.Windows.Forms.RichTextBox ProjectDisplay_RichTextBox;
         private System.Windows.Forms.Button UpdateTracking_Button;
+        private System.Windows.Forms.Label label2;
     }
 }
 

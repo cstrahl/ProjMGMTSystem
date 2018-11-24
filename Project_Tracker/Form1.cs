@@ -275,7 +275,6 @@ namespace Project_Tracker
         private void Add_Project_Button_Click(object sender, EventArgs e)
         {
             Project_TabControl.SelectTab(Add_Project_Tab);
-
         }
 
         private void Project_Manager_Textbox_Leave(object sender, EventArgs e)
@@ -312,6 +311,25 @@ namespace Project_Tracker
             {
                 TeamMembers_PictureBox.Visible = false;
             }
+        }
+
+        private void UpdateTracking_Button_Click(object sender, EventArgs e)
+        {
+            Project_TabControl.SelectTab(Tracking_Tab);
+        }
+
+        private void ViewProjectDetails_Button_Click(object sender, EventArgs e)
+        {
+            string Project_Text;
+
+            //get current project and assign it to temp; extract all of its text and display it in richtextbox
+        }
+
+        private void Modify_Project_Button_Click(object sender, EventArgs e)
+        {
+            Project_TabControl.SelectTab(Add_Project_Tab);
+
+            //load in the whole project to text boxes and listboxes
         }
     }
 }
