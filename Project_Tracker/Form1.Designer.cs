@@ -89,6 +89,7 @@
             this.Delete_Project_Button = new System.Windows.Forms.Button();
             this.Project_Details_Display_GroupBox = new System.Windows.Forms.GroupBox();
             this.ProjectDisplay_RichTextBox = new System.Windows.Forms.RichTextBox();
+            this.UpdateTracking_Button = new System.Windows.Forms.Button();
             this.Project_TabControl.SuspendLayout();
             this.Home_Tab.SuspendLayout();
             this.Add_Project_Tab.SuspendLayout();
@@ -150,6 +151,7 @@
             // 
             // Home_Tab
             // 
+            this.Home_Tab.Controls.Add(this.UpdateTracking_Button);
             this.Home_Tab.Controls.Add(this.Project_Details_Display_GroupBox);
             this.Home_Tab.Controls.Add(this.Delete_Project_Button);
             this.Home_Tab.Controls.Add(this.ViewProjectDetails_Button);
@@ -675,7 +677,7 @@
             // 
             // Delete_Project_Button
             // 
-            this.Delete_Project_Button.Location = new System.Drawing.Point(170, 344);
+            this.Delete_Project_Button.Location = new System.Drawing.Point(110, 399);
             this.Delete_Project_Button.Name = "Delete_Project_Button";
             this.Delete_Project_Button.Size = new System.Drawing.Size(75, 34);
             this.Delete_Project_Button.TabIndex = 4;
@@ -700,6 +702,15 @@
             this.ProjectDisplay_RichTextBox.Size = new System.Drawing.Size(318, 393);
             this.ProjectDisplay_RichTextBox.TabIndex = 0;
             this.ProjectDisplay_RichTextBox.Text = "";
+            // 
+            // UpdateTracking_Button
+            // 
+            this.UpdateTracking_Button.Location = new System.Drawing.Point(170, 344);
+            this.UpdateTracking_Button.Name = "UpdateTracking_Button";
+            this.UpdateTracking_Button.Size = new System.Drawing.Size(75, 34);
+            this.UpdateTracking_Button.TabIndex = 6;
+            this.UpdateTracking_Button.Text = "Update Tracking";
+            this.UpdateTracking_Button.UseVisualStyleBackColor = true;
             // 
             // Main_Form
             // 
@@ -799,6 +810,7 @@
         private System.Windows.Forms.Button Delete_Project_Button;
         private System.Windows.Forms.GroupBox Project_Details_Display_GroupBox;
         private System.Windows.Forms.RichTextBox ProjectDisplay_RichTextBox;
+        private System.Windows.Forms.Button UpdateTracking_Button;
     }
 }
 
