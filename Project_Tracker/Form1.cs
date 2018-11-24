@@ -238,5 +238,10 @@ namespace Project_Tracker
         {
 
         }
+
+        private void Add_Project_Button_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(Add_Project_Tab);
+        }
     }
 }
