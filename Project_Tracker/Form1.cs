@@ -170,6 +170,7 @@ namespace Project_Tracker
                     Risk_Status_ComboBox.Text = "";
                     Risks_ListBox.Enabled = true;
                     Requirements_ListBox.Enabled = true;
+                    TempProj.setProjRisk(RiskList); //update list of risks
                 }
 
                 //Rewrites the requirement
@@ -194,6 +195,7 @@ namespace Project_Tracker
                     NonFunctional_RadioButton.Checked = false;
                     Requirements_ListBox.Enabled = true;
                     Risks_ListBox.Enabled = true;
+                    TempProj.setProjReq(RequirementList); //updates list of requirements
                 }
             }
         }
@@ -224,9 +226,24 @@ namespace Project_Tracker
         }
 
         private void Delete_Button_Click(object sender, EventArgs e)
-        {
-            //used for removing a risk or requirement completely
-            
+        {         
+            //if both listboxes are empty or neither of them have an item selected then dont run the code below
+            if (Risks_ListBox.Items.Count == 0 && Requirements_ListBox.Items.Count == 0 || Risks_ListBox.SelectedIndex == -1 && Requirements_ListBox.SelectedIndex == -1)
+            {
+                return;
+            }
+
+            if (Risks_ListBox.SelectedIndex > -1) {
+                RiskList.RemoveAt(Risks_ListBox.SelectedIndex);
+                Risks_ListBox.Items.RemoveAt(Risks_ListBox.SelectedIndex);
+                TempProj.setProjRisk(RiskList);  //update the list after deleting
+            }
+
+            if (Requirements_ListBox.SelectedIndex > -1) {
+                RequirementList.RemoveAt(Requirements_ListBox.SelectedIndex);
+                Requirements_ListBox.Items.RemoveAt(Requirements_ListBox.SelectedIndex);
+                TempProj.setProjReq(RequirementList);  //update the list after deleting
+            }
         }
 
         private void Main_Form_Load(object sender, EventArgs e)
@@ -237,6 +254,17 @@ namespace Project_Tracker
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Project_Name_Textbox_Leave(object sender, EventArgs e)
+        {
+            if (Project_Name_Textbox.Text == "")
+            {
+                ProjectName_PictureBox.Visible = true;
+            }
+            else {
+                ProjectName_PictureBox.Visible = false;
+            }
         }
     }
 }

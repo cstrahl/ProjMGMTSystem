@@ -242,6 +242,7 @@
             this.Project_Name_Textbox.Name = "Project_Name_Textbox";
             this.Project_Name_Textbox.Size = new System.Drawing.Size(127, 20);
             this.Project_Name_Textbox.TabIndex = 1;
+            this.Project_Name_Textbox.Leave += new System.EventHandler(this.Project_Name_Textbox_Leave);
             // 
             // ProjectName_PictureBox
             // 
