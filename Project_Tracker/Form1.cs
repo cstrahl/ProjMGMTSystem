@@ -110,6 +110,8 @@ namespace Project_Tracker
             TempProj.setProjReq(RequirementList);
             ProjectList.Add(TempProj);
             Projects_Listbox.Items.Add(TempProj.getProjName());
+            EmptyAddProjectFields();
+            Hide_Error_Graphics();
         }
 
         private void Modify_Button_Click(object sender, EventArgs e)
@@ -218,6 +220,7 @@ namespace Project_Tracker
             Functional_PictureBox.Visible = false;
             NonFunctional_PictureBox.Visible = false;
             Error_Label.Visible = false;
+            HomePageError_Label.Visible = false;
         }
 
         private void Requirements_ListBox_MouseDown(object sender, MouseEventArgs e)
@@ -327,9 +330,50 @@ namespace Project_Tracker
 
         private void Modify_Project_Button_Click(object sender, EventArgs e)
         {
+            int z = Projects_Listbox.SelectedIndex;
             Project_TabControl.SelectTab(Add_Project_Tab);
+            Project_Name_Textbox.Text = ProjectList[z].getProjName();
+            Project_Manager_Textbox.Text = ProjectList[z].getProjManager().ToString();
+            Project_Description_TextBox.Text = ProjectList[z].getProjDescrip();
+            //string TeamMembersList;
+            List<Person> TeamMembersNameList = ProjectList[z].getProjMembers();
+
+            foreach (Person Per in TeamMembersNameList) {
+                Team_Members_TextBox.Text += Per.ToString() + Environment.NewLine;
+            }
+
+            List<Risk> RisksforListBox = ProjectList[z].getProjRisk();
+            foreach (Risk Ri in RisksforListBox) {
+                Risks_ListBox.Items.Add(Ri.Name);
+            }
+
+            List<Requirement> RequirementsforListBox = ProjectList[z].getProjReq();
+            foreach (Requirement Req in RequirementsforListBox)
+            {
+                Requirements_ListBox.Items.Add(Req.Name);
+            }
+
+            //Team_Members_TextBox.Text = TeamMembersList;
+
 
             //load in the whole project to text boxes and listboxes
+        }
+
+        private void EmptyAddProjectFields() {
+            Project_Name_Textbox.Text = "";
+            Project_Manager_Textbox.Text = "";
+            Project_Description_TextBox.Text = "";
+            Team_Members_TextBox.Text = "";
+            Risk_Name_Textbox.Text = "";
+            Risk_Description_TextBox.Text = "";
+            Risk_Status_ComboBox.SelectedIndex = -1;
+            Risks_ListBox.Items.Clear();
+            Requirements_Name_TextBox.Text = "";
+            Requirements_Description_TextBox.Text = "";
+            Functional_RadioButton.Checked = false;
+            NonFunctional_RadioButton.Checked = false;
+            Requirements_ListBox.Items.Clear();
+
         }
     }
 }

@@ -32,7 +32,14 @@ namespace Project_Tracker{
         }
 
         public override string ToString(){
-            return (firstName + " " + lastName);
+            try
+            {
+                return (firstName + " " + lastName);
+            }
+            catch {
+                return (firstName);
+            }
+            
         }
 
     }

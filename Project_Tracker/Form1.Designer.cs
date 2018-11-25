@@ -90,7 +90,7 @@
             this.Project_Details_Display_GroupBox = new System.Windows.Forms.GroupBox();
             this.ProjectDisplay_RichTextBox = new System.Windows.Forms.RichTextBox();
             this.UpdateTracking_Button = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.HomePageError_Label = new System.Windows.Forms.Label();
             this.Project_TabControl.SuspendLayout();
             this.Home_Tab.SuspendLayout();
             this.Add_Project_Tab.SuspendLayout();
@@ -153,7 +153,7 @@
             // 
             // Home_Tab
             // 
-            this.Home_Tab.Controls.Add(this.label2);
+            this.Home_Tab.Controls.Add(this.HomePageError_Label);
             this.Home_Tab.Controls.Add(this.UpdateTracking_Button);
             this.Home_Tab.Controls.Add(this.Project_Details_Display_GroupBox);
             this.Home_Tab.Controls.Add(this.Delete_Project_Button);
@@ -717,16 +717,16 @@
             this.UpdateTracking_Button.UseVisualStyleBackColor = true;
             this.UpdateTracking_Button.Click += new System.EventHandler(this.UpdateTracking_Button_Click);
             // 
-            // label2
+            // HomePageError_Label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(50, 450);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 13);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "*Please select a project first";
+            this.HomePageError_Label.AutoSize = true;
+            this.HomePageError_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomePageError_Label.ForeColor = System.Drawing.Color.Red;
+            this.HomePageError_Label.Location = new System.Drawing.Point(50, 450);
+            this.HomePageError_Label.Name = "HomePageError_Label";
+            this.HomePageError_Label.Size = new System.Drawing.Size(137, 13);
+            this.HomePageError_Label.TabIndex = 21;
+            this.HomePageError_Label.Text = "*Please select a project first";
             // 
             // Main_Form
             // 
@@ -828,7 +828,7 @@
         private System.Windows.Forms.GroupBox Project_Details_Display_GroupBox;
         private System.Windows.Forms.RichTextBox ProjectDisplay_RichTextBox;
         private System.Windows.Forms.Button UpdateTracking_Button;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label HomePageError_Label;
     }
 }
 
