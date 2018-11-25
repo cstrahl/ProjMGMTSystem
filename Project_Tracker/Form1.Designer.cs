@@ -204,6 +204,7 @@
             this.Team_Members_TextBox.Location = new System.Drawing.Point(482, 79);
             this.Team_Members_TextBox.Multiline = true;
             this.Team_Members_TextBox.Name = "Team_Members_TextBox";
+            this.Team_Members_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Team_Members_TextBox.Size = new System.Drawing.Size(127, 59);
             this.Team_Members_TextBox.TabIndex = 7;
             this.Team_Members_TextBox.WordWrap = false;
@@ -223,6 +224,7 @@
             this.Project_Description_TextBox.Location = new System.Drawing.Point(132, 82);
             this.Project_Description_TextBox.Multiline = true;
             this.Project_Description_TextBox.Name = "Project_Description_TextBox";
+            this.Project_Description_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Project_Description_TextBox.Size = new System.Drawing.Size(127, 59);
             this.Project_Description_TextBox.TabIndex = 5;
             this.Project_Description_TextBox.Leave += new System.EventHandler(this.Project_Description_TextBox_Leave);
@@ -355,6 +357,7 @@
             this.Requirements_Description_TextBox.Location = new System.Drawing.Point(88, 62);
             this.Requirements_Description_TextBox.Multiline = true;
             this.Requirements_Description_TextBox.Name = "Requirements_Description_TextBox";
+            this.Requirements_Description_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Requirements_Description_TextBox.Size = new System.Drawing.Size(127, 46);
             this.Requirements_Description_TextBox.TabIndex = 3;
             // 
@@ -490,6 +493,7 @@
             this.Risk_Description_TextBox.Location = new System.Drawing.Point(88, 62);
             this.Risk_Description_TextBox.Multiline = true;
             this.Risk_Description_TextBox.Name = "Risk_Description_TextBox";
+            this.Risk_Description_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Risk_Description_TextBox.Size = new System.Drawing.Size(127, 46);
             this.Risk_Description_TextBox.TabIndex = 3;
             // 
@@ -687,6 +691,7 @@
             this.Delete_Project_Button.TabIndex = 4;
             this.Delete_Project_Button.Text = "Delete Project";
             this.Delete_Project_Button.UseVisualStyleBackColor = true;
+            this.Delete_Project_Button.Click += new System.EventHandler(this.Delete_Project_Button_Click);
             // 
             // Project_Details_Display_GroupBox
             // 

@@ -118,10 +118,57 @@ namespace Project_Tracker
                 Projects_Listbox.Items.Add(TempProj.getProjName());
                 EmptyAddProjectFields();
                 Hide_Error_Graphics();
+                Project_TabControl.SelectTab(Home_Tab);
             }
 
             if (ModifyingProject == true) {
-                Save_Project_Button.Text = "Update Project";
+                //Save_Project_Button.Text = "Update Project";
+
+                int a = Projects_Listbox.SelectedIndex;
+                ProjectList[a].setProjName(Project_Name_Textbox.Text);
+                ProjectList[a].setProjDescrip(Project_Description_TextBox.Text);
+                              
+                string MangrName2 = Project_Manager_Textbox.Text;
+                try
+                {
+                    //Assuming first and last name of manager are typed
+                    string[] ManagerName2 = MangrName2.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+                    Person Manager2 = new Person(ManagerName2[0], ManagerName2[1]);
+                    ProjectList[a].setProjManager(Manager2);
+                }
+                catch
+                {
+                    //If Project Manager first name given and last name was not typed
+                    Person Manager2 = new Person(Project_Manager_Textbox.Text);
+                    ProjectList[a].setProjManager(Manager2);
+                }
+
+                string[] Members2 = Team_Members_TextBox.Text.Split('\n'); //Put each name typed in list
+                List<Person> Tmembers2 = new List<Person>();  //Create a team members list to store the people
+                foreach (string Persn2 in Members2)
+                {
+                    try
+                    {
+                        //Split name into first and last using space
+                        string[] EachName2 = Persn2.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+                        Person PerTemp2 = new Person(EachName2[0], EachName2[1]);    //Store each name as a person
+                        ProjectList[a].setProjMembers(Tmembers2);
+                    }
+                    catch
+                    {
+                        Person PerTemp2 = new Person(Persn2);  //If only first names were typed
+                        ProjectList[a].setProjMembers(Tmembers2);
+                    }
+                }
+
+                ProjectList[a].setProjRisk(RiskList);
+                ProjectList[a].setProjReq(RequirementList);
+                Projects_Listbox.Items[Projects_Listbox.SelectedIndex] = Project_Name_Textbox.Text;
+                EmptyAddProjectFields();
+                Hide_Error_Graphics();
+                Save_Project_Button.Text = "Add Project";
+                ModifyingProject = false;
+                Project_TabControl.SelectTab(Home_Tab);
             }
         }
 
@@ -342,32 +389,49 @@ namespace Project_Tracker
         private void Modify_Project_Button_Click(object sender, EventArgs e)
         {
             //load in the whole project to text boxes and listboxes
-            int z = Projects_Listbox.SelectedIndex;
-            Project_TabControl.SelectTab(Add_Project_Tab);
-            Project_Name_Textbox.Text = ProjectList[z].getProjName();
-            Project_Manager_Textbox.Text = ProjectList[z].getProjManager().ToString();
-            Project_Description_TextBox.Text = ProjectList[z].getProjDescrip();
-            
-            List<Person> TeamMembersNameList = ProjectList[z].getProjMembers();
 
-            foreach (Person Per in TeamMembersNameList) {  //error here
-                Team_Members_TextBox.Text += Per.ToString() + Environment.NewLine;
-            }
-
-            List<Risk> RisksforListBox = ProjectList[z].getProjRisk();
-            foreach (Risk Ri in RisksforListBox) {
-                Risks_ListBox.Items.Add(Ri.Name);
-            }
-
-            List<Requirement> RequirementsforListBox = ProjectList[z].getProjReq();
-            foreach (Requirement Req in RequirementsforListBox)
+            if (Projects_Listbox.SelectedIndex > -1)
             {
-                Requirements_ListBox.Items.Add(Req.Name);
+                int z = Projects_Listbox.SelectedIndex;
+                Project_TabControl.SelectTab(Add_Project_Tab);
+                Project_Name_Textbox.Text = ProjectList[z].getProjName();
+                Project_Manager_Textbox.Text = ProjectList[z].getProjManager().ToString();
+                Project_Description_TextBox.Text = ProjectList[z].getProjDescrip();
+
+                List<Person> TeamMembersNameList = ProjectList[z].getProjMembers();
+
+                //foreach (Person Per in TeamMembersNameList)
+                //{  //error here
+                //    Team_Members_TextBox.AppendText(Per.ToString() + Environment.NewLine);
+                //}
+
+                //team members are not brought back into text box after a second modify, error here
+                int numb = TeamMembersNameList.Count( ) - 1;
+                for (int i = 0; i <= numb; i++) {
+                    if (i == numb) {
+                        Team_Members_TextBox.AppendText(TeamMembersNameList[i].ToString());
+                        goto LeaveLoop;
+                    }
+                    Team_Members_TextBox.AppendText(TeamMembersNameList[i].ToString() + Environment.NewLine);
+                }
+                LeaveLoop:
+
+                List<Risk> RisksforListBox = ProjectList[z].getProjRisk();
+                foreach (Risk Ri in RisksforListBox)
+                {
+                    Risks_ListBox.Items.Add(Ri.Name);
+                }
+
+                List<Requirement> RequirementsforListBox = ProjectList[z].getProjReq();
+                foreach (Requirement Req in RequirementsforListBox)
+                {
+                    Requirements_ListBox.Items.Add(Req.Name);
+                }
+
+                ModifyingProject = true;
+                Save_Project_Button.Text = "Update Project";
+                Project_TabControl.SelectTab(Add_Project_Tab);
             }
-
-            Project_TabControl.SelectTab(Add_Project_Tab);
-            ModifyingProject = true;            
-
         }
 
         private void EmptyAddProjectFields() {
@@ -385,6 +449,21 @@ namespace Project_Tracker
             NonFunctional_RadioButton.Checked = false;
             Requirements_ListBox.Items.Clear();
 
+        }
+
+        private void Delete_Project_Button_Click(object sender, EventArgs e)
+        {
+            //if both listboxes are empty or neither of them have an item selected then dont run the code below
+            if (Projects_Listbox.Items.Count == 0 || Projects_Listbox.SelectedIndex == -1)
+            {
+                return;
+            }
+
+            if (Projects_Listbox.SelectedIndex > -1)
+            {
+                ProjectList.RemoveAt(Projects_Listbox.SelectedIndex);
+                Projects_Listbox.Items.RemoveAt(Projects_Listbox.SelectedIndex);
+            }
         }
     }
 }
