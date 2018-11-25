@@ -16,7 +16,7 @@ namespace Project_Tracker
         ProjectData TempProj = new ProjectData();
         List<Risk> RiskList = new List<Risk>();
         List<Requirement> RequirementList = new List<Requirement>();
-
+        bool ModifyingProject = false;
 
         public Main_Form()
         {
@@ -72,46 +72,57 @@ namespace Project_Tracker
                 return;
             }
 
-            TempProj.setProjName(Project_Name_Textbox.Text);
-            string MangrName = Project_Manager_Textbox.Text;
-            try
+            if (ModifyingProject == false)
             {
-                //Assuming first and last name of manager are typed
-                string[] ManagerName = MangrName.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
-                Person Manager = new Person(ManagerName[0], ManagerName[1]);
-                TempProj.setProjManager(Manager);
-            }
-            catch {
-                //If Project Manager first name given and last name was not typed
-                Person Manager2 = new Person(Project_Manager_Textbox.Text);
-                TempProj.setProjManager(Manager2);
-            }
-            
-            TempProj.setProjDescrip(Project_Description_TextBox.Text);
-
-            //add members, loop through list
-            string[] Members = Team_Members_TextBox.Text.Split('\n'); //Put each name typed in list
-            List<Person> Tmembers = new List<Person>();  //Create a team members list to store the people
-            foreach (string Persn in Members) {
+                TempProj.setProjName(Project_Name_Textbox.Text);
+                string MangrName = Project_Manager_Textbox.Text;
                 try
                 {
-                    //Split name into first and last using space
-                    string[] EachName = Persn.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
-                    Person PerTemp = new Person(EachName[0], EachName[1]);    //Store each name as a person
-                    Tmembers.Add(PerTemp);
+                    //Assuming first and last name of manager are typed
+                    string[] ManagerName = MangrName.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+                    Person Manager = new Person(ManagerName[0], ManagerName[1]);
+                    TempProj.setProjManager(Manager);
                 }
-                catch {
-                    Person PerTemp2 = new Person(Persn);  //If only first names were typed
-                    Tmembers.Add(PerTemp2);
-                }                
+                catch
+                {
+                    //If Project Manager first name given and last name was not typed
+                    Person Manager2 = new Person(Project_Manager_Textbox.Text);
+                    TempProj.setProjManager(Manager2);
+                }
+
+                TempProj.setProjDescrip(Project_Description_TextBox.Text);
+
+                //add members, loop through list
+                string[] Members = Team_Members_TextBox.Text.Split('\n'); //Put each name typed in list
+                List<Person> Tmembers = new List<Person>();  //Create a team members list to store the people
+                foreach (string Persn in Members)
+                {
+                    try
+                    {
+                        //Split name into first and last using space
+                        string[] EachName = Persn.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
+                        Person PerTemp = new Person(EachName[0], EachName[1]);    //Store each name as a person
+                        Tmembers.Add(PerTemp);
+                    }
+                    catch
+                    {
+                        Person PerTemp2 = new Person(Persn);  //If only first names were typed
+                        Tmembers.Add(PerTemp2);
+                    }
+                }
+
+                TempProj.setProjMembers(Tmembers);
+                TempProj.setProjRisk(RiskList);
+                TempProj.setProjReq(RequirementList);
+                ProjectList.Add(TempProj);
+                Projects_Listbox.Items.Add(TempProj.getProjName());
+                EmptyAddProjectFields();
+                Hide_Error_Graphics();
             }
 
-            TempProj.setProjRisk(RiskList);
-            TempProj.setProjReq(RequirementList);
-            ProjectList.Add(TempProj);
-            Projects_Listbox.Items.Add(TempProj.getProjName());
-            EmptyAddProjectFields();
-            Hide_Error_Graphics();
+            if (ModifyingProject == true) {
+                Save_Project_Button.Text = "Update Project";
+            }
         }
 
         private void Modify_Button_Click(object sender, EventArgs e)
@@ -330,15 +341,16 @@ namespace Project_Tracker
 
         private void Modify_Project_Button_Click(object sender, EventArgs e)
         {
+            //load in the whole project to text boxes and listboxes
             int z = Projects_Listbox.SelectedIndex;
             Project_TabControl.SelectTab(Add_Project_Tab);
             Project_Name_Textbox.Text = ProjectList[z].getProjName();
             Project_Manager_Textbox.Text = ProjectList[z].getProjManager().ToString();
             Project_Description_TextBox.Text = ProjectList[z].getProjDescrip();
-            //string TeamMembersList;
+            
             List<Person> TeamMembersNameList = ProjectList[z].getProjMembers();
 
-            foreach (Person Per in TeamMembersNameList) {
+            foreach (Person Per in TeamMembersNameList) {  //error here
                 Team_Members_TextBox.Text += Per.ToString() + Environment.NewLine;
             }
 
@@ -353,10 +365,9 @@ namespace Project_Tracker
                 Requirements_ListBox.Items.Add(Req.Name);
             }
 
-            //Team_Members_TextBox.Text = TeamMembersList;
+            Project_TabControl.SelectTab(Add_Project_Tab);
+            ModifyingProject = true;            
 
-
-            //load in the whole project to text boxes and listboxes
         }
 
         private void EmptyAddProjectFields() {

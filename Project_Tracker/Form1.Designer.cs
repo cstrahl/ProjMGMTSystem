@@ -283,9 +283,9 @@
             // 
             // Save_Project_Button
             // 
-            this.Save_Project_Button.Location = new System.Drawing.Point(119, 443);
+            this.Save_Project_Button.Location = new System.Drawing.Point(114, 435);
             this.Save_Project_Button.Name = "Save_Project_Button";
-            this.Save_Project_Button.Size = new System.Drawing.Size(75, 23);
+            this.Save_Project_Button.Size = new System.Drawing.Size(80, 38);
             this.Save_Project_Button.TabIndex = 19;
             this.Save_Project_Button.Text = "Add Project";
             this.Save_Project_Button.UseVisualStyleBackColor = true;
