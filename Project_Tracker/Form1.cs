@@ -38,6 +38,7 @@ namespace Project_Tracker
                 Risk_Name_Textbox.Text = "";
                 Risk_Description_TextBox.Text = "";
                 Risk_Status_ComboBox.Text = "";
+                RisksListbox_PictureBox.Visible = false;
             }
             
 
@@ -62,11 +63,19 @@ namespace Project_Tracker
                 Requirements_Description_TextBox.Text = "";
                 Functional_RadioButton.Checked = false;
                 NonFunctional_RadioButton.Checked = false;
+                RequirementsListBox_PictureBox.Visible = false;
             }
         }
 
         private void Save_Project_Button_Click(object sender, EventArgs e)
         {
+            if (Risks_ListBox.Items.Count == 0) {
+                RisksListbox_PictureBox.Visible = true;
+            }
+
+            if (Requirements_ListBox.Items.Count == 0) {
+                RequirementsListBox_PictureBox.Visible = true;
+            }
             if (Project_Name_Textbox.Text == "" || Project_Manager_Textbox.Text == "" || Project_Description_TextBox.Text == "" || Team_Members_TextBox.Text == "" || Risks_ListBox.Items.Count == 0 || Requirements_ListBox.Items.Count == 0) {
                 Error_Label.Visible = true;
                 return;
@@ -271,13 +280,8 @@ namespace Project_Tracker
             ProjectManager_PictureBox.Visible = false;
             ProjectDescription_PictureBox.Visible = false;
             TeamMembers_PictureBox.Visible = false;
-            RiskName_PictureBox.Visible = false;
-            RiskDescription_PictureBox.Visible = false;
-            RiskStatus_PictureBox.Visible = false;
-            RequirementsName_PictureBox.Visible = false;
-            RequirementsDescription_PictureBox.Visible = false;
-            Functional_PictureBox.Visible = false;
-            NonFunctional_PictureBox.Visible = false;
+            RequirementsListBox_PictureBox.Visible = false;
+            RisksListbox_PictureBox.Visible = false;
             Error_Label.Visible = false;
             HomePageError_Label.Visible = false;
         }
@@ -293,7 +297,7 @@ namespace Project_Tracker
         }
 
         private void Delete_Button_Click(object sender, EventArgs e)
-        {         
+        {
             //if both listboxes are empty or neither of them have an item selected then dont run the code below
             if (Risks_ListBox.Items.Count == 0 && Requirements_ListBox.Items.Count == 0 || Risks_ListBox.SelectedIndex == -1 && Requirements_ListBox.SelectedIndex == -1)
             {
