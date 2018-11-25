@@ -151,16 +151,17 @@ namespace Project_Tracker
                     {
                         //Split name into first and last using space
                         string[] EachName2 = Persn2.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
-                        Person PerTemp2 = new Person(EachName2[0], EachName2[1]);    //Store each name as a person
-                        ProjectList[a].setProjMembers(Tmembers2);
+                        Person PerTemp3 = new Person(EachName2[0], EachName2[1]);    //Store each name as a person
+                        Tmembers2.Add(PerTemp3);
                     }
                     catch
                     {
-                        Person PerTemp2 = new Person(Persn2);  //If only first names were typed
-                        ProjectList[a].setProjMembers(Tmembers2);
+                        Person PerTemp4 = new Person(Persn2);  //If only first names were typed
+                        Tmembers2.Add(PerTemp4);
                     }
                 }
 
+                ProjectList[a].setProjMembers(Tmembers2);
                 ProjectList[a].setProjRisk(RiskList);
                 ProjectList[a].setProjReq(RequirementList);
                 Projects_Listbox.Items[Projects_Listbox.SelectedIndex] = Project_Name_Textbox.Text;
@@ -389,7 +390,6 @@ namespace Project_Tracker
         private void Modify_Project_Button_Click(object sender, EventArgs e)
         {
             //load in the whole project to text boxes and listboxes
-
             if (Projects_Listbox.SelectedIndex > -1)
             {
                 int z = Projects_Listbox.SelectedIndex;
@@ -400,12 +400,7 @@ namespace Project_Tracker
 
                 List<Person> TeamMembersNameList = ProjectList[z].getProjMembers();
 
-                //foreach (Person Per in TeamMembersNameList)
-                //{  //error here
-                //    Team_Members_TextBox.AppendText(Per.ToString() + Environment.NewLine);
-                //}
-
-                //team members are not brought back into text box after a second modify, error here
+                //used for importing team members back into textbox
                 int numb = TeamMembersNameList.Count( ) - 1;
                 for (int i = 0; i <= numb; i++) {
                     if (i == numb) {
