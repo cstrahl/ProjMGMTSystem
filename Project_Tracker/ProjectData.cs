@@ -16,7 +16,6 @@ namespace Project_Tracker
         private List<Person> projMembers;
         private List<Risk> projRisk;
         private List<Requirement> projReq;
-        //private DataGridView projTracking;
 
         public ProjectData() { }
 
@@ -53,14 +52,6 @@ namespace Project_Tracker
         internal void setProjReq (List<Requirement> projReq){
             this.projReq = projReq;
         }
-
-        //internal void setProjTracking (DataGridView projTracking){
-        //    this.projTracking = projTracking;
-        //}
-
-        //public DataGridView getProjTracking(){
-        //    return projTracking;
-        //}
 
         public string getProjName()
         {

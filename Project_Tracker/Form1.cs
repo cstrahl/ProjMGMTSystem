@@ -591,6 +591,7 @@ namespace Project_Tracker
                 return;
             }
 
+            //Update Table
             if (TrackingCategory_ComboBox.SelectedIndex == 0) {
                 TrackingTable.Rows[TrackingNames_ComboBox.SelectedIndex]["Requirements Analysis"] = HourAmount;
             }
