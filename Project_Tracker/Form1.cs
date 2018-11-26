@@ -16,6 +16,7 @@ namespace Project_Tracker
         ProjectData TempProj = new ProjectData();
         List<Risk> RiskList = new List<Risk>();
         List<Requirement> RequirementList = new List<Requirement>();
+        DataTable TrackingTable = new DataTable();
         bool ModifyingProject = false;
 
         public Main_Form()
@@ -383,9 +384,11 @@ namespace Project_Tracker
 
         private void UpdateTracking_Button_Click(object sender, EventArgs e)
         {
-            
-
-            DataTable TrackingTable = new DataTable();
+            if (Projects_Listbox.SelectedIndex == -1)
+            {
+                HomePageError_Label.Visible = true;
+                return;
+            }
 
             TrackingTable.Columns.Add("Name", typeof(string));
             TrackingTable.Columns.Add("Requirements Analysis", typeof(int));
@@ -541,6 +544,35 @@ namespace Project_Tracker
         private void TrackingToHome_Button_Click(object sender, EventArgs e)
         {
             Project_TabControl.SelectTab(Home_Tab);
+        }
+
+        private void SubmitHours_Button_Click(object sender, EventArgs e)
+        {
+            int HourAmount = Convert.ToInt32(HourlyInput_NumericUpDown.Value);
+
+            if (TrackingNames_ComboBox.SelectedIndex == -1 || TrackingCategory_ComboBox.SelectedIndex == -1 || HourAmount == 0) {
+                return;
+            }
+
+            if (TrackingCategory_ComboBox.SelectedIndex == 0) {
+                TrackingTable.Rows[TrackingNames_ComboBox.SelectedIndex]["Requirements Analysis"] = HourAmount;
+            }
+            else if (TrackingCategory_ComboBox.SelectedIndex == 1)
+            {
+                TrackingTable.Rows[TrackingNames_ComboBox.SelectedIndex]["Designing"] = HourAmount;
+            }
+            else if (TrackingCategory_ComboBox.SelectedIndex == 2)
+            {
+                TrackingTable.Rows[TrackingNames_ComboBox.SelectedIndex]["Coding"] = HourAmount;
+            }
+            else if (TrackingCategory_ComboBox.SelectedIndex == 3)
+            {
+                TrackingTable.Rows[TrackingNames_ComboBox.SelectedIndex]["Testing"] = HourAmount;
+            }
+            else if (TrackingCategory_ComboBox.SelectedIndex == 4)
+            {
+                TrackingTable.Rows[TrackingNames_ComboBox.SelectedIndex]["Project Management"] = HourAmount;
+            }
         }
     }
 }

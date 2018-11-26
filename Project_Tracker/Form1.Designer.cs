@@ -95,7 +95,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.TrackingNames_ComboBox = new System.Windows.Forms.ComboBox();
             this.TrackingCategory_ComboBox = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SubmitHours_Button = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.HourlyInput_NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.TrackingToHome_Button = new System.Windows.Forms.Button();
@@ -715,7 +715,7 @@
             // 
             this.groupBox1.Controls.Add(this.HourlyInput_NumericUpDown);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.SubmitHours_Button);
             this.groupBox1.Controls.Add(this.TrackingCategory_ComboBox);
             this.groupBox1.Controls.Add(this.TrackingNames_ComboBox);
             this.groupBox1.Controls.Add(this.radioButton2);
@@ -791,14 +791,15 @@
             this.TrackingCategory_ComboBox.Size = new System.Drawing.Size(121, 21);
             this.TrackingCategory_ComboBox.TabIndex = 5;
             // 
-            // button1
+            // SubmitHours_Button
             // 
-            this.button1.Location = new System.Drawing.Point(389, 61);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 34);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Submit Hours";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SubmitHours_Button.Location = new System.Drawing.Point(389, 61);
+            this.SubmitHours_Button.Name = "SubmitHours_Button";
+            this.SubmitHours_Button.Size = new System.Drawing.Size(75, 34);
+            this.SubmitHours_Button.TabIndex = 6;
+            this.SubmitHours_Button.Text = "Submit Hours";
+            this.SubmitHours_Button.UseVisualStyleBackColor = true;
+            this.SubmitHours_Button.Click += new System.EventHandler(this.SubmitHours_Button_Click);
             // 
             // label4
             // 
@@ -927,7 +928,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.NumericUpDown HourlyInput_NumericUpDown;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SubmitHours_Button;
         private System.Windows.Forms.ComboBox TrackingCategory_ComboBox;
         private System.Windows.Forms.ComboBox TrackingNames_ComboBox;
         private System.Windows.Forms.RadioButton radioButton2;
