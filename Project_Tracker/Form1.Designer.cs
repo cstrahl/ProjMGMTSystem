@@ -507,6 +507,7 @@
             // 
             // Risk_Status_ComboBox
             // 
+            this.Risk_Status_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Risk_Status_ComboBox.FormattingEnabled = true;
             this.Risk_Status_ComboBox.Items.AddRange(new object[] {
             "Identified",
@@ -679,6 +680,7 @@
             // 
             // TrackingCategory_ComboBox
             // 
+            this.TrackingCategory_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TrackingCategory_ComboBox.FormattingEnabled = true;
             this.TrackingCategory_ComboBox.Items.AddRange(new object[] {
             "Requirements Analysis",
@@ -693,6 +695,7 @@
             // 
             // TrackingNames_ComboBox
             // 
+            this.TrackingNames_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TrackingNames_ComboBox.FormattingEnabled = true;
             this.TrackingNames_ComboBox.Location = new System.Drawing.Point(92, 36);
             this.TrackingNames_ComboBox.Name = "TrackingNames_ComboBox";

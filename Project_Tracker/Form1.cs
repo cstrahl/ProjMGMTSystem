@@ -564,17 +564,23 @@ namespace Project_Tracker
 
         private void Delete_Project_Button_Click(object sender, EventArgs e)
         {
-            //if both listboxes are empty or neither of them have an item selected then dont run the code below
-            if (Projects_Listbox.Items.Count == 0 || Projects_Listbox.SelectedIndex == -1)
-            {
-                return;
-            }
+            MessageBox.Show("First: " + ProjectList[0].getProjName());
+            MessageBox.Show("First2: " + ProjectList[Projects_Listbox.SelectedIndex].getProjName());
 
-            if (Projects_Listbox.SelectedIndex > -1)
-            {
-                ProjectList.RemoveAt(Projects_Listbox.SelectedIndex);
-                Projects_Listbox.Items.RemoveAt(Projects_Listbox.SelectedIndex);
-            }
+
+            MessageBox.Show("Second: " + ProjectList[1].getProjName());
+            MessageBox.Show("Second2: " + ProjectList[Projects_Listbox.SelectedIndex].getProjName());
+            ////if both listboxes are empty or neither of them have an item selected then dont run the code below
+            //if (Projects_Listbox.Items.Count == 0 || Projects_Listbox.SelectedIndex == -1)
+            //{
+            //    return;
+            //}
+
+            //if (Projects_Listbox.SelectedIndex > -1)
+            //{
+            //    ProjectList.RemoveAt(Projects_Listbox.SelectedIndex);
+            //    Projects_Listbox.Items.RemoveAt(Projects_Listbox.SelectedIndex);
+            //}
         }
 
         private void TrackingToHome_Button_Click(object sender, EventArgs e)
