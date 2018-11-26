@@ -121,8 +121,8 @@ namespace Project_Tracker
                 TempProj.setProjRisk(RiskList);
                 TempProj.setProjReq(RequirementList);
                 ProjectList.Add(TempProj);
-                RiskList.Clear();
-                RequirementList.Clear();
+                //RiskList.Clear();
+                //RequirementList.Clear();
                 Projects_Listbox.Items.Add(TempProj.getProjName());
                 EmptyAddProjectFields();
                 Hide_Error_Graphics();
