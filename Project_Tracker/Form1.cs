@@ -1,4 +1,8 @@
-﻿using System;
+﻿//SWE 4663 - Software Product
+//Group 2 - The Gentlemen
+//Broderick Thayer, Zachary Thayer, Josh Capers, Colt Mckissick, Chris Strahl
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -576,11 +580,18 @@ namespace Project_Tracker
                 ProjectList.RemoveAt(Projects_Listbox.SelectedIndex);
                 Projects_Listbox.Items.RemoveAt(Projects_Listbox.SelectedIndex);
             }
+            ProjectDisplay_RichTextBox.Text = "";
         }
 
         private void TrackingToHome_Button_Click(object sender, EventArgs e)
         {
             Project_TabControl.SelectTab(Home_Tab);
+            TrackingNames_ComboBox.Text = "";
+            TrackingCategory_ComboBox.Text = "";
+            HourlyInput_NumericUpDown.Value = 0;
+            Daily_RadioButton.Checked = false;
+            Weekly_RadioButton.Checked = false;
+            ProjectDisplay_RichTextBox.Text = "";
         }
 
         private void SubmitHours_Button_Click(object sender, EventArgs e)

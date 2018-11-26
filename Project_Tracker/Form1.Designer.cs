@@ -33,6 +33,7 @@
             this.Modify_Project_Button = new System.Windows.Forms.Button();
             this.Project_TabControl = new System.Windows.Forms.TabControl();
             this.Home_Tab = new System.Windows.Forms.TabPage();
+            this.ProjectList_Label = new System.Windows.Forms.Label();
             this.HomePageError_Label = new System.Windows.Forms.Label();
             this.UpdateTracking_Button = new System.Windows.Forms.Button();
             this.Project_Details_Display_GroupBox = new System.Windows.Forms.GroupBox();
@@ -84,12 +85,11 @@
             this.SubmitHours_Button = new System.Windows.Forms.Button();
             this.TrackingCategory_ComboBox = new System.Windows.Forms.ComboBox();
             this.TrackingNames_ComboBox = new System.Windows.Forms.ComboBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.Weekly_RadioButton = new System.Windows.Forms.RadioButton();
+            this.Daily_RadioButton = new System.Windows.Forms.RadioButton();
             this.TrackingCategory_Label = new System.Windows.Forms.Label();
             this.TrackingName_Label = new System.Windows.Forms.Label();
             this.ProjectTracking_DataGridView = new System.Windows.Forms.DataGridView();
-            this.ProjectList_Label = new System.Windows.Forms.Label();
             this.Project_TabControl.SuspendLayout();
             this.Home_Tab.SuspendLayout();
             this.Project_Details_Display_GroupBox.SuspendLayout();
@@ -161,11 +161,20 @@
             this.Home_Tab.Controls.Add(this.Add_Project_Button);
             this.Home_Tab.Location = new System.Drawing.Point(4, 22);
             this.Home_Tab.Name = "Home_Tab";
-            this.Home_Tab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Home_Tab.Padding = new System.Windows.Forms.Padding(3);
             this.Home_Tab.Size = new System.Drawing.Size(665, 493);
             this.Home_Tab.TabIndex = 0;
             this.Home_Tab.Text = "Home";
             this.Home_Tab.UseVisualStyleBackColor = true;
+            // 
+            // ProjectList_Label
+            // 
+            this.ProjectList_Label.AutoSize = true;
+            this.ProjectList_Label.Location = new System.Drawing.Point(50, 51);
+            this.ProjectList_Label.Name = "ProjectList_Label";
+            this.ProjectList_Label.Size = new System.Drawing.Size(62, 13);
+            this.ProjectList_Label.TabIndex = 22;
+            this.ProjectList_Label.Text = "Project List:";
             // 
             // HomePageError_Label
             // 
@@ -251,7 +260,7 @@
             this.Add_Project_Tab.Controls.Add(this.Project_Name_Label);
             this.Add_Project_Tab.Location = new System.Drawing.Point(4, 22);
             this.Add_Project_Tab.Name = "Add_Project_Tab";
-            this.Add_Project_Tab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Add_Project_Tab.Padding = new System.Windows.Forms.Padding(3);
             this.Add_Project_Tab.Size = new System.Drawing.Size(665, 493);
             this.Add_Project_Tab.TabIndex = 1;
             this.Add_Project_Tab.Text = "Add Project";
@@ -641,8 +650,8 @@
             this.groupBox1.Controls.Add(this.SubmitHours_Button);
             this.groupBox1.Controls.Add(this.TrackingCategory_ComboBox);
             this.groupBox1.Controls.Add(this.TrackingNames_ComboBox);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.Weekly_RadioButton);
+            this.groupBox1.Controls.Add(this.Daily_RadioButton);
             this.groupBox1.Controls.Add(this.TrackingCategory_Label);
             this.groupBox1.Controls.Add(this.TrackingName_Label);
             this.groupBox1.Location = new System.Drawing.Point(30, 27);
@@ -700,27 +709,27 @@
             this.TrackingNames_ComboBox.Size = new System.Drawing.Size(121, 21);
             this.TrackingNames_ComboBox.TabIndex = 4;
             // 
-            // radioButton2
+            // Weekly_RadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(252, 88);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(92, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Weekly Hours";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.Weekly_RadioButton.AutoSize = true;
+            this.Weekly_RadioButton.Location = new System.Drawing.Point(252, 88);
+            this.Weekly_RadioButton.Name = "Weekly_RadioButton";
+            this.Weekly_RadioButton.Size = new System.Drawing.Size(92, 17);
+            this.Weekly_RadioButton.TabIndex = 3;
+            this.Weekly_RadioButton.TabStop = true;
+            this.Weekly_RadioButton.Text = "Weekly Hours";
+            this.Weekly_RadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // Daily_RadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(252, 56);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(79, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Daily Hours";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.Daily_RadioButton.AutoSize = true;
+            this.Daily_RadioButton.Location = new System.Drawing.Point(252, 56);
+            this.Daily_RadioButton.Name = "Daily_RadioButton";
+            this.Daily_RadioButton.Size = new System.Drawing.Size(79, 17);
+            this.Daily_RadioButton.TabIndex = 2;
+            this.Daily_RadioButton.TabStop = true;
+            this.Daily_RadioButton.Text = "Daily Hours";
+            this.Daily_RadioButton.UseVisualStyleBackColor = true;
             // 
             // TrackingCategory_Label
             // 
@@ -747,15 +756,6 @@
             this.ProjectTracking_DataGridView.Name = "ProjectTracking_DataGridView";
             this.ProjectTracking_DataGridView.Size = new System.Drawing.Size(644, 290);
             this.ProjectTracking_DataGridView.TabIndex = 0;
-            // 
-            // ProjectList_Label
-            // 
-            this.ProjectList_Label.AutoSize = true;
-            this.ProjectList_Label.Location = new System.Drawing.Point(50, 51);
-            this.ProjectList_Label.Name = "ProjectList_Label";
-            this.ProjectList_Label.Size = new System.Drawing.Size(62, 13);
-            this.ProjectList_Label.TabIndex = 22;
-            this.ProjectList_Label.Text = "Project List:";
             // 
             // Main_Form
             // 
@@ -851,8 +851,8 @@
         private System.Windows.Forms.Button SubmitHours_Button;
         private System.Windows.Forms.ComboBox TrackingCategory_ComboBox;
         private System.Windows.Forms.ComboBox TrackingNames_ComboBox;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton Weekly_RadioButton;
+        private System.Windows.Forms.RadioButton Daily_RadioButton;
         private System.Windows.Forms.Label TrackingCategory_Label;
         private System.Windows.Forms.Label TrackingName_Label;
         private System.Windows.Forms.Button TrackingToHome_Button;
