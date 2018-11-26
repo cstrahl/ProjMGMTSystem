@@ -130,7 +130,6 @@ namespace Project_Tracker
             }
 
             if (ModifyingProject == true) {
-                //Save_Project_Button.Text = "Update Project";
 
                 int a = Projects_Listbox.SelectedIndex;
                 ProjectList[a].setProjName(Project_Name_Textbox.Text);
