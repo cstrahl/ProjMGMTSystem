@@ -124,6 +124,8 @@ namespace Project_Tracker
                 TempProj.setProjRisk(RiskList);
                 TempProj.setProjReq(RequirementList);
                 ProjectList.Add(TempProj);
+                //RiskList.Clear();
+                //RequirementList.Clear();
                 Projects_Listbox.Items.Add(TempProj.getProjName());
                 EmptyAddProjectFields();
                 Hide_Error_Graphics();
@@ -386,7 +388,38 @@ namespace Project_Tracker
 
         private void ViewProjectDetails_Button_Click(object sender, EventArgs e)
         {
-            string Project_Text;
+            //string Project_Text;
+            int b = Projects_Listbox.SelectedIndex;
+            ProjectDisplay_RichTextBox.Text = ProjectList[b].getProjName() + Environment.NewLine + Environment.NewLine;
+            ProjectDisplay_RichTextBox.AppendText("Manager: " + ProjectList[b].getProjManager().ToString() + Environment.NewLine + Environment.NewLine);
+           
+            List<Person> TeamMembersNameList2 = ProjectList[b].getProjMembers();
+
+            string TeamMembersCSV = string.Join(", ", TeamMembersNameList2);
+            ProjectDisplay_RichTextBox.AppendText("Team Members: " + TeamMembersCSV + Environment.NewLine + Environment.NewLine);
+
+            ProjectDisplay_RichTextBox.AppendText("Description: " + ProjectList[b].getProjDescrip() + Environment.NewLine + Environment.NewLine);
+
+            ProjectDisplay_RichTextBox.AppendText("Risks:" + Environment.NewLine);
+            List<Risk> AllProjectRisks = ProjectList[b].getProjRisk();
+            foreach (Risk ProjRisk in AllProjectRisks) {
+                ProjectDisplay_RichTextBox.AppendText(ProjRisk.Name + ": " + ProjRisk.RiskStatus + Environment.NewLine + ProjRisk.Description + Environment.NewLine + Environment.NewLine);
+            }
+
+            ProjectDisplay_RichTextBox.AppendText(Environment.NewLine + "Requirements:" + Environment.NewLine);
+            List<Requirement> AllProjectRequirements = ProjectList[b].getProjReq();
+            foreach (Requirement ProjReq in AllProjectRequirements)
+            {
+                string type = "";
+                if (ProjReq.Functional == true)
+                {
+                    type = "Functional";
+                }
+                else {
+                    type = "Non-Functional";
+                }
+                ProjectDisplay_RichTextBox.AppendText(ProjReq.Name + ": " + type + Environment.NewLine + ProjReq.Description + Environment.NewLine + Environment.NewLine);
+            }
 
             //get current project and assign it to temp; extract all of its text and display it in richtextbox
         }
