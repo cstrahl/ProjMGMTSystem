@@ -14,8 +14,8 @@ namespace Project_Tracker
     {
         private List<ProjectData> ProjectList = new List<ProjectData>();
         ProjectData TempProj = null;
-        List<Risk> RiskList = new List<Risk>();
-        List<Requirement> RequirementList = new List<Requirement>();
+        List<Risk> RiskList = null;
+        List<Requirement> RequirementList = null;
         DataTable TrackingTable = new DataTable();
         bool ModifyingProject = false;
         int selectedIndex = 0;
@@ -30,7 +30,7 @@ namespace Project_Tracker
         {
             //For addings risks  
             //Make sure every entry is filled before adding    
-            TempProj = new ProjectData();
+            
             if (Risk_Name_Textbox.Text != "" && Risk_Description_TextBox.Text != "" && !string.IsNullOrEmpty(Risk_Status_ComboBox.Text))
             {
                 Risk NewRisk = new Risk(Risk_Name_Textbox.Text, Risk_Description_TextBox.Text, Risk_Status_ComboBox.SelectedItem.ToString());
@@ -369,6 +369,9 @@ namespace Project_Tracker
         private void Add_Project_Button_Click(object sender, EventArgs e)
         {
             Project_TabControl.SelectTab(Add_Project_Tab);
+            TempProj = new ProjectData();
+            RiskList = new List<Risk>();
+            RequirementList = new List<Requirement>();
         }
 
         private void Project_Manager_Textbox_Leave(object sender, EventArgs e)
