@@ -80,15 +80,16 @@
             this.TrackingToHome_Button = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.HourlyInput_NumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
+            this.TrackingHours_Label = new System.Windows.Forms.Label();
             this.SubmitHours_Button = new System.Windows.Forms.Button();
             this.TrackingCategory_ComboBox = new System.Windows.Forms.ComboBox();
             this.TrackingNames_ComboBox = new System.Windows.Forms.ComboBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.TrackingCategory_Label = new System.Windows.Forms.Label();
+            this.TrackingName_Label = new System.Windows.Forms.Label();
             this.ProjectTracking_DataGridView = new System.Windows.Forms.DataGridView();
+            this.ProjectList_Label = new System.Windows.Forms.Label();
             this.Project_TabControl.SuspendLayout();
             this.Home_Tab.SuspendLayout();
             this.Project_Details_Display_GroupBox.SuspendLayout();
@@ -120,9 +121,9 @@
             // Projects_Listbox
             // 
             this.Projects_Listbox.FormattingEnabled = true;
-            this.Projects_Listbox.Location = new System.Drawing.Point(53, 51);
+            this.Projects_Listbox.Location = new System.Drawing.Point(53, 77);
             this.Projects_Listbox.Name = "Projects_Listbox";
-            this.Projects_Listbox.Size = new System.Drawing.Size(192, 212);
+            this.Projects_Listbox.Size = new System.Drawing.Size(192, 199);
             this.Projects_Listbox.TabIndex = 1;
             this.Projects_Listbox.SelectedIndexChanged += new System.EventHandler(this.Projects_Listbox_SelectedIndexChanged);
             // 
@@ -149,6 +150,7 @@
             // 
             // Home_Tab
             // 
+            this.Home_Tab.Controls.Add(this.ProjectList_Label);
             this.Home_Tab.Controls.Add(this.HomePageError_Label);
             this.Home_Tab.Controls.Add(this.UpdateTracking_Button);
             this.Home_Tab.Controls.Add(this.Project_Details_Display_GroupBox);
@@ -635,14 +637,14 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.HourlyInput_NumericUpDown);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.TrackingHours_Label);
             this.groupBox1.Controls.Add(this.SubmitHours_Button);
             this.groupBox1.Controls.Add(this.TrackingCategory_ComboBox);
             this.groupBox1.Controls.Add(this.TrackingNames_ComboBox);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.TrackingCategory_Label);
+            this.groupBox1.Controls.Add(this.TrackingName_Label);
             this.groupBox1.Location = new System.Drawing.Point(30, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(490, 137);
@@ -657,14 +659,14 @@
             this.HourlyInput_NumericUpDown.Size = new System.Drawing.Size(121, 20);
             this.HourlyInput_NumericUpDown.TabIndex = 8;
             // 
-            // label4
+            // TrackingHours_Label
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Hours:";
+            this.TrackingHours_Label.AutoSize = true;
+            this.TrackingHours_Label.Location = new System.Drawing.Point(47, 107);
+            this.TrackingHours_Label.Name = "TrackingHours_Label";
+            this.TrackingHours_Label.Size = new System.Drawing.Size(38, 13);
+            this.TrackingHours_Label.TabIndex = 7;
+            this.TrackingHours_Label.Text = "Hours:";
             // 
             // SubmitHours_Button
             // 
@@ -720,23 +722,23 @@
             this.radioButton1.Text = "Daily Hours";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // TrackingCategory_Label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Category:";
+            this.TrackingCategory_Label.AutoSize = true;
+            this.TrackingCategory_Label.Location = new System.Drawing.Point(33, 72);
+            this.TrackingCategory_Label.Name = "TrackingCategory_Label";
+            this.TrackingCategory_Label.Size = new System.Drawing.Size(52, 13);
+            this.TrackingCategory_Label.TabIndex = 1;
+            this.TrackingCategory_Label.Text = "Category:";
             // 
-            // label2
+            // TrackingName_Label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Name:";
+            this.TrackingName_Label.AutoSize = true;
+            this.TrackingName_Label.Location = new System.Drawing.Point(47, 36);
+            this.TrackingName_Label.Name = "TrackingName_Label";
+            this.TrackingName_Label.Size = new System.Drawing.Size(38, 13);
+            this.TrackingName_Label.TabIndex = 0;
+            this.TrackingName_Label.Text = "Name:";
             // 
             // ProjectTracking_DataGridView
             // 
@@ -746,11 +748,20 @@
             this.ProjectTracking_DataGridView.Size = new System.Drawing.Size(644, 290);
             this.ProjectTracking_DataGridView.TabIndex = 0;
             // 
+            // ProjectList_Label
+            // 
+            this.ProjectList_Label.AutoSize = true;
+            this.ProjectList_Label.Location = new System.Drawing.Point(50, 51);
+            this.ProjectList_Label.Name = "ProjectList_Label";
+            this.ProjectList_Label.Size = new System.Drawing.Size(62, 13);
+            this.ProjectList_Label.TabIndex = 22;
+            this.ProjectList_Label.Text = "Project List:";
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 541);
+            this.ClientSize = new System.Drawing.Size(691, 541);
             this.Controls.Add(this.Project_TabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -836,15 +847,16 @@
         private System.Windows.Forms.DataGridView ProjectTracking_DataGridView;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.NumericUpDown HourlyInput_NumericUpDown;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label TrackingHours_Label;
         private System.Windows.Forms.Button SubmitHours_Button;
         private System.Windows.Forms.ComboBox TrackingCategory_ComboBox;
         private System.Windows.Forms.ComboBox TrackingNames_ComboBox;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label TrackingCategory_Label;
+        private System.Windows.Forms.Label TrackingName_Label;
         private System.Windows.Forms.Button TrackingToHome_Button;
+        private System.Windows.Forms.Label ProjectList_Label;
     }
 }
 

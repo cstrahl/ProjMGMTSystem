@@ -121,8 +121,6 @@ namespace Project_Tracker
                 TempProj.setProjRisk(RiskList);
                 TempProj.setProjReq(RequirementList);
                 ProjectList.Add(TempProj);
-                //RiskList.Clear();
-                //RequirementList.Clear();
                 Projects_Listbox.Items.Add(TempProj.getProjName());
                 EmptyAddProjectFields();
                 Hide_Error_Graphics();
@@ -352,6 +350,9 @@ namespace Project_Tracker
             Hide_Error_Graphics();
             ProjectTracking_DataGridView.BackgroundColor = SystemColors.ControlLightLight;
             ProjectTracking_DataGridView.BorderStyle = BorderStyle.None;
+            Project_TabControl.Appearance = TabAppearance.FlatButtons;
+            Project_TabControl.ItemSize = new Size(0, 1);
+            Project_TabControl.SizeMode = TabSizeMode.Fixed;
         }
 
         private void Project_Name_Textbox_Leave(object sender, EventArgs e)
@@ -441,9 +442,7 @@ namespace Project_Tracker
                 }
             }
          
-
             ProjectTracking_DataGridView.DataSource = TrackingTable;
-
             Project_TabControl.SelectTab(TrackingGrid_Tab);
         }
 
@@ -462,6 +461,7 @@ namespace Project_Tracker
                 return;
             }
 
+            //Get current project, extract all of its text and display it in richtextbox
             int b = selectedIndex;
             Console.WriteLine("Selected " + b);
             ProjectDisplay_RichTextBox.Text = ProjectList[b].getProjName() + Environment.NewLine + Environment.NewLine;
@@ -496,7 +496,6 @@ namespace Project_Tracker
             }
 
             HomePageError_Label.Visible = false;
-            //get current project and assign it to temp; extract all of its text and display it in richtextbox
         }
 
         private void Modify_Project_Button_Click(object sender, EventArgs e)
@@ -562,7 +561,6 @@ namespace Project_Tracker
             Functional_RadioButton.Checked = false;
             NonFunctional_RadioButton.Checked = false;
             Requirements_ListBox.Items.Clear();
-
         }
 
         private void Delete_Project_Button_Click(object sender, EventArgs e)
