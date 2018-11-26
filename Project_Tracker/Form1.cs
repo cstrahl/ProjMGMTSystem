@@ -390,31 +390,42 @@ namespace Project_Tracker
                 return;
             }
 
-            TrackingTable.Columns.Add("Name", typeof(string));
-            TrackingTable.Columns.Add("Requirements Analysis", typeof(int));
-            TrackingTable.Columns.Add("Designing", typeof(int));
-            TrackingTable.Columns.Add("Coding", typeof(int));
-            TrackingTable.Columns.Add("Testing", typeof(int));
-            TrackingTable.Columns.Add("Project Management", typeof(int));
-
-            //Add project manager
-            string ProjManager = ProjectList[Projects_Listbox.SelectedIndex].getProjManager().ToString();
-            TrackingNames_ComboBox.Items.Add(ProjManager);
-            TrackingTable.Rows.Add(ProjManager, 0, 0, 0, 0, 0);
-
-
-            //tracking names combo box needs filled with project names
-            List<Person> TmembersListforCombo = ProjectList[Projects_Listbox.SelectedIndex].getProjMembers();
-            foreach (Person Member in TmembersListforCombo)
+            if (checkIfTableExists())
             {
-                TrackingNames_ComboBox.Items.Add(Member.ToString());
-                TrackingTable.Rows.Add(Member.ToString(), 0, 0, 0, 0, 0);
+                TrackingTable.Columns.Add("Name", typeof(string));
+                TrackingTable.Columns.Add("Requirements Analysis", typeof(int));
+                TrackingTable.Columns.Add("Designing", typeof(int));
+                TrackingTable.Columns.Add("Coding", typeof(int));
+                TrackingTable.Columns.Add("Testing", typeof(int));
+                TrackingTable.Columns.Add("Project Management", typeof(int));
+
+                //Add project manager
+                string ProjManager = ProjectList[Projects_Listbox.SelectedIndex].getProjManager().ToString();
+                TrackingNames_ComboBox.Items.Add(ProjManager);
+                TrackingTable.Rows.Add(ProjManager, 0, 0, 0, 0, 0);
+
+
+                //tracking names combo box needs filled with project names
+                List<Person> TmembersListforCombo = ProjectList[Projects_Listbox.SelectedIndex].getProjMembers();
+                foreach (Person Member in TmembersListforCombo)
+                {
+                    TrackingNames_ComboBox.Items.Add(Member.ToString());
+                    TrackingTable.Rows.Add(Member.ToString(), 0, 0, 0, 0, 0);
+                }
             }
          
 
             ProjectTracking_DataGridView.DataSource = TrackingTable;
 
             Project_TabControl.SelectTab(TrackingGrid_Tab);
+        }
+
+        private bool checkIfTableExists()
+        {
+            if (!TrackingTable.Columns.Contains("Name"))
+                return true;
+            else
+                return false;
         }
 
         private void ViewProjectDetails_Button_Click(object sender, EventArgs e)
