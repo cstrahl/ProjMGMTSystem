@@ -460,7 +460,7 @@ namespace Project_Tracker
             }
 
             int b = Projects_Listbox.SelectedIndex;
-            MessageBox.Show(b.ToString());
+            
             ProjectDisplay_RichTextBox.Text = ProjectList[b].getProjName() + Environment.NewLine + Environment.NewLine;
             ProjectDisplay_RichTextBox.AppendText("Manager: " + ProjectList[b].getProjManager().ToString() + Environment.NewLine + Environment.NewLine);
            
