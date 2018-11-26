@@ -70,13 +70,8 @@ namespace Project_Tracker
 
         private void Save_Project_Button_Click(object sender, EventArgs e)
         {
-            if (Risks_ListBox.Items.Count == 0) {
-                RisksListbox_PictureBox.Visible = true;
-            }
+            CheckForEmptyFields();
 
-            if (Requirements_ListBox.Items.Count == 0) {
-                RequirementsListBox_PictureBox.Visible = true;
-            }
             if (Project_Name_Textbox.Text == "" || Project_Manager_Textbox.Text == "" || Project_Description_TextBox.Text == "" || Team_Members_TextBox.Text == "" || Risks_ListBox.Items.Count == 0 || Requirements_ListBox.Items.Count == 0) {
                 Error_Label.Visible = true;
                 return;
@@ -182,6 +177,38 @@ namespace Project_Tracker
                 Save_Project_Button.Text = "Add Project";
                 ModifyingProject = false;
                 Project_TabControl.SelectTab(Home_Tab);
+            }
+        }
+
+        public void CheckForEmptyFields() {
+            if (Project_Name_Textbox.Text == "")
+            {
+                ProjectName_PictureBox.Visible = true;
+            }
+
+            if (Project_Manager_Textbox.Text == "")
+            {
+                ProjectManager_PictureBox.Visible = true;
+            }
+
+            if (Project_Description_TextBox.Text == "")
+            {
+                ProjectDescription_PictureBox.Visible = true;
+            }
+
+            if (Team_Members_TextBox.Text == "")
+            {
+                TeamMembers_PictureBox.Visible = true;
+            }
+
+            if (Risks_ListBox.Items.Count == 0)
+            {
+                RisksListbox_PictureBox.Visible = true;
+            }
+
+            if (Requirements_ListBox.Items.Count == 0)
+            {
+                RequirementsListBox_PictureBox.Visible = true;
             }
         }
 
@@ -323,11 +350,8 @@ namespace Project_Tracker
         private void Main_Form_Load(object sender, EventArgs e)
         {
             Hide_Error_Graphics();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            ProjectTracking_DataGridView.BackgroundColor = SystemColors.ControlLightLight;
+            ProjectTracking_DataGridView.BorderStyle = BorderStyle.None;
         }
 
         private void Project_Name_Textbox_Leave(object sender, EventArgs e)
