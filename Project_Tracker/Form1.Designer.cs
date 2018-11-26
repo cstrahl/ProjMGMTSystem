@@ -33,6 +33,12 @@
             this.Modify_Project_Button = new System.Windows.Forms.Button();
             this.Project_TabControl = new System.Windows.Forms.TabControl();
             this.Home_Tab = new System.Windows.Forms.TabPage();
+            this.HomePageError_Label = new System.Windows.Forms.Label();
+            this.UpdateTracking_Button = new System.Windows.Forms.Button();
+            this.Project_Details_Display_GroupBox = new System.Windows.Forms.GroupBox();
+            this.ProjectDisplay_RichTextBox = new System.Windows.Forms.RichTextBox();
+            this.Delete_Project_Button = new System.Windows.Forms.Button();
+            this.ViewProjectDetails_Button = new System.Windows.Forms.Button();
             this.Add_Project_Tab = new System.Windows.Forms.TabPage();
             this.Team_Members_TextBox = new System.Windows.Forms.TextBox();
             this.TeamMembers_PictureBox = new System.Windows.Forms.PictureBox();
@@ -48,18 +54,20 @@
             this.Modify_Button = new System.Windows.Forms.Button();
             this.Add_Button = new System.Windows.Forms.Button();
             this.Requirements_Input_GroupBox = new System.Windows.Forms.GroupBox();
+            this.Requirements_ListBox = new System.Windows.Forms.ListBox();
+            this.RequirementsListBox_PictureBox = new System.Windows.Forms.PictureBox();
             this.Requirements_Description_TextBox = new System.Windows.Forms.TextBox();
             this.Requirements_Name_TextBox = new System.Windows.Forms.TextBox();
             this.NonFunctional_RadioButton = new System.Windows.Forms.RadioButton();
             this.Functional_RadioButton = new System.Windows.Forms.RadioButton();
-            this.Requirements_ListBox = new System.Windows.Forms.ListBox();
             this.Requirements_Description_Label = new System.Windows.Forms.Label();
             this.Requirements_Name_Label = new System.Windows.Forms.Label();
             this.Risk_Input_GroupBox = new System.Windows.Forms.GroupBox();
+            this.Risks_ListBox = new System.Windows.Forms.ListBox();
+            this.RisksListbox_PictureBox = new System.Windows.Forms.PictureBox();
             this.Risk_Status_ComboBox = new System.Windows.Forms.ComboBox();
             this.Risk_Description_TextBox = new System.Windows.Forms.TextBox();
             this.Risk_Name_Textbox = new System.Windows.Forms.TextBox();
-            this.Risks_ListBox = new System.Windows.Forms.ListBox();
             this.Risk_Status_Label = new System.Windows.Forms.Label();
             this.Risk_Description_Label = new System.Windows.Forms.Label();
             this.Risk_Name_Label = new System.Windows.Forms.Label();
@@ -78,45 +86,41 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ViewProjectDetails_Button = new System.Windows.Forms.Button();
-            this.Delete_Project_Button = new System.Windows.Forms.Button();
-            this.Project_Details_Display_GroupBox = new System.Windows.Forms.GroupBox();
-            this.ProjectDisplay_RichTextBox = new System.Windows.Forms.RichTextBox();
-            this.UpdateTracking_Button = new System.Windows.Forms.Button();
-            this.HomePageError_Label = new System.Windows.Forms.Label();
-            this.RisksListbox_PictureBox = new System.Windows.Forms.PictureBox();
-            this.RequirementsListBox_PictureBox = new System.Windows.Forms.PictureBox();
             this.TrackingGrid_Tab = new System.Windows.Forms.TabPage();
-            this.ProjectTracking_DataGridView = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.TrackingNames_ComboBox = new System.Windows.Forms.ComboBox();
-            this.TrackingCategory_ComboBox = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.HourlyInput_NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.TrackingToHome_Button = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.HourlyInput_NumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.TrackingCategory_ComboBox = new System.Windows.Forms.ComboBox();
+            this.TrackingNames_ComboBox = new System.Windows.Forms.ComboBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ProjectTracking_DataGridView = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.Project_TabControl.SuspendLayout();
             this.Home_Tab.SuspendLayout();
+            this.Project_Details_Display_GroupBox.SuspendLayout();
             this.Add_Project_Tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeamMembers_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectDescription_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectManager_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectName_PictureBox)).BeginInit();
             this.Requirements_Input_GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RequirementsListBox_PictureBox)).BeginInit();
             this.Risk_Input_GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RisksListbox_PictureBox)).BeginInit();
             this.Tracking_Tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.Project_Details_Display_GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RisksListbox_PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RequirementsListBox_PictureBox)).BeginInit();
             this.TrackingGrid_Tab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProjectTracking_DataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HourlyInput_NumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectTracking_DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // Add_Project_Button
@@ -171,11 +175,71 @@
             this.Home_Tab.Controls.Add(this.Add_Project_Button);
             this.Home_Tab.Location = new System.Drawing.Point(4, 22);
             this.Home_Tab.Name = "Home_Tab";
-            this.Home_Tab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Home_Tab.Padding = new System.Windows.Forms.Padding(3);
             this.Home_Tab.Size = new System.Drawing.Size(665, 493);
             this.Home_Tab.TabIndex = 0;
             this.Home_Tab.Text = "Home";
             this.Home_Tab.UseVisualStyleBackColor = true;
+            // 
+            // HomePageError_Label
+            // 
+            this.HomePageError_Label.AutoSize = true;
+            this.HomePageError_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomePageError_Label.ForeColor = System.Drawing.Color.Red;
+            this.HomePageError_Label.Location = new System.Drawing.Point(50, 450);
+            this.HomePageError_Label.Name = "HomePageError_Label";
+            this.HomePageError_Label.Size = new System.Drawing.Size(137, 13);
+            this.HomePageError_Label.TabIndex = 21;
+            this.HomePageError_Label.Text = "*Please select a project first";
+            // 
+            // UpdateTracking_Button
+            // 
+            this.UpdateTracking_Button.Location = new System.Drawing.Point(170, 344);
+            this.UpdateTracking_Button.Name = "UpdateTracking_Button";
+            this.UpdateTracking_Button.Size = new System.Drawing.Size(75, 34);
+            this.UpdateTracking_Button.TabIndex = 6;
+            this.UpdateTracking_Button.Text = "Update Tracking";
+            this.UpdateTracking_Button.UseVisualStyleBackColor = true;
+            this.UpdateTracking_Button.Click += new System.EventHandler(this.UpdateTracking_Button_Click);
+            // 
+            // Project_Details_Display_GroupBox
+            // 
+            this.Project_Details_Display_GroupBox.Controls.Add(this.ProjectDisplay_RichTextBox);
+            this.Project_Details_Display_GroupBox.Location = new System.Drawing.Point(301, 45);
+            this.Project_Details_Display_GroupBox.Name = "Project_Details_Display_GroupBox";
+            this.Project_Details_Display_GroupBox.Size = new System.Drawing.Size(330, 418);
+            this.Project_Details_Display_GroupBox.TabIndex = 5;
+            this.Project_Details_Display_GroupBox.TabStop = false;
+            this.Project_Details_Display_GroupBox.Text = "Project Details Display";
+            // 
+            // ProjectDisplay_RichTextBox
+            // 
+            this.ProjectDisplay_RichTextBox.Location = new System.Drawing.Point(6, 19);
+            this.ProjectDisplay_RichTextBox.Name = "ProjectDisplay_RichTextBox";
+            this.ProjectDisplay_RichTextBox.ReadOnly = true;
+            this.ProjectDisplay_RichTextBox.Size = new System.Drawing.Size(318, 393);
+            this.ProjectDisplay_RichTextBox.TabIndex = 0;
+            this.ProjectDisplay_RichTextBox.Text = "";
+            // 
+            // Delete_Project_Button
+            // 
+            this.Delete_Project_Button.Location = new System.Drawing.Point(110, 399);
+            this.Delete_Project_Button.Name = "Delete_Project_Button";
+            this.Delete_Project_Button.Size = new System.Drawing.Size(75, 34);
+            this.Delete_Project_Button.TabIndex = 4;
+            this.Delete_Project_Button.Text = "Delete Project";
+            this.Delete_Project_Button.UseVisualStyleBackColor = true;
+            this.Delete_Project_Button.Click += new System.EventHandler(this.Delete_Project_Button_Click);
+            // 
+            // ViewProjectDetails_Button
+            // 
+            this.ViewProjectDetails_Button.Location = new System.Drawing.Point(170, 291);
+            this.ViewProjectDetails_Button.Name = "ViewProjectDetails_Button";
+            this.ViewProjectDetails_Button.Size = new System.Drawing.Size(75, 34);
+            this.ViewProjectDetails_Button.TabIndex = 3;
+            this.ViewProjectDetails_Button.Text = "View Project Details";
+            this.ViewProjectDetails_Button.UseVisualStyleBackColor = true;
+            this.ViewProjectDetails_Button.Click += new System.EventHandler(this.ViewProjectDetails_Button_Click);
             // 
             // Add_Project_Tab
             // 
@@ -201,7 +265,7 @@
             this.Add_Project_Tab.Controls.Add(this.Project_Name_Label);
             this.Add_Project_Tab.Location = new System.Drawing.Point(4, 22);
             this.Add_Project_Tab.Name = "Add_Project_Tab";
-            this.Add_Project_Tab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Add_Project_Tab.Padding = new System.Windows.Forms.Padding(3);
             this.Add_Project_Tab.Size = new System.Drawing.Size(665, 493);
             this.Add_Project_Tab.TabIndex = 1;
             this.Add_Project_Tab.Text = "Add Project";
@@ -348,6 +412,24 @@
             this.Requirements_Input_GroupBox.TabStop = false;
             this.Requirements_Input_GroupBox.Text = "Requirements Input";
             // 
+            // Requirements_ListBox
+            // 
+            this.Requirements_ListBox.FormattingEnabled = true;
+            this.Requirements_ListBox.Location = new System.Drawing.Point(22, 162);
+            this.Requirements_ListBox.Name = "Requirements_ListBox";
+            this.Requirements_ListBox.Size = new System.Drawing.Size(193, 82);
+            this.Requirements_ListBox.TabIndex = 6;
+            this.Requirements_ListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Requirements_ListBox_MouseDown);
+            // 
+            // RequirementsListBox_PictureBox
+            // 
+            this.RequirementsListBox_PictureBox.BackColor = System.Drawing.Color.Red;
+            this.RequirementsListBox_PictureBox.Location = new System.Drawing.Point(20, 160);
+            this.RequirementsListBox_PictureBox.Name = "RequirementsListBox_PictureBox";
+            this.RequirementsListBox_PictureBox.Size = new System.Drawing.Size(197, 86);
+            this.RequirementsListBox_PictureBox.TabIndex = 35;
+            this.RequirementsListBox_PictureBox.TabStop = false;
+            // 
             // Requirements_Description_TextBox
             // 
             this.Requirements_Description_TextBox.Location = new System.Drawing.Point(88, 62);
@@ -386,15 +468,6 @@
             this.Functional_RadioButton.Text = "Functional Requirement";
             this.Functional_RadioButton.UseVisualStyleBackColor = true;
             // 
-            // Requirements_ListBox
-            // 
-            this.Requirements_ListBox.FormattingEnabled = true;
-            this.Requirements_ListBox.Location = new System.Drawing.Point(22, 162);
-            this.Requirements_ListBox.Name = "Requirements_ListBox";
-            this.Requirements_ListBox.Size = new System.Drawing.Size(193, 82);
-            this.Requirements_ListBox.TabIndex = 6;
-            this.Requirements_ListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Requirements_ListBox_MouseDown);
-            // 
             // Requirements_Description_Label
             // 
             this.Requirements_Description_Label.AutoSize = true;
@@ -430,6 +503,24 @@
             this.Risk_Input_GroupBox.TabStop = false;
             this.Risk_Input_GroupBox.Text = "Risks Input";
             // 
+            // Risks_ListBox
+            // 
+            this.Risks_ListBox.FormattingEnabled = true;
+            this.Risks_ListBox.Location = new System.Drawing.Point(22, 162);
+            this.Risks_ListBox.Name = "Risks_ListBox";
+            this.Risks_ListBox.Size = new System.Drawing.Size(193, 82);
+            this.Risks_ListBox.TabIndex = 6;
+            this.Risks_ListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Risks_ListBox_MouseDown);
+            // 
+            // RisksListbox_PictureBox
+            // 
+            this.RisksListbox_PictureBox.BackColor = System.Drawing.Color.Red;
+            this.RisksListbox_PictureBox.Location = new System.Drawing.Point(20, 160);
+            this.RisksListbox_PictureBox.Name = "RisksListbox_PictureBox";
+            this.RisksListbox_PictureBox.Size = new System.Drawing.Size(197, 86);
+            this.RisksListbox_PictureBox.TabIndex = 34;
+            this.RisksListbox_PictureBox.TabStop = false;
+            // 
             // Risk_Status_ComboBox
             // 
             this.Risk_Status_ComboBox.FormattingEnabled = true;
@@ -461,15 +552,6 @@
             this.Risk_Name_Textbox.Name = "Risk_Name_Textbox";
             this.Risk_Name_Textbox.Size = new System.Drawing.Size(127, 20);
             this.Risk_Name_Textbox.TabIndex = 1;
-            // 
-            // Risks_ListBox
-            // 
-            this.Risks_ListBox.FormattingEnabled = true;
-            this.Risks_ListBox.Location = new System.Drawing.Point(22, 162);
-            this.Risks_ListBox.Name = "Risks_ListBox";
-            this.Risks_ListBox.Size = new System.Drawing.Size(193, 82);
-            this.Risks_ListBox.TabIndex = 6;
-            this.Risks_ListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Risks_ListBox_MouseDown);
             // 
             // Risk_Status_Label
             // 
@@ -546,10 +628,14 @@
             // 
             // Tracking_Tab
             // 
+            this.Tracking_Tab.Controls.Add(this.label6);
+            this.Tracking_Tab.Controls.Add(this.label5);
+            this.Tracking_Tab.Controls.Add(this.textBox2);
+            this.Tracking_Tab.Controls.Add(this.textBox1);
             this.Tracking_Tab.Controls.Add(this.dataGridView1);
             this.Tracking_Tab.Location = new System.Drawing.Point(4, 22);
             this.Tracking_Tab.Name = "Tracking_Tab";
-            this.Tracking_Tab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Tracking_Tab.Padding = new System.Windows.Forms.Padding(3);
             this.Tracking_Tab.Size = new System.Drawing.Size(665, 493);
             this.Tracking_Tab.TabIndex = 2;
             this.Tracking_Tab.Text = "Tracking";
@@ -569,7 +655,7 @@
             this.Column7});
             this.dataGridView1.Location = new System.Drawing.Point(0, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(633, 390);
+            this.dataGridView1.Size = new System.Drawing.Size(633, 153);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -613,84 +699,6 @@
             this.Column7.HeaderText = "7";
             this.Column7.Name = "Column7";
             // 
-            // ViewProjectDetails_Button
-            // 
-            this.ViewProjectDetails_Button.Location = new System.Drawing.Point(170, 291);
-            this.ViewProjectDetails_Button.Name = "ViewProjectDetails_Button";
-            this.ViewProjectDetails_Button.Size = new System.Drawing.Size(75, 34);
-            this.ViewProjectDetails_Button.TabIndex = 3;
-            this.ViewProjectDetails_Button.Text = "View Project Details";
-            this.ViewProjectDetails_Button.UseVisualStyleBackColor = true;
-            this.ViewProjectDetails_Button.Click += new System.EventHandler(this.ViewProjectDetails_Button_Click);
-            // 
-            // Delete_Project_Button
-            // 
-            this.Delete_Project_Button.Location = new System.Drawing.Point(110, 399);
-            this.Delete_Project_Button.Name = "Delete_Project_Button";
-            this.Delete_Project_Button.Size = new System.Drawing.Size(75, 34);
-            this.Delete_Project_Button.TabIndex = 4;
-            this.Delete_Project_Button.Text = "Delete Project";
-            this.Delete_Project_Button.UseVisualStyleBackColor = true;
-            this.Delete_Project_Button.Click += new System.EventHandler(this.Delete_Project_Button_Click);
-            // 
-            // Project_Details_Display_GroupBox
-            // 
-            this.Project_Details_Display_GroupBox.Controls.Add(this.ProjectDisplay_RichTextBox);
-            this.Project_Details_Display_GroupBox.Location = new System.Drawing.Point(301, 45);
-            this.Project_Details_Display_GroupBox.Name = "Project_Details_Display_GroupBox";
-            this.Project_Details_Display_GroupBox.Size = new System.Drawing.Size(330, 418);
-            this.Project_Details_Display_GroupBox.TabIndex = 5;
-            this.Project_Details_Display_GroupBox.TabStop = false;
-            this.Project_Details_Display_GroupBox.Text = "Project Details Display";
-            // 
-            // ProjectDisplay_RichTextBox
-            // 
-            this.ProjectDisplay_RichTextBox.Location = new System.Drawing.Point(6, 19);
-            this.ProjectDisplay_RichTextBox.Name = "ProjectDisplay_RichTextBox";
-            this.ProjectDisplay_RichTextBox.ReadOnly = true;
-            this.ProjectDisplay_RichTextBox.Size = new System.Drawing.Size(318, 393);
-            this.ProjectDisplay_RichTextBox.TabIndex = 0;
-            this.ProjectDisplay_RichTextBox.Text = "";
-            // 
-            // UpdateTracking_Button
-            // 
-            this.UpdateTracking_Button.Location = new System.Drawing.Point(170, 344);
-            this.UpdateTracking_Button.Name = "UpdateTracking_Button";
-            this.UpdateTracking_Button.Size = new System.Drawing.Size(75, 34);
-            this.UpdateTracking_Button.TabIndex = 6;
-            this.UpdateTracking_Button.Text = "Update Tracking";
-            this.UpdateTracking_Button.UseVisualStyleBackColor = true;
-            this.UpdateTracking_Button.Click += new System.EventHandler(this.UpdateTracking_Button_Click);
-            // 
-            // HomePageError_Label
-            // 
-            this.HomePageError_Label.AutoSize = true;
-            this.HomePageError_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomePageError_Label.ForeColor = System.Drawing.Color.Red;
-            this.HomePageError_Label.Location = new System.Drawing.Point(50, 450);
-            this.HomePageError_Label.Name = "HomePageError_Label";
-            this.HomePageError_Label.Size = new System.Drawing.Size(137, 13);
-            this.HomePageError_Label.TabIndex = 21;
-            this.HomePageError_Label.Text = "*Please select a project first";
-            // 
-            // RisksListbox_PictureBox
-            // 
-            this.RisksListbox_PictureBox.BackColor = System.Drawing.Color.Red;
-            this.RisksListbox_PictureBox.Location = new System.Drawing.Point(20, 160);
-            this.RisksListbox_PictureBox.Name = "RisksListbox_PictureBox";
-            this.RisksListbox_PictureBox.Size = new System.Drawing.Size(197, 86);
-            this.RisksListbox_PictureBox.TabIndex = 34;
-            this.RisksListbox_PictureBox.TabStop = false;
-            // 
-            // RequirementsListBox_PictureBox
-            // 
-            this.RequirementsListBox_PictureBox.BackColor = System.Drawing.Color.Red;
-            this.RequirementsListBox_PictureBox.Location = new System.Drawing.Point(20, 160);
-            this.RequirementsListBox_PictureBox.Name = "RequirementsListBox_PictureBox";
-            this.RequirementsListBox_PictureBox.Size = new System.Drawing.Size(197, 86);
-            this.RequirementsListBox_PictureBox.TabIndex = 35;
-            this.RequirementsListBox_PictureBox.TabStop = false;
-            // 
             // TrackingGrid_Tab
             // 
             this.TrackingGrid_Tab.Controls.Add(this.TrackingToHome_Button);
@@ -703,13 +711,15 @@
             this.TrackingGrid_Tab.Text = "Tracking Grid";
             this.TrackingGrid_Tab.UseVisualStyleBackColor = true;
             // 
-            // ProjectTracking_DataGridView
+            // TrackingToHome_Button
             // 
-            this.ProjectTracking_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProjectTracking_DataGridView.Location = new System.Drawing.Point(10, 182);
-            this.ProjectTracking_DataGridView.Name = "ProjectTracking_DataGridView";
-            this.ProjectTracking_DataGridView.Size = new System.Drawing.Size(644, 290);
-            this.ProjectTracking_DataGridView.TabIndex = 0;
+            this.TrackingToHome_Button.Location = new System.Drawing.Point(566, 86);
+            this.TrackingToHome_Button.Name = "TrackingToHome_Button";
+            this.TrackingToHome_Button.Size = new System.Drawing.Size(75, 38);
+            this.TrackingToHome_Button.TabIndex = 9;
+            this.TrackingToHome_Button.Text = "Return to Project View";
+            this.TrackingToHome_Button.UseVisualStyleBackColor = true;
+            this.TrackingToHome_Button.Click += new System.EventHandler(this.TrackingToHome_Button_Click);
             // 
             // groupBox1
             // 
@@ -729,53 +739,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tracking Information Input";
             // 
-            // label2
+            // HourlyInput_NumericUpDown
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Name:";
+            this.HourlyInput_NumericUpDown.Location = new System.Drawing.Point(92, 107);
+            this.HourlyInput_NumericUpDown.Name = "HourlyInput_NumericUpDown";
+            this.HourlyInput_NumericUpDown.Size = new System.Drawing.Size(121, 20);
+            this.HourlyInput_NumericUpDown.TabIndex = 8;
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Category:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(47, 107);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Hours:";
             // 
-            // radioButton1
+            // button1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(252, 56);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(79, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Daily Hours";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(252, 88);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(92, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Weekly Hours";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // TrackingNames_ComboBox
-            // 
-            this.TrackingNames_ComboBox.FormattingEnabled = true;
-            this.TrackingNames_ComboBox.Location = new System.Drawing.Point(92, 36);
-            this.TrackingNames_ComboBox.Name = "TrackingNames_ComboBox";
-            this.TrackingNames_ComboBox.Size = new System.Drawing.Size(121, 21);
-            this.TrackingNames_ComboBox.TabIndex = 4;
+            this.button1.Location = new System.Drawing.Point(389, 61);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 34);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Submit Hours";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // TrackingCategory_ComboBox
             // 
@@ -791,40 +778,95 @@
             this.TrackingCategory_ComboBox.Size = new System.Drawing.Size(121, 21);
             this.TrackingCategory_ComboBox.TabIndex = 5;
             // 
-            // button1
+            // TrackingNames_ComboBox
             // 
-            this.button1.Location = new System.Drawing.Point(389, 61);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 34);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Submit Hours";
-            this.button1.UseVisualStyleBackColor = true;
+            this.TrackingNames_ComboBox.FormattingEnabled = true;
+            this.TrackingNames_ComboBox.Location = new System.Drawing.Point(92, 36);
+            this.TrackingNames_ComboBox.Name = "TrackingNames_ComboBox";
+            this.TrackingNames_ComboBox.Size = new System.Drawing.Size(121, 21);
+            this.TrackingNames_ComboBox.TabIndex = 4;
             // 
-            // label4
+            // radioButton2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 107);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Hours:";
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(252, 88);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(92, 17);
+            this.radioButton2.TabIndex = 3;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Weekly Hours";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // HourlyInput_NumericUpDown
+            // radioButton1
             // 
-            this.HourlyInput_NumericUpDown.Location = new System.Drawing.Point(92, 107);
-            this.HourlyInput_NumericUpDown.Name = "HourlyInput_NumericUpDown";
-            this.HourlyInput_NumericUpDown.Size = new System.Drawing.Size(121, 20);
-            this.HourlyInput_NumericUpDown.TabIndex = 8;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(252, 56);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(79, 17);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Daily Hours";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // TrackingToHome_Button
+            // label3
             // 
-            this.TrackingToHome_Button.Location = new System.Drawing.Point(566, 86);
-            this.TrackingToHome_Button.Name = "TrackingToHome_Button";
-            this.TrackingToHome_Button.Size = new System.Drawing.Size(75, 38);
-            this.TrackingToHome_Button.TabIndex = 9;
-            this.TrackingToHome_Button.Text = "Return to Project View";
-            this.TrackingToHome_Button.UseVisualStyleBackColor = true;
-            this.TrackingToHome_Button.Click += new System.EventHandler(this.TrackingToHome_Button_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(33, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Category:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(47, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Name:";
+            // 
+            // ProjectTracking_DataGridView
+            // 
+            this.ProjectTracking_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProjectTracking_DataGridView.Location = new System.Drawing.Point(10, 182);
+            this.ProjectTracking_DataGridView.Name = "ProjectTracking_DataGridView";
+            this.ProjectTracking_DataGridView.Size = new System.Drawing.Size(644, 290);
+            this.ProjectTracking_DataGridView.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(125, 179);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(171, 20);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(125, 216);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(171, 20);
+            this.textBox2.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 182);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Requirements Analysis:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 219);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 13);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Implementation:";
             // 
             // Main_Form
             // 
@@ -838,6 +880,7 @@
             this.Project_TabControl.ResumeLayout(false);
             this.Home_Tab.ResumeLayout(false);
             this.Home_Tab.PerformLayout();
+            this.Project_Details_Display_GroupBox.ResumeLayout(false);
             this.Add_Project_Tab.ResumeLayout(false);
             this.Add_Project_Tab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeamMembers_PictureBox)).EndInit();
@@ -846,18 +889,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.ProjectName_PictureBox)).EndInit();
             this.Requirements_Input_GroupBox.ResumeLayout(false);
             this.Requirements_Input_GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RequirementsListBox_PictureBox)).EndInit();
             this.Risk_Input_GroupBox.ResumeLayout(false);
             this.Risk_Input_GroupBox.PerformLayout();
-            this.Tracking_Tab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.Project_Details_Display_GroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RisksListbox_PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RequirementsListBox_PictureBox)).EndInit();
+            this.Tracking_Tab.ResumeLayout(false);
+            this.Tracking_Tab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.TrackingGrid_Tab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ProjectTracking_DataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HourlyInput_NumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectTracking_DataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -935,6 +978,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button TrackingToHome_Button;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 
