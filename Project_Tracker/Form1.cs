@@ -13,11 +13,12 @@ namespace Project_Tracker
     public partial class Main_Form : Form
     {
         private List<ProjectData> ProjectList = new List<ProjectData>();
-        ProjectData TempProj = new ProjectData();
+        ProjectData TempProj = null;
         List<Risk> RiskList = new List<Risk>();
         List<Requirement> RequirementList = new List<Requirement>();
         DataTable TrackingTable = new DataTable();
         bool ModifyingProject = false;
+        int selectedIndex = 0;
 
         public Main_Form()
         {
@@ -28,8 +29,8 @@ namespace Project_Tracker
         private void Add_Button_Click(object sender, EventArgs e)
         {
             //For addings risks  
-            
-            //Make sure every entry is filled before adding       
+            //Make sure every entry is filled before adding    
+            TempProj = new ProjectData();
             if (Risk_Name_Textbox.Text != "" && Risk_Description_TextBox.Text != "" && !string.IsNullOrEmpty(Risk_Status_ComboBox.Text))
             {
                 Risk NewRisk = new Risk(Risk_Name_Textbox.Text, Risk_Description_TextBox.Text, Risk_Status_ComboBox.SelectedItem.ToString());
@@ -436,11 +437,11 @@ namespace Project_Tracker
                     TrackingNames_ComboBox.Items.Add(Member.ToString());
                     TrackingTable.Rows.Add(Member.ToString(), 0, 0, 0, 0, 0);
                 }
-
-                ProjectName_Label.Text = ProjectList[Projects_Listbox.SelectedIndex].getProjName();
-            }         
+            }
+         
 
             ProjectTracking_DataGridView.DataSource = TrackingTable;
+
             Project_TabControl.SelectTab(TrackingGrid_Tab);
         }
 
@@ -459,8 +460,8 @@ namespace Project_Tracker
                 return;
             }
 
-            int b = Projects_Listbox.SelectedIndex;
-            
+            int b = selectedIndex;
+            Console.WriteLine("Selected " + b);
             ProjectDisplay_RichTextBox.Text = ProjectList[b].getProjName() + Environment.NewLine + Environment.NewLine;
             ProjectDisplay_RichTextBox.AppendText("Manager: " + ProjectList[b].getProjManager().ToString() + Environment.NewLine + Environment.NewLine);
            
@@ -580,10 +581,6 @@ namespace Project_Tracker
         private void TrackingToHome_Button_Click(object sender, EventArgs e)
         {
             Project_TabControl.SelectTab(Home_Tab);
-            TrackingNames_ComboBox.SelectedIndex = -1;
-            TrackingCategory_ComboBox.SelectedIndex = -1;
-            HourlyInput_NumericUpDown.Value = 0;
-            //ProjectTracking_DataGridView.Rows.Clear();
         }
 
         private void SubmitHours_Button_Click(object sender, EventArgs e)
@@ -613,6 +610,11 @@ namespace Project_Tracker
             {
                 TrackingTable.Rows[TrackingNames_ComboBox.SelectedIndex]["Project Management"] = HourAmount;
             }
+        }
+
+        private void Projects_Listbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedIndex = Projects_Listbox.SelectedIndex;
         }
     }
 }

@@ -84,12 +84,11 @@
             this.SubmitHours_Button = new System.Windows.Forms.Button();
             this.TrackingCategory_ComboBox = new System.Windows.Forms.ComboBox();
             this.TrackingNames_ComboBox = new System.Windows.Forms.ComboBox();
-            this.WeeklyHours_RadioButton = new System.Windows.Forms.RadioButton();
-            this.DailyHours_RadioButton = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ProjectTracking_DataGridView = new System.Windows.Forms.DataGridView();
-            this.ProjectName_Label = new System.Windows.Forms.Label();
             this.Project_TabControl.SuspendLayout();
             this.Home_Tab.SuspendLayout();
             this.Project_Details_Display_GroupBox.SuspendLayout();
@@ -110,9 +109,10 @@
             // 
             // Add_Project_Button
             // 
-            this.Add_Project_Button.Location = new System.Drawing.Point(53, 291);
+            this.Add_Project_Button.Location = new System.Drawing.Point(106, 560);
+            this.Add_Project_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Add_Project_Button.Name = "Add_Project_Button";
-            this.Add_Project_Button.Size = new System.Drawing.Size(75, 34);
+            this.Add_Project_Button.Size = new System.Drawing.Size(150, 65);
             this.Add_Project_Button.TabIndex = 0;
             this.Add_Project_Button.Text = "Add Project";
             this.Add_Project_Button.UseVisualStyleBackColor = true;
@@ -121,16 +121,20 @@
             // Projects_Listbox
             // 
             this.Projects_Listbox.FormattingEnabled = true;
-            this.Projects_Listbox.Location = new System.Drawing.Point(53, 51);
+            this.Projects_Listbox.ItemHeight = 25;
+            this.Projects_Listbox.Location = new System.Drawing.Point(106, 98);
+            this.Projects_Listbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Projects_Listbox.Name = "Projects_Listbox";
-            this.Projects_Listbox.Size = new System.Drawing.Size(192, 212);
+            this.Projects_Listbox.Size = new System.Drawing.Size(380, 404);
             this.Projects_Listbox.TabIndex = 1;
+            this.Projects_Listbox.SelectedIndexChanged += new System.EventHandler(this.Projects_Listbox_SelectedIndexChanged);
             // 
             // Modify_Project_Button
             // 
-            this.Modify_Project_Button.Location = new System.Drawing.Point(53, 344);
+            this.Modify_Project_Button.Location = new System.Drawing.Point(106, 662);
+            this.Modify_Project_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Modify_Project_Button.Name = "Modify_Project_Button";
-            this.Modify_Project_Button.Size = new System.Drawing.Size(75, 34);
+            this.Modify_Project_Button.Size = new System.Drawing.Size(150, 65);
             this.Modify_Project_Button.TabIndex = 2;
             this.Modify_Project_Button.Text = "Modify Project";
             this.Modify_Project_Button.UseVisualStyleBackColor = true;
@@ -141,10 +145,11 @@
             this.Project_TabControl.Controls.Add(this.Home_Tab);
             this.Project_TabControl.Controls.Add(this.Add_Project_Tab);
             this.Project_TabControl.Controls.Add(this.TrackingGrid_Tab);
-            this.Project_TabControl.Location = new System.Drawing.Point(12, 12);
+            this.Project_TabControl.Location = new System.Drawing.Point(24, 23);
+            this.Project_TabControl.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Project_TabControl.Name = "Project_TabControl";
             this.Project_TabControl.SelectedIndex = 0;
-            this.Project_TabControl.Size = new System.Drawing.Size(673, 519);
+            this.Project_TabControl.Size = new System.Drawing.Size(1346, 998);
             this.Project_TabControl.TabIndex = 3;
             // 
             // Home_Tab
@@ -157,10 +162,11 @@
             this.Home_Tab.Controls.Add(this.Projects_Listbox);
             this.Home_Tab.Controls.Add(this.Modify_Project_Button);
             this.Home_Tab.Controls.Add(this.Add_Project_Button);
-            this.Home_Tab.Location = new System.Drawing.Point(4, 22);
+            this.Home_Tab.Location = new System.Drawing.Point(8, 39);
+            this.Home_Tab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Home_Tab.Name = "Home_Tab";
-            this.Home_Tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Home_Tab.Size = new System.Drawing.Size(665, 493);
+            this.Home_Tab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Home_Tab.Size = new System.Drawing.Size(1330, 951);
             this.Home_Tab.TabIndex = 0;
             this.Home_Tab.Text = "Home";
             this.Home_Tab.UseVisualStyleBackColor = true;
@@ -170,17 +176,19 @@
             this.HomePageError_Label.AutoSize = true;
             this.HomePageError_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomePageError_Label.ForeColor = System.Drawing.Color.Red;
-            this.HomePageError_Label.Location = new System.Drawing.Point(50, 450);
+            this.HomePageError_Label.Location = new System.Drawing.Point(100, 865);
+            this.HomePageError_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.HomePageError_Label.Name = "HomePageError_Label";
-            this.HomePageError_Label.Size = new System.Drawing.Size(137, 13);
+            this.HomePageError_Label.Size = new System.Drawing.Size(281, 26);
             this.HomePageError_Label.TabIndex = 21;
             this.HomePageError_Label.Text = "*Please select a project first";
             // 
             // UpdateTracking_Button
             // 
-            this.UpdateTracking_Button.Location = new System.Drawing.Point(170, 344);
+            this.UpdateTracking_Button.Location = new System.Drawing.Point(340, 662);
+            this.UpdateTracking_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.UpdateTracking_Button.Name = "UpdateTracking_Button";
-            this.UpdateTracking_Button.Size = new System.Drawing.Size(75, 34);
+            this.UpdateTracking_Button.Size = new System.Drawing.Size(150, 65);
             this.UpdateTracking_Button.TabIndex = 6;
             this.UpdateTracking_Button.Text = "Update Tracking";
             this.UpdateTracking_Button.UseVisualStyleBackColor = true;
@@ -189,27 +197,31 @@
             // Project_Details_Display_GroupBox
             // 
             this.Project_Details_Display_GroupBox.Controls.Add(this.ProjectDisplay_RichTextBox);
-            this.Project_Details_Display_GroupBox.Location = new System.Drawing.Point(301, 45);
+            this.Project_Details_Display_GroupBox.Location = new System.Drawing.Point(602, 87);
+            this.Project_Details_Display_GroupBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Project_Details_Display_GroupBox.Name = "Project_Details_Display_GroupBox";
-            this.Project_Details_Display_GroupBox.Size = new System.Drawing.Size(330, 418);
+            this.Project_Details_Display_GroupBox.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Project_Details_Display_GroupBox.Size = new System.Drawing.Size(660, 804);
             this.Project_Details_Display_GroupBox.TabIndex = 5;
             this.Project_Details_Display_GroupBox.TabStop = false;
             this.Project_Details_Display_GroupBox.Text = "Project Details Display";
             // 
             // ProjectDisplay_RichTextBox
             // 
-            this.ProjectDisplay_RichTextBox.Location = new System.Drawing.Point(6, 19);
+            this.ProjectDisplay_RichTextBox.Location = new System.Drawing.Point(12, 37);
+            this.ProjectDisplay_RichTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ProjectDisplay_RichTextBox.Name = "ProjectDisplay_RichTextBox";
             this.ProjectDisplay_RichTextBox.ReadOnly = true;
-            this.ProjectDisplay_RichTextBox.Size = new System.Drawing.Size(318, 393);
+            this.ProjectDisplay_RichTextBox.Size = new System.Drawing.Size(632, 752);
             this.ProjectDisplay_RichTextBox.TabIndex = 0;
             this.ProjectDisplay_RichTextBox.Text = "";
             // 
             // Delete_Project_Button
             // 
-            this.Delete_Project_Button.Location = new System.Drawing.Point(110, 399);
+            this.Delete_Project_Button.Location = new System.Drawing.Point(220, 767);
+            this.Delete_Project_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Delete_Project_Button.Name = "Delete_Project_Button";
-            this.Delete_Project_Button.Size = new System.Drawing.Size(75, 34);
+            this.Delete_Project_Button.Size = new System.Drawing.Size(150, 65);
             this.Delete_Project_Button.TabIndex = 4;
             this.Delete_Project_Button.Text = "Delete Project";
             this.Delete_Project_Button.UseVisualStyleBackColor = true;
@@ -217,9 +229,10 @@
             // 
             // ViewProjectDetails_Button
             // 
-            this.ViewProjectDetails_Button.Location = new System.Drawing.Point(170, 291);
+            this.ViewProjectDetails_Button.Location = new System.Drawing.Point(340, 560);
+            this.ViewProjectDetails_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ViewProjectDetails_Button.Name = "ViewProjectDetails_Button";
-            this.ViewProjectDetails_Button.Size = new System.Drawing.Size(75, 34);
+            this.ViewProjectDetails_Button.Size = new System.Drawing.Size(150, 65);
             this.ViewProjectDetails_Button.TabIndex = 3;
             this.ViewProjectDetails_Button.Text = "View Project Details";
             this.ViewProjectDetails_Button.UseVisualStyleBackColor = true;
@@ -247,21 +260,23 @@
             this.Add_Project_Tab.Controls.Add(this.Team_Members_Label);
             this.Add_Project_Tab.Controls.Add(this.Project_Manager_Label);
             this.Add_Project_Tab.Controls.Add(this.Project_Name_Label);
-            this.Add_Project_Tab.Location = new System.Drawing.Point(4, 22);
+            this.Add_Project_Tab.Location = new System.Drawing.Point(8, 39);
+            this.Add_Project_Tab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Add_Project_Tab.Name = "Add_Project_Tab";
-            this.Add_Project_Tab.Padding = new System.Windows.Forms.Padding(3);
-            this.Add_Project_Tab.Size = new System.Drawing.Size(665, 493);
+            this.Add_Project_Tab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Add_Project_Tab.Size = new System.Drawing.Size(1330, 951);
             this.Add_Project_Tab.TabIndex = 1;
             this.Add_Project_Tab.Text = "Add Project";
             this.Add_Project_Tab.UseVisualStyleBackColor = true;
             // 
             // Team_Members_TextBox
             // 
-            this.Team_Members_TextBox.Location = new System.Drawing.Point(482, 79);
+            this.Team_Members_TextBox.Location = new System.Drawing.Point(964, 152);
+            this.Team_Members_TextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Team_Members_TextBox.Multiline = true;
             this.Team_Members_TextBox.Name = "Team_Members_TextBox";
             this.Team_Members_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Team_Members_TextBox.Size = new System.Drawing.Size(127, 59);
+            this.Team_Members_TextBox.Size = new System.Drawing.Size(250, 110);
             this.Team_Members_TextBox.TabIndex = 7;
             this.Team_Members_TextBox.WordWrap = false;
             this.Team_Members_TextBox.Leave += new System.EventHandler(this.Team_Members_TextBox_Leave);
@@ -269,62 +284,69 @@
             // TeamMembers_PictureBox
             // 
             this.TeamMembers_PictureBox.BackColor = System.Drawing.Color.Red;
-            this.TeamMembers_PictureBox.Location = new System.Drawing.Point(480, 77);
+            this.TeamMembers_PictureBox.Location = new System.Drawing.Point(960, 148);
+            this.TeamMembers_PictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TeamMembers_PictureBox.Name = "TeamMembers_PictureBox";
-            this.TeamMembers_PictureBox.Size = new System.Drawing.Size(131, 63);
+            this.TeamMembers_PictureBox.Size = new System.Drawing.Size(262, 121);
             this.TeamMembers_PictureBox.TabIndex = 28;
             this.TeamMembers_PictureBox.TabStop = false;
             // 
             // Project_Description_TextBox
             // 
-            this.Project_Description_TextBox.Location = new System.Drawing.Point(132, 82);
+            this.Project_Description_TextBox.Location = new System.Drawing.Point(264, 158);
+            this.Project_Description_TextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Project_Description_TextBox.Multiline = true;
             this.Project_Description_TextBox.Name = "Project_Description_TextBox";
             this.Project_Description_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Project_Description_TextBox.Size = new System.Drawing.Size(127, 59);
+            this.Project_Description_TextBox.Size = new System.Drawing.Size(250, 110);
             this.Project_Description_TextBox.TabIndex = 5;
             this.Project_Description_TextBox.Leave += new System.EventHandler(this.Project_Description_TextBox_Leave);
             // 
             // ProjectDescription_PictureBox
             // 
             this.ProjectDescription_PictureBox.BackColor = System.Drawing.Color.Red;
-            this.ProjectDescription_PictureBox.Location = new System.Drawing.Point(130, 80);
+            this.ProjectDescription_PictureBox.Location = new System.Drawing.Point(260, 154);
+            this.ProjectDescription_PictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ProjectDescription_PictureBox.Name = "ProjectDescription_PictureBox";
-            this.ProjectDescription_PictureBox.Size = new System.Drawing.Size(131, 63);
+            this.ProjectDescription_PictureBox.Size = new System.Drawing.Size(262, 121);
             this.ProjectDescription_PictureBox.TabIndex = 23;
             this.ProjectDescription_PictureBox.TabStop = false;
             // 
             // Project_Manager_Textbox
             // 
-            this.Project_Manager_Textbox.Location = new System.Drawing.Point(482, 34);
+            this.Project_Manager_Textbox.Location = new System.Drawing.Point(964, 65);
+            this.Project_Manager_Textbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Project_Manager_Textbox.Name = "Project_Manager_Textbox";
-            this.Project_Manager_Textbox.Size = new System.Drawing.Size(127, 20);
+            this.Project_Manager_Textbox.Size = new System.Drawing.Size(250, 31);
             this.Project_Manager_Textbox.TabIndex = 3;
             this.Project_Manager_Textbox.Leave += new System.EventHandler(this.Project_Manager_Textbox_Leave);
             // 
             // ProjectManager_PictureBox
             // 
             this.ProjectManager_PictureBox.BackColor = System.Drawing.Color.Red;
-            this.ProjectManager_PictureBox.Location = new System.Drawing.Point(480, 32);
+            this.ProjectManager_PictureBox.Location = new System.Drawing.Point(960, 62);
+            this.ProjectManager_PictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ProjectManager_PictureBox.Name = "ProjectManager_PictureBox";
-            this.ProjectManager_PictureBox.Size = new System.Drawing.Size(131, 24);
+            this.ProjectManager_PictureBox.Size = new System.Drawing.Size(262, 46);
             this.ProjectManager_PictureBox.TabIndex = 22;
             this.ProjectManager_PictureBox.TabStop = false;
             // 
             // Project_Name_Textbox
             // 
-            this.Project_Name_Textbox.Location = new System.Drawing.Point(132, 37);
+            this.Project_Name_Textbox.Location = new System.Drawing.Point(264, 71);
+            this.Project_Name_Textbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Project_Name_Textbox.Name = "Project_Name_Textbox";
-            this.Project_Name_Textbox.Size = new System.Drawing.Size(127, 20);
+            this.Project_Name_Textbox.Size = new System.Drawing.Size(250, 31);
             this.Project_Name_Textbox.TabIndex = 1;
             this.Project_Name_Textbox.Leave += new System.EventHandler(this.Project_Name_Textbox_Leave);
             // 
             // ProjectName_PictureBox
             // 
             this.ProjectName_PictureBox.BackColor = System.Drawing.Color.Red;
-            this.ProjectName_PictureBox.Location = new System.Drawing.Point(130, 35);
+            this.ProjectName_PictureBox.Location = new System.Drawing.Point(260, 67);
+            this.ProjectName_PictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ProjectName_PictureBox.Name = "ProjectName_PictureBox";
-            this.ProjectName_PictureBox.Size = new System.Drawing.Size(131, 24);
+            this.ProjectName_PictureBox.Size = new System.Drawing.Size(262, 46);
             this.ProjectName_PictureBox.TabIndex = 21;
             this.ProjectName_PictureBox.TabStop = false;
             // 
@@ -333,17 +355,19 @@
             this.Error_Label.AutoSize = true;
             this.Error_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Error_Label.ForeColor = System.Drawing.Color.Red;
-            this.Error_Label.Location = new System.Drawing.Point(200, 448);
+            this.Error_Label.Location = new System.Drawing.Point(400, 862);
+            this.Error_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Error_Label.Name = "Error_Label";
-            this.Error_Label.Size = new System.Drawing.Size(161, 13);
+            this.Error_Label.Size = new System.Drawing.Size(338, 26);
             this.Error_Label.TabIndex = 20;
             this.Error_Label.Text = "*Please fill in the empty fields first";
             // 
             // Save_Project_Button
             // 
-            this.Save_Project_Button.Location = new System.Drawing.Point(114, 435);
+            this.Save_Project_Button.Location = new System.Drawing.Point(228, 837);
+            this.Save_Project_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Save_Project_Button.Name = "Save_Project_Button";
-            this.Save_Project_Button.Size = new System.Drawing.Size(80, 38);
+            this.Save_Project_Button.Size = new System.Drawing.Size(160, 73);
             this.Save_Project_Button.TabIndex = 19;
             this.Save_Project_Button.Text = "Add Project";
             this.Save_Project_Button.UseVisualStyleBackColor = true;
@@ -351,9 +375,10 @@
             // 
             // Delete_Button
             // 
-            this.Delete_Button.Location = new System.Drawing.Point(282, 340);
+            this.Delete_Button.Location = new System.Drawing.Point(564, 654);
+            this.Delete_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Delete_Button.Name = "Delete_Button";
-            this.Delete_Button.Size = new System.Drawing.Size(80, 38);
+            this.Delete_Button.Size = new System.Drawing.Size(160, 73);
             this.Delete_Button.TabIndex = 12;
             this.Delete_Button.Text = "Delete Selected Item";
             this.Delete_Button.UseVisualStyleBackColor = true;
@@ -361,9 +386,10 @@
             // 
             // Modify_Button
             // 
-            this.Modify_Button.Location = new System.Drawing.Point(282, 270);
+            this.Modify_Button.Location = new System.Drawing.Point(564, 519);
+            this.Modify_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Modify_Button.Name = "Modify_Button";
-            this.Modify_Button.Size = new System.Drawing.Size(80, 38);
+            this.Modify_Button.Size = new System.Drawing.Size(160, 73);
             this.Modify_Button.TabIndex = 11;
             this.Modify_Button.Text = "Modify Selected Item";
             this.Modify_Button.UseVisualStyleBackColor = true;
@@ -371,9 +397,10 @@
             // 
             // Add_Button
             // 
-            this.Add_Button.Location = new System.Drawing.Point(282, 200);
+            this.Add_Button.Location = new System.Drawing.Point(564, 385);
+            this.Add_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Add_Button.Name = "Add_Button";
-            this.Add_Button.Size = new System.Drawing.Size(80, 38);
+            this.Add_Button.Size = new System.Drawing.Size(160, 73);
             this.Add_Button.TabIndex = 10;
             this.Add_Button.Text = "Add to List";
             this.Add_Button.UseVisualStyleBackColor = true;
@@ -389,9 +416,11 @@
             this.Requirements_Input_GroupBox.Controls.Add(this.Functional_RadioButton);
             this.Requirements_Input_GroupBox.Controls.Add(this.Requirements_Description_Label);
             this.Requirements_Input_GroupBox.Controls.Add(this.Requirements_Name_Label);
-            this.Requirements_Input_GroupBox.Location = new System.Drawing.Point(383, 166);
+            this.Requirements_Input_GroupBox.Location = new System.Drawing.Point(766, 319);
+            this.Requirements_Input_GroupBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Requirements_Input_GroupBox.Name = "Requirements_Input_GroupBox";
-            this.Requirements_Input_GroupBox.Size = new System.Drawing.Size(226, 253);
+            this.Requirements_Input_GroupBox.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Requirements_Input_GroupBox.Size = new System.Drawing.Size(452, 487);
             this.Requirements_Input_GroupBox.TabIndex = 13;
             this.Requirements_Input_GroupBox.TabStop = false;
             this.Requirements_Input_GroupBox.Text = "Requirements Input";
@@ -399,43 +428,49 @@
             // Requirements_ListBox
             // 
             this.Requirements_ListBox.FormattingEnabled = true;
-            this.Requirements_ListBox.Location = new System.Drawing.Point(22, 162);
+            this.Requirements_ListBox.ItemHeight = 25;
+            this.Requirements_ListBox.Location = new System.Drawing.Point(44, 312);
+            this.Requirements_ListBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Requirements_ListBox.Name = "Requirements_ListBox";
-            this.Requirements_ListBox.Size = new System.Drawing.Size(193, 82);
+            this.Requirements_ListBox.Size = new System.Drawing.Size(382, 154);
             this.Requirements_ListBox.TabIndex = 6;
             this.Requirements_ListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Requirements_ListBox_MouseDown);
             // 
             // RequirementsListBox_PictureBox
             // 
             this.RequirementsListBox_PictureBox.BackColor = System.Drawing.Color.Red;
-            this.RequirementsListBox_PictureBox.Location = new System.Drawing.Point(20, 160);
+            this.RequirementsListBox_PictureBox.Location = new System.Drawing.Point(40, 308);
+            this.RequirementsListBox_PictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.RequirementsListBox_PictureBox.Name = "RequirementsListBox_PictureBox";
-            this.RequirementsListBox_PictureBox.Size = new System.Drawing.Size(197, 86);
+            this.RequirementsListBox_PictureBox.Size = new System.Drawing.Size(394, 165);
             this.RequirementsListBox_PictureBox.TabIndex = 35;
             this.RequirementsListBox_PictureBox.TabStop = false;
             // 
             // Requirements_Description_TextBox
             // 
-            this.Requirements_Description_TextBox.Location = new System.Drawing.Point(88, 62);
+            this.Requirements_Description_TextBox.Location = new System.Drawing.Point(176, 119);
+            this.Requirements_Description_TextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Requirements_Description_TextBox.Multiline = true;
             this.Requirements_Description_TextBox.Name = "Requirements_Description_TextBox";
             this.Requirements_Description_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Requirements_Description_TextBox.Size = new System.Drawing.Size(127, 46);
+            this.Requirements_Description_TextBox.Size = new System.Drawing.Size(250, 85);
             this.Requirements_Description_TextBox.TabIndex = 3;
             // 
             // Requirements_Name_TextBox
             // 
-            this.Requirements_Name_TextBox.Location = new System.Drawing.Point(88, 23);
+            this.Requirements_Name_TextBox.Location = new System.Drawing.Point(176, 44);
+            this.Requirements_Name_TextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Requirements_Name_TextBox.Name = "Requirements_Name_TextBox";
-            this.Requirements_Name_TextBox.Size = new System.Drawing.Size(127, 20);
+            this.Requirements_Name_TextBox.Size = new System.Drawing.Size(250, 31);
             this.Requirements_Name_TextBox.TabIndex = 1;
             // 
             // NonFunctional_RadioButton
             // 
             this.NonFunctional_RadioButton.AutoSize = true;
-            this.NonFunctional_RadioButton.Location = new System.Drawing.Point(33, 138);
+            this.NonFunctional_RadioButton.Location = new System.Drawing.Point(66, 265);
+            this.NonFunctional_RadioButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.NonFunctional_RadioButton.Name = "NonFunctional_RadioButton";
-            this.NonFunctional_RadioButton.Size = new System.Drawing.Size(160, 17);
+            this.NonFunctional_RadioButton.Size = new System.Drawing.Size(317, 29);
             this.NonFunctional_RadioButton.TabIndex = 5;
             this.NonFunctional_RadioButton.TabStop = true;
             this.NonFunctional_RadioButton.Text = "Non-Functional Requirement";
@@ -444,9 +479,10 @@
             // Functional_RadioButton
             // 
             this.Functional_RadioButton.AutoSize = true;
-            this.Functional_RadioButton.Location = new System.Drawing.Point(33, 114);
+            this.Functional_RadioButton.Location = new System.Drawing.Point(66, 219);
+            this.Functional_RadioButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Functional_RadioButton.Name = "Functional_RadioButton";
-            this.Functional_RadioButton.Size = new System.Drawing.Size(137, 17);
+            this.Functional_RadioButton.Size = new System.Drawing.Size(271, 29);
             this.Functional_RadioButton.TabIndex = 4;
             this.Functional_RadioButton.TabStop = true;
             this.Functional_RadioButton.Text = "Functional Requirement";
@@ -455,18 +491,20 @@
             // Requirements_Description_Label
             // 
             this.Requirements_Description_Label.AutoSize = true;
-            this.Requirements_Description_Label.Location = new System.Drawing.Point(19, 65);
+            this.Requirements_Description_Label.Location = new System.Drawing.Point(38, 125);
+            this.Requirements_Description_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Requirements_Description_Label.Name = "Requirements_Description_Label";
-            this.Requirements_Description_Label.Size = new System.Drawing.Size(63, 13);
+            this.Requirements_Description_Label.Size = new System.Drawing.Size(126, 25);
             this.Requirements_Description_Label.TabIndex = 2;
             this.Requirements_Description_Label.Text = "Description:";
             // 
             // Requirements_Name_Label
             // 
             this.Requirements_Name_Label.AutoSize = true;
-            this.Requirements_Name_Label.Location = new System.Drawing.Point(44, 26);
+            this.Requirements_Name_Label.Location = new System.Drawing.Point(88, 50);
+            this.Requirements_Name_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Requirements_Name_Label.Name = "Requirements_Name_Label";
-            this.Requirements_Name_Label.Size = new System.Drawing.Size(38, 13);
+            this.Requirements_Name_Label.Size = new System.Drawing.Size(74, 25);
             this.Requirements_Name_Label.TabIndex = 0;
             this.Requirements_Name_Label.Text = "Name:";
             // 
@@ -480,9 +518,11 @@
             this.Risk_Input_GroupBox.Controls.Add(this.Risk_Status_Label);
             this.Risk_Input_GroupBox.Controls.Add(this.Risk_Description_Label);
             this.Risk_Input_GroupBox.Controls.Add(this.Risk_Name_Label);
-            this.Risk_Input_GroupBox.Location = new System.Drawing.Point(33, 166);
+            this.Risk_Input_GroupBox.Location = new System.Drawing.Point(66, 319);
+            this.Risk_Input_GroupBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Risk_Input_GroupBox.Name = "Risk_Input_GroupBox";
-            this.Risk_Input_GroupBox.Size = new System.Drawing.Size(226, 253);
+            this.Risk_Input_GroupBox.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Risk_Input_GroupBox.Size = new System.Drawing.Size(452, 487);
             this.Risk_Input_GroupBox.TabIndex = 9;
             this.Risk_Input_GroupBox.TabStop = false;
             this.Risk_Input_GroupBox.Text = "Risks Input";
@@ -490,18 +530,21 @@
             // Risks_ListBox
             // 
             this.Risks_ListBox.FormattingEnabled = true;
-            this.Risks_ListBox.Location = new System.Drawing.Point(22, 162);
+            this.Risks_ListBox.ItemHeight = 25;
+            this.Risks_ListBox.Location = new System.Drawing.Point(44, 312);
+            this.Risks_ListBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Risks_ListBox.Name = "Risks_ListBox";
-            this.Risks_ListBox.Size = new System.Drawing.Size(193, 82);
+            this.Risks_ListBox.Size = new System.Drawing.Size(382, 154);
             this.Risks_ListBox.TabIndex = 6;
             this.Risks_ListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Risks_ListBox_MouseDown);
             // 
             // RisksListbox_PictureBox
             // 
             this.RisksListbox_PictureBox.BackColor = System.Drawing.Color.Red;
-            this.RisksListbox_PictureBox.Location = new System.Drawing.Point(20, 160);
+            this.RisksListbox_PictureBox.Location = new System.Drawing.Point(40, 308);
+            this.RisksListbox_PictureBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.RisksListbox_PictureBox.Name = "RisksListbox_PictureBox";
-            this.RisksListbox_PictureBox.Size = new System.Drawing.Size(197, 86);
+            this.RisksListbox_PictureBox.Size = new System.Drawing.Size(394, 165);
             this.RisksListbox_PictureBox.TabIndex = 34;
             this.RisksListbox_PictureBox.TabStop = false;
             // 
@@ -516,60 +559,67 @@
             "Closed",
             "Not Occurred",
             "Rejected"});
-            this.Risk_Status_ComboBox.Location = new System.Drawing.Point(88, 125);
+            this.Risk_Status_ComboBox.Location = new System.Drawing.Point(176, 240);
+            this.Risk_Status_ComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Risk_Status_ComboBox.Name = "Risk_Status_ComboBox";
-            this.Risk_Status_ComboBox.Size = new System.Drawing.Size(127, 21);
+            this.Risk_Status_ComboBox.Size = new System.Drawing.Size(250, 33);
             this.Risk_Status_ComboBox.TabIndex = 5;
             // 
             // Risk_Description_TextBox
             // 
-            this.Risk_Description_TextBox.Location = new System.Drawing.Point(88, 62);
+            this.Risk_Description_TextBox.Location = new System.Drawing.Point(176, 119);
+            this.Risk_Description_TextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Risk_Description_TextBox.Multiline = true;
             this.Risk_Description_TextBox.Name = "Risk_Description_TextBox";
             this.Risk_Description_TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.Risk_Description_TextBox.Size = new System.Drawing.Size(127, 46);
+            this.Risk_Description_TextBox.Size = new System.Drawing.Size(250, 85);
             this.Risk_Description_TextBox.TabIndex = 3;
             // 
             // Risk_Name_Textbox
             // 
-            this.Risk_Name_Textbox.Location = new System.Drawing.Point(88, 23);
+            this.Risk_Name_Textbox.Location = new System.Drawing.Point(176, 44);
+            this.Risk_Name_Textbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Risk_Name_Textbox.Name = "Risk_Name_Textbox";
-            this.Risk_Name_Textbox.Size = new System.Drawing.Size(127, 20);
+            this.Risk_Name_Textbox.Size = new System.Drawing.Size(250, 31);
             this.Risk_Name_Textbox.TabIndex = 1;
             // 
             // Risk_Status_Label
             // 
             this.Risk_Status_Label.AutoSize = true;
-            this.Risk_Status_Label.Location = new System.Drawing.Point(19, 128);
+            this.Risk_Status_Label.Location = new System.Drawing.Point(38, 246);
+            this.Risk_Status_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Risk_Status_Label.Name = "Risk_Status_Label";
-            this.Risk_Status_Label.Size = new System.Drawing.Size(64, 13);
+            this.Risk_Status_Label.Size = new System.Drawing.Size(127, 25);
             this.Risk_Status_Label.TabIndex = 4;
             this.Risk_Status_Label.Text = "Risk Status:";
             // 
             // Risk_Description_Label
             // 
             this.Risk_Description_Label.AutoSize = true;
-            this.Risk_Description_Label.Location = new System.Drawing.Point(19, 65);
+            this.Risk_Description_Label.Location = new System.Drawing.Point(38, 125);
+            this.Risk_Description_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Risk_Description_Label.Name = "Risk_Description_Label";
-            this.Risk_Description_Label.Size = new System.Drawing.Size(63, 13);
+            this.Risk_Description_Label.Size = new System.Drawing.Size(126, 25);
             this.Risk_Description_Label.TabIndex = 2;
             this.Risk_Description_Label.Text = "Description:";
             // 
             // Risk_Name_Label
             // 
             this.Risk_Name_Label.AutoSize = true;
-            this.Risk_Name_Label.Location = new System.Drawing.Point(42, 26);
+            this.Risk_Name_Label.Location = new System.Drawing.Point(84, 50);
+            this.Risk_Name_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Risk_Name_Label.Name = "Risk_Name_Label";
-            this.Risk_Name_Label.Size = new System.Drawing.Size(38, 13);
+            this.Risk_Name_Label.Size = new System.Drawing.Size(74, 25);
             this.Risk_Name_Label.TabIndex = 0;
             this.Risk_Name_Label.Text = "Name:";
             // 
             // Project_Description_Label
             // 
             this.Project_Description_Label.AutoSize = true;
-            this.Project_Description_Label.Location = new System.Drawing.Point(27, 82);
+            this.Project_Description_Label.Location = new System.Drawing.Point(54, 158);
+            this.Project_Description_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Project_Description_Label.Name = "Project_Description_Label";
-            this.Project_Description_Label.Size = new System.Drawing.Size(99, 13);
+            this.Project_Description_Label.Size = new System.Drawing.Size(199, 25);
             this.Project_Description_Label.TabIndex = 4;
             this.Project_Description_Label.Text = "Project Description:";
             // 
@@ -577,57 +627,62 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(366, 101);
+            this.label1.Location = new System.Drawing.Point(732, 194);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 13);
+            this.label1.Size = new System.Drawing.Size(226, 26);
             this.label1.TabIndex = 8;
             this.label1.Text = "*One member per line";
             // 
             // Team_Members_Label
             // 
             this.Team_Members_Label.AutoSize = true;
-            this.Team_Members_Label.Location = new System.Drawing.Point(391, 79);
+            this.Team_Members_Label.Location = new System.Drawing.Point(782, 152);
+            this.Team_Members_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Team_Members_Label.Name = "Team_Members_Label";
-            this.Team_Members_Label.Size = new System.Drawing.Size(83, 13);
+            this.Team_Members_Label.Size = new System.Drawing.Size(167, 25);
             this.Team_Members_Label.TabIndex = 6;
             this.Team_Members_Label.Text = "Team Members:";
             // 
             // Project_Manager_Label
             // 
             this.Project_Manager_Label.AutoSize = true;
-            this.Project_Manager_Label.Location = new System.Drawing.Point(388, 37);
+            this.Project_Manager_Label.Location = new System.Drawing.Point(776, 71);
+            this.Project_Manager_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Project_Manager_Label.Name = "Project_Manager_Label";
-            this.Project_Manager_Label.Size = new System.Drawing.Size(88, 13);
+            this.Project_Manager_Label.Size = new System.Drawing.Size(176, 25);
             this.Project_Manager_Label.TabIndex = 2;
             this.Project_Manager_Label.Text = "Project Manager:";
             // 
             // Project_Name_Label
             // 
             this.Project_Name_Label.AutoSize = true;
-            this.Project_Name_Label.Location = new System.Drawing.Point(52, 40);
+            this.Project_Name_Label.Location = new System.Drawing.Point(104, 77);
+            this.Project_Name_Label.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.Project_Name_Label.Name = "Project_Name_Label";
-            this.Project_Name_Label.Size = new System.Drawing.Size(74, 13);
+            this.Project_Name_Label.Size = new System.Drawing.Size(147, 25);
             this.Project_Name_Label.TabIndex = 0;
             this.Project_Name_Label.Text = "Project Name:";
             // 
             // TrackingGrid_Tab
             // 
-            this.TrackingGrid_Tab.Controls.Add(this.ProjectName_Label);
             this.TrackingGrid_Tab.Controls.Add(this.TrackingToHome_Button);
             this.TrackingGrid_Tab.Controls.Add(this.groupBox1);
             this.TrackingGrid_Tab.Controls.Add(this.ProjectTracking_DataGridView);
-            this.TrackingGrid_Tab.Location = new System.Drawing.Point(4, 22);
+            this.TrackingGrid_Tab.Location = new System.Drawing.Point(8, 39);
+            this.TrackingGrid_Tab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TrackingGrid_Tab.Name = "TrackingGrid_Tab";
-            this.TrackingGrid_Tab.Size = new System.Drawing.Size(665, 493);
+            this.TrackingGrid_Tab.Size = new System.Drawing.Size(1330, 951);
             this.TrackingGrid_Tab.TabIndex = 3;
             this.TrackingGrid_Tab.Text = "Tracking Grid";
             this.TrackingGrid_Tab.UseVisualStyleBackColor = true;
             // 
             // TrackingToHome_Button
             // 
-            this.TrackingToHome_Button.Location = new System.Drawing.Point(548, 86);
+            this.TrackingToHome_Button.Location = new System.Drawing.Point(1096, 165);
+            this.TrackingToHome_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TrackingToHome_Button.Name = "TrackingToHome_Button";
-            this.TrackingToHome_Button.Size = new System.Drawing.Size(75, 38);
+            this.TrackingToHome_Button.Size = new System.Drawing.Size(150, 73);
             this.TrackingToHome_Button.TabIndex = 9;
             this.TrackingToHome_Button.Text = "Return to Project View";
             this.TrackingToHome_Button.UseVisualStyleBackColor = true;
@@ -640,38 +695,43 @@
             this.groupBox1.Controls.Add(this.SubmitHours_Button);
             this.groupBox1.Controls.Add(this.TrackingCategory_ComboBox);
             this.groupBox1.Controls.Add(this.TrackingNames_ComboBox);
-            this.groupBox1.Controls.Add(this.WeeklyHours_RadioButton);
-            this.groupBox1.Controls.Add(this.DailyHours_RadioButton);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(30, 27);
+            this.groupBox1.Location = new System.Drawing.Point(60, 52);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(490, 137);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Size = new System.Drawing.Size(980, 263);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tracking Information Input";
             // 
             // HourlyInput_NumericUpDown
             // 
-            this.HourlyInput_NumericUpDown.Location = new System.Drawing.Point(92, 107);
+            this.HourlyInput_NumericUpDown.Location = new System.Drawing.Point(184, 206);
+            this.HourlyInput_NumericUpDown.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.HourlyInput_NumericUpDown.Name = "HourlyInput_NumericUpDown";
-            this.HourlyInput_NumericUpDown.Size = new System.Drawing.Size(121, 20);
+            this.HourlyInput_NumericUpDown.Size = new System.Drawing.Size(242, 31);
             this.HourlyInput_NumericUpDown.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 107);
+            this.label4.Location = new System.Drawing.Point(94, 206);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.Size = new System.Drawing.Size(75, 25);
             this.label4.TabIndex = 7;
             this.label4.Text = "Hours:";
             // 
             // SubmitHours_Button
             // 
-            this.SubmitHours_Button.Location = new System.Drawing.Point(389, 61);
+            this.SubmitHours_Button.Location = new System.Drawing.Point(778, 117);
+            this.SubmitHours_Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.SubmitHours_Button.Name = "SubmitHours_Button";
-            this.SubmitHours_Button.Size = new System.Drawing.Size(75, 34);
+            this.SubmitHours_Button.Size = new System.Drawing.Size(150, 65);
             this.SubmitHours_Button.TabIndex = 6;
             this.SubmitHours_Button.Text = "Submit Hours";
             this.SubmitHours_Button.UseVisualStyleBackColor = true;
@@ -686,82 +746,81 @@
             "Coding",
             "Testing",
             "Project Management"});
-            this.TrackingCategory_ComboBox.Location = new System.Drawing.Point(92, 69);
+            this.TrackingCategory_ComboBox.Location = new System.Drawing.Point(184, 133);
+            this.TrackingCategory_ComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TrackingCategory_ComboBox.Name = "TrackingCategory_ComboBox";
-            this.TrackingCategory_ComboBox.Size = new System.Drawing.Size(121, 21);
+            this.TrackingCategory_ComboBox.Size = new System.Drawing.Size(238, 33);
             this.TrackingCategory_ComboBox.TabIndex = 5;
             // 
             // TrackingNames_ComboBox
             // 
             this.TrackingNames_ComboBox.FormattingEnabled = true;
-            this.TrackingNames_ComboBox.Location = new System.Drawing.Point(92, 36);
+            this.TrackingNames_ComboBox.Location = new System.Drawing.Point(184, 69);
+            this.TrackingNames_ComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TrackingNames_ComboBox.Name = "TrackingNames_ComboBox";
-            this.TrackingNames_ComboBox.Size = new System.Drawing.Size(121, 21);
+            this.TrackingNames_ComboBox.Size = new System.Drawing.Size(238, 33);
             this.TrackingNames_ComboBox.TabIndex = 4;
             // 
-            // WeeklyHours_RadioButton
+            // radioButton2
             // 
-            this.WeeklyHours_RadioButton.AutoSize = true;
-            this.WeeklyHours_RadioButton.Location = new System.Drawing.Point(252, 88);
-            this.WeeklyHours_RadioButton.Name = "WeeklyHours_RadioButton";
-            this.WeeklyHours_RadioButton.Size = new System.Drawing.Size(92, 17);
-            this.WeeklyHours_RadioButton.TabIndex = 3;
-            this.WeeklyHours_RadioButton.TabStop = true;
-            this.WeeklyHours_RadioButton.Text = "Weekly Hours";
-            this.WeeklyHours_RadioButton.UseVisualStyleBackColor = true;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(504, 169);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(177, 29);
+            this.radioButton2.TabIndex = 3;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Weekly Hours";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // DailyHours_RadioButton
+            // radioButton1
             // 
-            this.DailyHours_RadioButton.AutoSize = true;
-            this.DailyHours_RadioButton.Location = new System.Drawing.Point(252, 56);
-            this.DailyHours_RadioButton.Name = "DailyHours_RadioButton";
-            this.DailyHours_RadioButton.Size = new System.Drawing.Size(79, 17);
-            this.DailyHours_RadioButton.TabIndex = 2;
-            this.DailyHours_RadioButton.TabStop = true;
-            this.DailyHours_RadioButton.Text = "Daily Hours";
-            this.DailyHours_RadioButton.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(504, 108);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(154, 29);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Daily Hours";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 72);
+            this.label3.Location = new System.Drawing.Point(66, 138);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(105, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "Category:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 36);
+            this.label2.Location = new System.Drawing.Point(94, 69);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(74, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "Name:";
             // 
             // ProjectTracking_DataGridView
             // 
             this.ProjectTracking_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProjectTracking_DataGridView.Location = new System.Drawing.Point(10, 204);
+            this.ProjectTracking_DataGridView.Location = new System.Drawing.Point(20, 350);
+            this.ProjectTracking_DataGridView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ProjectTracking_DataGridView.Name = "ProjectTracking_DataGridView";
-            this.ProjectTracking_DataGridView.Size = new System.Drawing.Size(644, 268);
+            this.ProjectTracking_DataGridView.Size = new System.Drawing.Size(1288, 558);
             this.ProjectTracking_DataGridView.TabIndex = 0;
-            // 
-            // ProjectName_Label
-            // 
-            this.ProjectName_Label.AutoSize = true;
-            this.ProjectName_Label.Location = new System.Drawing.Point(27, 179);
-            this.ProjectName_Label.Name = "ProjectName_Label";
-            this.ProjectName_Label.Size = new System.Drawing.Size(71, 13);
-            this.ProjectName_Label.TabIndex = 10;
-            this.ProjectName_Label.Text = "Project Name";
             // 
             // Main_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 543);
+            this.ClientSize = new System.Drawing.Size(1392, 1044);
             this.Controls.Add(this.Project_TabControl);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Main_Form";
             this.Text = "Project Tracker";
             this.Load += new System.EventHandler(this.Main_Form_Load);
@@ -782,7 +841,6 @@
             this.Risk_Input_GroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RisksListbox_PictureBox)).EndInit();
             this.TrackingGrid_Tab.ResumeLayout(false);
-            this.TrackingGrid_Tab.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HourlyInput_NumericUpDown)).EndInit();
@@ -849,12 +907,11 @@
         private System.Windows.Forms.Button SubmitHours_Button;
         private System.Windows.Forms.ComboBox TrackingCategory_ComboBox;
         private System.Windows.Forms.ComboBox TrackingNames_ComboBox;
-        private System.Windows.Forms.RadioButton WeeklyHours_RadioButton;
-        private System.Windows.Forms.RadioButton DailyHours_RadioButton;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button TrackingToHome_Button;
-        private System.Windows.Forms.Label ProjectName_Label;
     }
 }
 
