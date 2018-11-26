@@ -436,11 +436,11 @@ namespace Project_Tracker
                     TrackingNames_ComboBox.Items.Add(Member.ToString());
                     TrackingTable.Rows.Add(Member.ToString(), 0, 0, 0, 0, 0);
                 }
-            }
-         
+
+                ProjectName_Label.Text = ProjectList[Projects_Listbox.SelectedIndex].getProjName();
+            }         
 
             ProjectTracking_DataGridView.DataSource = TrackingTable;
-
             Project_TabControl.SelectTab(TrackingGrid_Tab);
         }
 
@@ -460,6 +460,7 @@ namespace Project_Tracker
             }
 
             int b = Projects_Listbox.SelectedIndex;
+            MessageBox.Show(b.ToString());
             ProjectDisplay_RichTextBox.Text = ProjectList[b].getProjName() + Environment.NewLine + Environment.NewLine;
             ProjectDisplay_RichTextBox.AppendText("Manager: " + ProjectList[b].getProjManager().ToString() + Environment.NewLine + Environment.NewLine);
            
@@ -579,6 +580,10 @@ namespace Project_Tracker
         private void TrackingToHome_Button_Click(object sender, EventArgs e)
         {
             Project_TabControl.SelectTab(Home_Tab);
+            TrackingNames_ComboBox.SelectedIndex = -1;
+            TrackingCategory_ComboBox.SelectedIndex = -1;
+            HourlyInput_NumericUpDown.Value = 0;
+            //ProjectTracking_DataGridView.Rows.Clear();
         }
 
         private void SubmitHours_Button_Click(object sender, EventArgs e)
