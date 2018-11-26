@@ -86,6 +86,18 @@
             this.HomePageError_Label = new System.Windows.Forms.Label();
             this.RisksListbox_PictureBox = new System.Windows.Forms.PictureBox();
             this.RequirementsListBox_PictureBox = new System.Windows.Forms.PictureBox();
+            this.TrackingGrid_Tab = new System.Windows.Forms.TabPage();
+            this.ProjectTracking_DataGridView = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.TrackingNames_ComboBox = new System.Windows.Forms.ComboBox();
+            this.TrackingCategory_ComboBox = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.HourlyInput_NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Project_TabControl.SuspendLayout();
             this.Home_Tab.SuspendLayout();
             this.Add_Project_Tab.SuspendLayout();
@@ -100,6 +112,10 @@
             this.Project_Details_Display_GroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RisksListbox_PictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RequirementsListBox_PictureBox)).BeginInit();
+            this.TrackingGrid_Tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectTracking_DataGridView)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HourlyInput_NumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // Add_Project_Button
@@ -135,6 +151,7 @@
             this.Project_TabControl.Controls.Add(this.Home_Tab);
             this.Project_TabControl.Controls.Add(this.Add_Project_Tab);
             this.Project_TabControl.Controls.Add(this.Tracking_Tab);
+            this.Project_TabControl.Controls.Add(this.TrackingGrid_Tab);
             this.Project_TabControl.Location = new System.Drawing.Point(12, 12);
             this.Project_TabControl.Name = "Project_TabControl";
             this.Project_TabControl.SelectedIndex = 0;
@@ -673,6 +690,130 @@
             this.RequirementsListBox_PictureBox.TabIndex = 35;
             this.RequirementsListBox_PictureBox.TabStop = false;
             // 
+            // TrackingGrid_Tab
+            // 
+            this.TrackingGrid_Tab.Controls.Add(this.groupBox1);
+            this.TrackingGrid_Tab.Controls.Add(this.ProjectTracking_DataGridView);
+            this.TrackingGrid_Tab.Location = new System.Drawing.Point(4, 22);
+            this.TrackingGrid_Tab.Name = "TrackingGrid_Tab";
+            this.TrackingGrid_Tab.Size = new System.Drawing.Size(665, 493);
+            this.TrackingGrid_Tab.TabIndex = 3;
+            this.TrackingGrid_Tab.Text = "Tracking Grid";
+            this.TrackingGrid_Tab.UseVisualStyleBackColor = true;
+            // 
+            // ProjectTracking_DataGridView
+            // 
+            this.ProjectTracking_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProjectTracking_DataGridView.Location = new System.Drawing.Point(10, 182);
+            this.ProjectTracking_DataGridView.Name = "ProjectTracking_DataGridView";
+            this.ProjectTracking_DataGridView.Size = new System.Drawing.Size(644, 290);
+            this.ProjectTracking_DataGridView.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.HourlyInput_NumericUpDown);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.TrackingCategory_ComboBox);
+            this.groupBox1.Controls.Add(this.TrackingNames_ComboBox);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(68, 27);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(520, 149);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tracking Information Input";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(47, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Name:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(33, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Category:";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(252, 56);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(79, 17);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Daily Hours";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(252, 88);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(92, 17);
+            this.radioButton2.TabIndex = 3;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Weekly Hours";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // TrackingNames_ComboBox
+            // 
+            this.TrackingNames_ComboBox.FormattingEnabled = true;
+            this.TrackingNames_ComboBox.Location = new System.Drawing.Point(92, 36);
+            this.TrackingNames_ComboBox.Name = "TrackingNames_ComboBox";
+            this.TrackingNames_ComboBox.Size = new System.Drawing.Size(121, 21);
+            this.TrackingNames_ComboBox.TabIndex = 4;
+            // 
+            // TrackingCategory_ComboBox
+            // 
+            this.TrackingCategory_ComboBox.FormattingEnabled = true;
+            this.TrackingCategory_ComboBox.Items.AddRange(new object[] {
+            "Requirements Analysis",
+            "Designing",
+            "Coding",
+            "Testing",
+            "Project Management"});
+            this.TrackingCategory_ComboBox.Location = new System.Drawing.Point(92, 69);
+            this.TrackingCategory_ComboBox.Name = "TrackingCategory_ComboBox";
+            this.TrackingCategory_ComboBox.Size = new System.Drawing.Size(121, 21);
+            this.TrackingCategory_ComboBox.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(389, 61);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 34);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Submit Hours";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(47, 107);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Hours:";
+            // 
+            // HourlyInput_NumericUpDown
+            // 
+            this.HourlyInput_NumericUpDown.Location = new System.Drawing.Point(92, 107);
+            this.HourlyInput_NumericUpDown.Name = "HourlyInput_NumericUpDown";
+            this.HourlyInput_NumericUpDown.Size = new System.Drawing.Size(121, 20);
+            this.HourlyInput_NumericUpDown.TabIndex = 8;
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -700,6 +841,11 @@
             this.Project_Details_Display_GroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RisksListbox_PictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RequirementsListBox_PictureBox)).EndInit();
+            this.TrackingGrid_Tab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ProjectTracking_DataGridView)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HourlyInput_NumericUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -764,6 +910,18 @@
         private System.Windows.Forms.Label HomePageError_Label;
         private System.Windows.Forms.PictureBox RequirementsListBox_PictureBox;
         private System.Windows.Forms.PictureBox RisksListbox_PictureBox;
+        private System.Windows.Forms.TabPage TrackingGrid_Tab;
+        private System.Windows.Forms.DataGridView ProjectTracking_DataGridView;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.NumericUpDown HourlyInput_NumericUpDown;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox TrackingCategory_ComboBox;
+        private System.Windows.Forms.ComboBox TrackingNames_ComboBox;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
 

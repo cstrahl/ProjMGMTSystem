@@ -383,12 +383,32 @@ namespace Project_Tracker
 
         private void UpdateTracking_Button_Click(object sender, EventArgs e)
         {
-            Project_TabControl.SelectTab(Tracking_Tab);
+            DataTable TrackingTable = new DataTable();
+
+            TrackingTable.Columns.Add("Name", typeof(string));
+            TrackingTable.Columns.Add("Requirements Analysis", typeof(int));
+            TrackingTable.Columns.Add("Designing", typeof(int));
+            TrackingTable.Columns.Add("Coding", typeof(int));
+            TrackingTable.Columns.Add("Testing", typeof(int));
+            TrackingTable.Columns.Add("Project Management", typeof(int));
+
+            TrackingTable.Rows.Add("Name 1", 0, 0, 0, 0, 0);
+            TrackingTable.Rows.Add("Name 2", 0, 0, 0, 0, 0);
+            TrackingTable.Rows.Add("Name 3", 0, 0, 0, 0, 0);
+            TrackingTable.Rows.Add("Name 4", 0, 0, 0, 0, 0);
+
+            ProjectTracking_DataGridView.DataSource = TrackingTable;
+
+            Project_TabControl.SelectTab(TrackingGrid_Tab);
         }
 
         private void ViewProjectDetails_Button_Click(object sender, EventArgs e)
         {
-            //string Project_Text;
+            if (Projects_Listbox.SelectedIndex == -1) {
+                HomePageError_Label.Visible = true;
+                return;
+            }
+
             int b = Projects_Listbox.SelectedIndex;
             ProjectDisplay_RichTextBox.Text = ProjectList[b].getProjName() + Environment.NewLine + Environment.NewLine;
             ProjectDisplay_RichTextBox.AppendText("Manager: " + ProjectList[b].getProjManager().ToString() + Environment.NewLine + Environment.NewLine);
@@ -421,11 +441,18 @@ namespace Project_Tracker
                 ProjectDisplay_RichTextBox.AppendText(ProjReq.Name + ": " + type + Environment.NewLine + ProjReq.Description + Environment.NewLine + Environment.NewLine);
             }
 
+            HomePageError_Label.Visible = false;
             //get current project and assign it to temp; extract all of its text and display it in richtextbox
         }
 
         private void Modify_Project_Button_Click(object sender, EventArgs e)
         {
+            if (Projects_Listbox.SelectedIndex == -1)
+            {
+                HomePageError_Label.Visible = true;
+                return;
+            }
+
             //load in the whole project to text boxes and listboxes
             if (Projects_Listbox.SelectedIndex > -1)
             {
@@ -463,6 +490,7 @@ namespace Project_Tracker
                 ModifyingProject = true;
                 Save_Project_Button.Text = "Update Project";
                 Project_TabControl.SelectTab(Add_Project_Tab);
+                HomePageError_Label.Visible = false;
             }
         }
 
