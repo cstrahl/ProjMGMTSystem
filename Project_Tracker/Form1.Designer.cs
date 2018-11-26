@@ -98,6 +98,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.HourlyInput_NumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.TrackingToHome_Button = new System.Windows.Forms.Button();
             this.Project_TabControl.SuspendLayout();
             this.Home_Tab.SuspendLayout();
             this.Add_Project_Tab.SuspendLayout();
@@ -692,6 +693,7 @@
             // 
             // TrackingGrid_Tab
             // 
+            this.TrackingGrid_Tab.Controls.Add(this.TrackingToHome_Button);
             this.TrackingGrid_Tab.Controls.Add(this.groupBox1);
             this.TrackingGrid_Tab.Controls.Add(this.ProjectTracking_DataGridView);
             this.TrackingGrid_Tab.Location = new System.Drawing.Point(4, 22);
@@ -720,7 +722,7 @@
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(68, 27);
+            this.groupBox1.Location = new System.Drawing.Point(30, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(520, 149);
             this.groupBox1.TabIndex = 2;
@@ -813,6 +815,16 @@
             this.HourlyInput_NumericUpDown.Name = "HourlyInput_NumericUpDown";
             this.HourlyInput_NumericUpDown.Size = new System.Drawing.Size(121, 20);
             this.HourlyInput_NumericUpDown.TabIndex = 8;
+            // 
+            // TrackingToHome_Button
+            // 
+            this.TrackingToHome_Button.Location = new System.Drawing.Point(566, 86);
+            this.TrackingToHome_Button.Name = "TrackingToHome_Button";
+            this.TrackingToHome_Button.Size = new System.Drawing.Size(75, 38);
+            this.TrackingToHome_Button.TabIndex = 9;
+            this.TrackingToHome_Button.Text = "Return to Project View";
+            this.TrackingToHome_Button.UseVisualStyleBackColor = true;
+            this.TrackingToHome_Button.Click += new System.EventHandler(this.TrackingToHome_Button_Click);
             // 
             // Main_Form
             // 
@@ -922,6 +934,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button TrackingToHome_Button;
     }
 }
 

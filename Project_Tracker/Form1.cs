@@ -383,6 +383,8 @@ namespace Project_Tracker
 
         private void UpdateTracking_Button_Click(object sender, EventArgs e)
         {
+            
+
             DataTable TrackingTable = new DataTable();
 
             TrackingTable.Columns.Add("Name", typeof(string));
@@ -392,10 +394,20 @@ namespace Project_Tracker
             TrackingTable.Columns.Add("Testing", typeof(int));
             TrackingTable.Columns.Add("Project Management", typeof(int));
 
-            TrackingTable.Rows.Add("Name 1", 0, 0, 0, 0, 0);
-            TrackingTable.Rows.Add("Name 2", 0, 0, 0, 0, 0);
-            TrackingTable.Rows.Add("Name 3", 0, 0, 0, 0, 0);
-            TrackingTable.Rows.Add("Name 4", 0, 0, 0, 0, 0);
+            //Add project manager
+            string ProjManager = ProjectList[Projects_Listbox.SelectedIndex].getProjManager().ToString();
+            TrackingNames_ComboBox.Items.Add(ProjManager);
+            TrackingTable.Rows.Add(ProjManager, 0, 0, 0, 0, 0);
+
+
+            //tracking names combo box needs filled with project names
+            List<Person> TmembersListforCombo = ProjectList[Projects_Listbox.SelectedIndex].getProjMembers();
+            foreach (Person Member in TmembersListforCombo)
+            {
+                TrackingNames_ComboBox.Items.Add(Member.ToString());
+                TrackingTable.Rows.Add(Member.ToString(), 0, 0, 0, 0, 0);
+            }
+         
 
             ProjectTracking_DataGridView.DataSource = TrackingTable;
 
@@ -524,6 +536,11 @@ namespace Project_Tracker
                 ProjectList.RemoveAt(Projects_Listbox.SelectedIndex);
                 Projects_Listbox.Items.RemoveAt(Projects_Listbox.SelectedIndex);
             }
+        }
+
+        private void TrackingToHome_Button_Click(object sender, EventArgs e)
+        {
+            Project_TabControl.SelectTab(Home_Tab);
         }
     }
 }
